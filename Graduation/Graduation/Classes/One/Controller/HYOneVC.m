@@ -11,9 +11,12 @@
 #import "HYOneModel.h"
 #import "HYHeaderView.h"
 #import "HYOneTVC.h"
+#import "HYTwoTVC_Design.h"
+#import "HYThreeTVC_Photo.h"
+#import "HYFourTVC_Life.h"
 static NSString *ID = @"cell";
-#define categorys  @[@"推荐",@"原创",@"热门",@"美食",@"生活",@"设计感",@"家居",@"礼物",@"阅读",@"运动健身",@"旅行户外"]
-
+#define categorys  @[@"推荐",@"原创",@"热门",@"美食"]
+//,@"生活",@"设计感",@"家居",@"礼物",@"阅读",@"运动健身",@"旅行户外"
 
 @interface HYOneVC ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -42,6 +45,9 @@ static NSString *ID = @"cell";
 
 // pre offsetY
 @property (nonatomic , assign) CGFloat preTableViewOffsetY;
+
+// ARRAY
+@property (nonatomic , strong) NSArray *vcArray;
 
 
 
@@ -220,16 +226,47 @@ static NSString *ID = @"cell";
         
 //        NSArray *colors = @[[UIColor redColor],[UIColor blueColor],[UIColor grayColor],[UIColor greenColor],[UIColor purpleColor],[UIColor orangeColor],[UIColor whiteColor],[UIColor redColor],[UIColor blueColor],[UIColor grayColor],[UIColor greenColor]];
         
-        for (int i = 0; i < categorys.count; i ++) {
             HYOneTVC *oneVC = [[HYOneTVC alloc] init];
-            oneVC.view.frame = CGRectMake(HYScreenWidth * i, 0, HYScreenWidth, HYScreenHeight);
+             HYTwoTVC_Design *twoVC = [[HYTwoTVC_Design alloc] init];
+             HYThreeTVC_Photo *threeVC = [[HYThreeTVC_Photo alloc] init];
+             HYFourTVC_Life *fourVC = [[HYFourTVC_Life alloc] init];
+            _vcArray = @[oneVC,twoVC,threeVC,fourVC];
+            
+
+        for (int i = 0; i < categorys.count; i ++) {
+            
+            
+            
+            oneVC.view.frame = CGRectMake(HYScreenWidth * 0, 0, HYScreenWidth, HYScreenHeight);
+            twoVC.view.frame = CGRectMake(HYScreenWidth * 1, 0, HYScreenWidth, HYScreenHeight);
+            threeVC.view.frame = CGRectMake(HYScreenWidth * 2, 0, HYScreenWidth, HYScreenHeight);
+            fourVC.view.frame = CGRectMake(HYScreenWidth * 3, 0, HYScreenWidth, HYScreenHeight);
 //            oneVC.view.backgroundColor = colors[i];
             [self.bottomScrollView addSubview:oneVC.view];
+            [self.bottomScrollView addSubview:twoVC.view];
+            [self.bottomScrollView addSubview:threeVC.view];
+            [self.bottomScrollView addSubview:fourVC.view];
+            
             [self.controllers addObject:oneVC];
+            [self.controllers addObject:twoVC];
+            [self.controllers addObject:threeVC];
+            [self.controllers addObject:fourVC];
+            
+            
             [self.tableViews addObject:oneVC.tableView];
+            [self.tableViews addObject:twoVC.tableView];
+            [self.tableViews addObject:threeVC.tableView];
+            [self.tableViews addObject:fourVC.tableView];
+            
             
             NSKeyValueObservingOptions options = NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld;
+            
+            
+            // 这句是控制 分类和底部一起到 导航览 就停止   整体运动
             [oneVC.tableView addObserver:self forKeyPath:@"contentOffset" options:options context:nil];
+            [twoVC.tableView addObserver:self forKeyPath:@"contentOffset" options:options context:nil];
+            [threeVC.tableView addObserver:self forKeyPath:@"contentOffset" options:options context:nil];
+            [fourVC.tableView addObserver:self forKeyPath:@"contentOffset" options:options context:nil];
         }
         
         self.currentTableView = self.tableViews[0];

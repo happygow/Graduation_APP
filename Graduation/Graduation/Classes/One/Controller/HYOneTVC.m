@@ -77,7 +77,7 @@ static NSString *ID = @"cell";
         
     }
     
-    [HYNetworking getWithUrl:_url refreshCache:YES params:nil success:^(id response) {
+    [HYNetworking getWithUrl:artUrl refreshCache:YES params:nil success:^(id response) {
         HYLog(@"data ===   %@",response);
         NSDictionary *dictData = [response objectForKey:@"data"];
         for (NSDictionary *dic in dictData) {
