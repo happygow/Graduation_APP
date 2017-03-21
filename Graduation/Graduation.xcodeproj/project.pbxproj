@@ -34,7 +34,6 @@
 		05309E0E1E8108D300E6ADD5 /* HYOneVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 05309D7B1E8108D300E6ADD5 /* HYOneVC.m */; };
 		05309E0F1E8108D300E6ADD5 /* HYThreeTVC_Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = 05309D7D1E8108D300E6ADD5 /* HYThreeTVC_Photo.m */; };
 		05309E101E8108D300E6ADD5 /* HYTwoTVC_Design.m in Sources */ = {isa = PBXBuildFile; fileRef = 05309D7F1E8108D300E6ADD5 /* HYTwoTVC_Design.m */; };
-		05309E111E8108D300E6ADD5 /* index.json in Resources */ = {isa = PBXBuildFile; fileRef = 05309D801E8108D300E6ADD5 /* index.json */; };
 		05309E121E8108D300E6ADD5 /* cycle_01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 05309D821E8108D300E6ADD5 /* cycle_01.jpg */; };
 		05309E131E8108D300E6ADD5 /* cycle_02.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 05309D831E8108D300E6ADD5 /* cycle_02.jpg */; };
 		05309E141E8108D300E6ADD5 /* cycle_03.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 05309D841E8108D300E6ADD5 /* cycle_03.jpg */; };
@@ -47,7 +46,6 @@
 		05309E1B1E8108D300E6ADD5 /* HYTwoModel_Design.m in Sources */ = {isa = PBXBuildFile; fileRef = 05309D8E1E8108D300E6ADD5 /* HYTwoModel_Design.m */; };
 		05309E1C1E8108D300E6ADD5 /* HYHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 05309D921E8108D300E6ADD5 /* HYHeaderView.m */; };
 		05309E1D1E8108D300E6ADD5 /* HYoneCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 05309D941E8108D300E6ADD5 /* HYoneCell.m */; };
-		05309E1E1E8108D300E6ADD5 /* HYTwoCell_Design.m in Sources */ = {isa = PBXBuildFile; fileRef = 05309D961E8108D300E6ADD5 /* HYTwoCell_Design.m */; };
 		05309E1F1E8108D300E6ADD5 /* HYThreeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 05309D9A1E8108D300E6ADD5 /* HYThreeVC.m */; };
 		05309E201E8108D300E6ADD5 /* HYTwoViewDidClickVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 05309D9C1E8108D300E6ADD5 /* HYTwoViewDidClickVC.m */; };
 		05309E211E8108D300E6ADD5 /* HYVideoPlayVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 05309D9E1E8108D300E6ADD5 /* HYVideoPlayVC.m */; };
@@ -117,7 +115,6 @@
 		05309D7D1E8108D300E6ADD5 /* HYThreeTVC_Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYThreeTVC_Photo.m; sourceTree = "<group>"; };
 		05309D7E1E8108D300E6ADD5 /* HYTwoTVC_Design.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYTwoTVC_Design.h; sourceTree = "<group>"; };
 		05309D7F1E8108D300E6ADD5 /* HYTwoTVC_Design.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYTwoTVC_Design.m; sourceTree = "<group>"; };
-		05309D801E8108D300E6ADD5 /* index.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = index.json; sourceTree = "<group>"; };
 		05309D821E8108D300E6ADD5 /* cycle_01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cycle_01.jpg; sourceTree = "<group>"; };
 		05309D831E8108D300E6ADD5 /* cycle_02.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cycle_02.jpg; sourceTree = "<group>"; };
 		05309D841E8108D300E6ADD5 /* cycle_03.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cycle_03.jpg; sourceTree = "<group>"; };
@@ -134,8 +131,6 @@
 		05309D921E8108D300E6ADD5 /* HYHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYHeaderView.m; sourceTree = "<group>"; };
 		05309D931E8108D300E6ADD5 /* HYoneCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYoneCell.h; sourceTree = "<group>"; };
 		05309D941E8108D300E6ADD5 /* HYoneCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYoneCell.m; sourceTree = "<group>"; };
-		05309D951E8108D300E6ADD5 /* HYTwoCell_Design.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYTwoCell_Design.h; sourceTree = "<group>"; };
-		05309D961E8108D300E6ADD5 /* HYTwoCell_Design.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYTwoCell_Design.m; sourceTree = "<group>"; };
 		05309D991E8108D300E6ADD5 /* HYThreeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYThreeVC.h; sourceTree = "<group>"; };
 		05309D9A1E8108D300E6ADD5 /* HYThreeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYThreeVC.m; sourceTree = "<group>"; };
 		05309D9B1E8108D300E6ADD5 /* HYTwoViewDidClickVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYTwoViewDidClickVC.h; sourceTree = "<group>"; };
@@ -306,7 +301,6 @@
 				05309D751E8108D300E6ADD5 /* Controller */,
 				05309D811E8108D300E6ADD5 /* Cycle */,
 				05309D8A1E8108D300E6ADD5 /* Model */,
-				05309D8F1E8108D300E6ADD5 /* Recmand */,
 				05309D901E8108D300E6ADD5 /* View */,
 			);
 			path = One;
@@ -336,17 +330,16 @@
 		05309D751E8108D300E6ADD5 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				05309D761E8108D300E6ADD5 /* HYFourTVC_Life.h */,
-				05309D771E8108D300E6ADD5 /* HYFourTVC_Life.m */,
-				05309D781E8108D300E6ADD5 /* HYOneTVC.h */,
-				05309D791E8108D300E6ADD5 /* HYOneTVC.m */,
 				05309D7A1E8108D300E6ADD5 /* HYOneVC.h */,
 				05309D7B1E8108D300E6ADD5 /* HYOneVC.m */,
-				05309D7C1E8108D300E6ADD5 /* HYThreeTVC_Photo.h */,
-				05309D7D1E8108D300E6ADD5 /* HYThreeTVC_Photo.m */,
+				05309D781E8108D300E6ADD5 /* HYOneTVC.h */,
+				05309D791E8108D300E6ADD5 /* HYOneTVC.m */,
 				05309D7E1E8108D300E6ADD5 /* HYTwoTVC_Design.h */,
 				05309D7F1E8108D300E6ADD5 /* HYTwoTVC_Design.m */,
-				05309D801E8108D300E6ADD5 /* index.json */,
+				05309D7C1E8108D300E6ADD5 /* HYThreeTVC_Photo.h */,
+				05309D7D1E8108D300E6ADD5 /* HYThreeTVC_Photo.m */,
+				05309D761E8108D300E6ADD5 /* HYFourTVC_Life.h */,
+				05309D771E8108D300E6ADD5 /* HYFourTVC_Life.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -377,13 +370,6 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		05309D8F1E8108D300E6ADD5 /* Recmand */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Recmand;
-			sourceTree = "<group>";
-		};
 		05309D901E8108D300E6ADD5 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -391,8 +377,6 @@
 				05309D921E8108D300E6ADD5 /* HYHeaderView.m */,
 				05309D931E8108D300E6ADD5 /* HYoneCell.h */,
 				05309D941E8108D300E6ADD5 /* HYoneCell.m */,
-				05309D951E8108D300E6ADD5 /* HYTwoCell_Design.h */,
-				05309D961E8108D300E6ADD5 /* HYTwoCell_Design.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -624,7 +608,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				05309E111E8108D300E6ADD5 /* index.json in Resources */,
 				05309E091E8108D300E6ADD5 /* tab_我的_pressed.png in Resources */,
 				05309E121E8108D300E6ADD5 /* cycle_01.jpg in Resources */,
 				05309E471E810AF200E6ADD5 /* 加载.gif in Resources */,
@@ -730,7 +713,6 @@
 				05309E3E1E8108D400E6ADD5 /* HYViewController.m in Sources */,
 				05309E1F1E8108D300E6ADD5 /* HYThreeVC.m in Sources */,
 				05309E231E8108D300E6ADD5 /* CardCellCollectionViewCell.m in Sources */,
-				05309E1E1E8108D300E6ADD5 /* HYTwoCell_Design.m in Sources */,
 				05309E3C1E8108D400E6ADD5 /* HYtabBar.m in Sources */,
 				05309E0D1E8108D300E6ADD5 /* HYOneTVC.m in Sources */,
 				05309E281E8108D400E6ADD5 /* HYTwoModel.m in Sources */,

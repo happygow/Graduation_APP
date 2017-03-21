@@ -12,6 +12,10 @@
 @interface HYOneTVC ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic, strong) NSMutableArray *dataArray;
 @property (nonatomic, strong) UIViewController *controller;
+// array
+@property (nonatomic , strong) NSArray *urlArray;
+// url
+@property (nonatomic , strong) NSString *url;
 @end
 static NSString *ID = @"cell";
 @implementation HYOneTVC
@@ -23,6 +27,13 @@ static NSString *ID = @"cell";
     return _dataArray;
 }
 
+- (NSArray *)urlArray
+{
+    if (!_urlArray) {
+        _urlArray = [NSArray array];
+    }
+    return _urlArray;
+}
 
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -42,7 +53,8 @@ static NSString *ID = @"cell";
 
 - (void)createView
 {
-    
+   
+
     _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, HYScreenWidth, HYScreenHeight)];
     _tableView.delegate = self;
     _tableView.dataSource = self;
@@ -57,7 +69,15 @@ static NSString *ID = @"cell";
 
 - (void)loadData
 {
-    [HYNetworking getWithUrl:artUrl refreshCache:YES params:nil success:^(id response) {
+      _urlArray = @[designURL,artUrl,photoURL,lifeURL];
+    for ( int i = 0; i < _urlArray.count; i ++) {
+        _url = _urlArray[_currentIndex];
+        HYLog(@"%@",_url);
+        HYLog(@"%ld",_currentIndex);
+        
+    }
+    
+    [HYNetworking getWithUrl:_url refreshCache:YES params:nil success:^(id response) {
         HYLog(@"data ===   %@",response);
         NSDictionary *dictData = [response objectForKey:@"data"];
         for (NSDictionary *dic in dictData) {

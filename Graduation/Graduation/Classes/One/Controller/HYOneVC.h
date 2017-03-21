@@ -10,5 +10,4 @@
 
 @interface HYOneVC : UIViewController
 
-@property(nonatomic,strong)NSMutableArray *array_view;
 @end

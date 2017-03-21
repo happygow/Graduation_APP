@@ -11,11 +11,8 @@
 #import "HYOneModel.h"
 #import "HYHeaderView.h"
 #import "HYOneTVC.h"
-#import "HYTwoTVC_Design.h"
-#import "HYThreeTVC_Photo.h"
-#import "HYFourTVC_Life.h"
 static NSString *ID = @"cell";
-#define categorys  @[@"艺术",@"设计",@"摄影",@"生活",@"生活",@"设计感",@"家居",@"礼物",@"阅读",@"运动健身",@"旅行户外"]
+#define categorys  @[@"推荐",@"原创",@"热门",@"美食",@"生活",@"设计感",@"家居",@"礼物",@"阅读",@"运动健身",@"旅行户外"]
 
 
 @interface HYOneVC ()<UITableViewDelegate,UITableViewDataSource>
@@ -42,13 +39,10 @@ static NSString *ID = @"cell";
 
 // tableViews
 @property (nonatomic , strong) NSMutableArray *tableViews;
-// views
-//@property (nonatomic , strong) NSArray *viewArray;
 
 // pre offsetY
 @property (nonatomic , assign) CGFloat preTableViewOffsetY;
-// vcs
-@property (nonatomic , strong) NSMutableArray *vcs;
+
 
 
 @end
@@ -69,7 +63,7 @@ static NSString *ID = @"cell";
         [self.view addSubview:self.segmentScrollView];
         [self.view addSubview:self.headerVeiw];
         
-
+        
     }
     return self;
     
@@ -79,9 +73,9 @@ static NSString *ID = @"cell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.jz_wantsNavigationBarVisible = NO;
-
+    
     self.view.backgroundColor = [UIColor whiteColor];
-//    self.navigationController.navigationBar.hidden = YES;
+    //    self.navigationController.navigationBar.hidden = YES;
     
 }
 
@@ -173,13 +167,17 @@ static NSString *ID = @"cell";
 // category  点击
 -(void)changeSelectedItem:(UIButton *)currentButton
 {
-    
+    HYOneTVC *oneVC = [[HYOneTVC alloc] init];
     _preBtn.selected = NO;
     currentButton.selected = YES;
     _preBtn = currentButton;
-    
+    oneVC.currentIndex = [self.titlesBtns indexOfObject:currentButton];
     NSInteger index = [self.titlesBtns indexOfObject:currentButton];
     self.currentTableView = self.tableViews[index];
+    
+    
+    HYLog(@"current index ========----------  %ld",oneVC.currentIndex);
+    
     for (UITableView *tableView in self.tableViews) {
         if (self.preTableViewOffsetY >= 0 && self.preTableViewOffsetY <= 136) {
             tableView.contentOffset = CGPointMake(0, self.preTableViewOffsetY);
@@ -222,50 +220,16 @@ static NSString *ID = @"cell";
         
 //        NSArray *colors = @[[UIColor redColor],[UIColor blueColor],[UIColor grayColor],[UIColor greenColor],[UIColor purpleColor],[UIColor orangeColor],[UIColor whiteColor],[UIColor redColor],[UIColor blueColor],[UIColor grayColor],[UIColor greenColor]];
         
-//        HYTwoTVC_Design *twoVC = [[HYTwoTVC_Design alloc] init];
-//        HYThreeTVC_Photo *threeVC = [[HYThreeTVC_Photo alloc] init];
-//        HYFourTVC_Life *fourVC = [[HYFourTVC_Life alloc] init];
-//            
-
-        self.vcs = [[NSMutableArray alloc] initWithObjects:@"oneVC",@"twoVC"@"threeVC",@"fourVC", nil];
-        
-        
-       
         for (int i = 0; i < categorys.count; i ++) {
             HYOneTVC *oneVC = [[HYOneTVC alloc] init];
-            
             oneVC.view.frame = CGRectMake(HYScreenWidth * i, 0, HYScreenWidth, HYScreenHeight);
-//            twoVC.view.frame = CGRectMake(HYScreenWidth * 1, 0, HYScreenWidth, HYScreenHeight);
-//            threeVC.view.frame = CGRectMake(HYScreenWidth * 2, 0, HYScreenWidth, HYScreenHeight);
-//            fourVC.view.frame = CGRectMake(HYScreenWidth * 3, 0, HYScreenWidth, HYScreenHeight);
-        
 //            oneVC.view.backgroundColor = colors[i];
             [self.bottomScrollView addSubview:oneVC.view];
-//            [self.bottomScrollView addSubview:twoVC.view];
-//            [self.bottomScrollView addSubview:threeVC.view];
-//            [self.bottomScrollView addSubview:fourVC.view];
-//            
-//            
             [self.controllers addObject:oneVC];
-//            [self.controllers addObject:twoVC];
-//            [self.controllers addObject:threeVC];
-//            [self.controllers addObject:fourVC];
-//
-//            
-            
             [self.tableViews addObject:oneVC.tableView];
-//            [self.tableViews addObject:twoVC.tableView];
-//            [self.tableViews addObject:threeVC.tableView];
-//            [self.tableViews addObject:fourVC.tableView];
-//            
-            
             
             NSKeyValueObservingOptions options = NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld;
-            
             [oneVC.tableView addObserver:self forKeyPath:@"contentOffset" options:options context:nil];
-//             [twoVC.tableView addObserver:self forKeyPath:@"contentOffset" options:options context:nil];
-//            [threeVC.tableView addObserver:self forKeyPath:@"contentOffset" options:options context:nil];
-//            [fourVC.tableView addObserver:self forKeyPath:@"contentOffset" options:options context:nil];
         }
         
         self.currentTableView = self.tableViews[0];
@@ -284,7 +248,7 @@ static NSString *ID = @"cell";
         [_segmentScrollView addSubview:self.currentSelectedImageView];
         _segmentScrollView.showsVerticalScrollIndicator = NO;
         _segmentScrollView.showsHorizontalScrollIndicator = YES;
-//        _segmentScrollView.backgroundColor = [UIColor whiteColor];
+        _segmentScrollView.backgroundColor = [UIColor whiteColor];
         NSInteger btnOffset = 0;
         for (int i = 0; i <categorys.count; i ++) {
             UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];

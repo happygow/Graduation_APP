@@ -10,4 +10,7 @@
 
 @interface HYOneTVC : UIViewController
 @property (nonatomic, strong) UITableView *tableView;
+// num
+@property (nonatomic , assign) NSInteger currentIndex;
+
 @end
