@@ -1,0 +1,38 @@
+//
+//  PrefixHeader.pch
+//  freelife
+//
+//  Created by sunnyday on 2016/10/15.
+//  Copyright © 2016年 sunnyday. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+
+#define PrefixHeader_pch
+#import "UIView+HYExtension.h"
+#import "UIBarButtonItem+HYExtenssion.h"
+#import "UIButton+size.h"
+#import "UIImage+HYImage.h"
+#import "Header.h"
+
+#import "UIImageView+WebCache.h"
+#import "AFNetworking.h"
+#import "SVProgressHUD.h"
+#import "MJRefresh.h"
+#import "HYNetworking.h"
+#import "SDCycleScrollView.h"
+#import "MJExtension.h"
+//#import "JKDBModel.h"
+
+
+#import "UIView+Addition.h"
+#import "HYTime.h"
+#import "JZNavigationExtension.h"
+#import "Masonry.h"
+
+
+
+#define textcolor [UIColor redColor]
+
+#endif /* PrefixHeader_pch */
+// /Users/BruceLee/Documents/1/Graduation_APP/Graduation/Graduation/other/PrefixHeader.pch
