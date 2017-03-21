@@ -173,17 +173,11 @@ static NSString *ID = @"cell";
 // category  点击
 -(void)changeSelectedItem:(UIButton *)currentButton
 {
-    HYOneTVC *oneVC = [[HYOneTVC alloc] init];
     _preBtn.selected = NO;
     currentButton.selected = YES;
     _preBtn = currentButton;
-    oneVC.currentIndex = [self.titlesBtns indexOfObject:currentButton];
     NSInteger index = [self.titlesBtns indexOfObject:currentButton];
     self.currentTableView = self.tableViews[index];
-    
-    
-    HYLog(@"current index ========----------  %ld",oneVC.currentIndex);
-    
     for (UITableView *tableView in self.tableViews) {
         if (self.preTableViewOffsetY >= 0 && self.preTableViewOffsetY <= 136) {
             tableView.contentOffset = CGPointMake(0, self.preTableViewOffsetY);
@@ -230,7 +224,6 @@ static NSString *ID = @"cell";
              HYTwoTVC_Design *twoVC = [[HYTwoTVC_Design alloc] init];
              HYThreeTVC_Photo *threeVC = [[HYThreeTVC_Photo alloc] init];
              HYFourTVC_Life *fourVC = [[HYFourTVC_Life alloc] init];
-            _vcArray = @[oneVC,twoVC,threeVC,fourVC];
             
 
         for (int i = 0; i < categorys.count; i ++) {
