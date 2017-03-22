@@ -9,13 +9,11 @@
 #import "HYOneTVC.h"
 #import "HYOneModel.h"
 #import "HYoneCell.h"
+
 @interface HYOneTVC ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic, strong) NSMutableArray *dataArray;
 @property (nonatomic, strong) UIViewController *controller;
-// array
-@property (nonatomic , strong) NSArray *urlArray;
-// url
-@property (nonatomic , strong) NSString *url;
+
 @end
 static NSString *ID = @"cell";
 @implementation HYOneTVC
@@ -27,13 +25,6 @@ static NSString *ID = @"cell";
     return _dataArray;
 }
 
-- (NSArray *)urlArray
-{
-    if (!_urlArray) {
-        _urlArray = [NSArray array];
-    }
-    return _urlArray;
-}
 
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -48,13 +39,12 @@ static NSString *ID = @"cell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self createView];
-
+    
 }
 
 - (void)createView
 {
-   
-
+    
     _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, HYScreenWidth, HYScreenHeight)];
     _tableView.delegate = self;
     _tableView.dataSource = self;
@@ -63,20 +53,12 @@ static NSString *ID = @"cell";
     tableHeaderView.backgroundColor = [UIColor whiteColor];
     _tableView.scrollIndicatorInsets = UIEdgeInsetsMake(HYValue(182), 0, 0, 0);
     _tableView.tableHeaderView = tableHeaderView;
-
+    
 }
 
 
 - (void)loadData
 {
-      _urlArray = @[designURL,artUrl,photoURL,lifeURL];
-    for ( int i = 0; i < _urlArray.count; i ++) {
-        _url = _urlArray[_currentIndex];
-        HYLog(@"%@",_url);
-        HYLog(@"%ld",_currentIndex);
-        
-    }
-    
     [HYNetworking getWithUrl:artUrl refreshCache:YES params:nil success:^(id response) {
         HYLog(@"data ===   %@",response);
         NSDictionary *dictData = [response objectForKey:@"data"];
@@ -84,30 +66,25 @@ static NSString *ID = @"cell";
             HYOneModel *model = [[HYOneModel alloc] initWithDictionary:dic];
             [_dataArray addObject:model];
             
-                HYLog(@"count =======     %ld",self.dataArray.count);
+            HYLog(@"count =======     %ld",self.dataArray.count);
             
             
         }
         
         
-    [self.tableView reloadData];
+        [self.tableView reloadData];
         
     } fail:^(NSError *error) {
         
     }];
-
+    
 }
 
-//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-//{
-//    return [self.dataArray count];
-//}
-
-- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if ([tableView respondsToSelector:@selector(setSeparatorInset:)]) {
-        [tableView setSeparatorInset:UIEdgeInsetsMake(0, 0, 0, 0)];
-    }
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return [self.dataArray count];
 }
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     
@@ -122,16 +99,18 @@ static NSString *ID = @"cell";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-     HYoneCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
-//    if (!cell) {
-//        cell = [[HYoneCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ID];
-//    }
+    HYoneCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
+    if (!cell) {
+        cell = [[HYoneCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ID];
+    }
     cell.model = [self.dataArray objectAtIndex:indexPath.row];
     return cell;
-
+    
 }
 
-
-
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+}
 
 @end

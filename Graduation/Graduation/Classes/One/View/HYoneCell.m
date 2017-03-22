@@ -18,6 +18,7 @@
         
         [self.contentView addSubview:self.topicimageView];
         [self.contentView addSubview:self.titleLabel];
+        [self.contentView addSubview:self.viewCount];
 
         
         self.selectionStyle = UITableViewCellSelectionStyleNone;
@@ -31,7 +32,7 @@
     [super layoutSubviews];
     
     [_topicimageView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.height.mas_equalTo(200);
+        make.height.mas_equalTo(220);
         make.left.mas_equalTo(20);
         make.right.mas_equalTo(-20);
         make.top.mas_equalTo(20);
@@ -43,6 +44,11 @@
         make.top.mas_equalTo(_topicimageView.mas_bottom).offset(20);
     }];
     
+    [_viewCount mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.mas_equalTo(self);
+        make.top.mas_equalTo(_topicimageView.mas_bottom).offset(40);
+    }];
+//
 
     
     
@@ -53,6 +59,8 @@
     HYLog(@"pic url ==== %@%@%@",model.picUrl,model.topic,model.viewCount);
     [self.topicimageView sd_setImageWithURL:[NSURL URLWithString:model.picUrl]];
     self.titleLabel.text = model.topic;
+    self.viewCount.text = [NSString stringWithFormat:@"浏览量:%@",self.model.viewCount];
+
 }
 
 
@@ -81,15 +89,15 @@
 }
 
 
-
-- (UILabel *)tagNmae {
-    if (!_tagNmae) {
-        _tagNmae = [[UILabel alloc] init];
-        _tagNmae.textColor = [[UIColor blackColor] colorWithAlphaComponent:0.5];
-        _tagNmae.font = [UIFont systemFontOfSize:11];
-        _tagNmae.text = @"小糖君";
+//
+- (UILabel *)viewCount {
+    if (!_viewCount) {
+        _viewCount = [[UILabel alloc] init];
+        _viewCount.textColor = [UIColor grayColor];
+        _viewCount.font = [UIFont systemFontOfSize:11];
+//        _viewCount.text = @"12121212";
     }
-    return _tagNmae;
+    return _viewCount;
 }
 
 

@@ -73,6 +73,7 @@
 		05309E471E810AF200E6ADD5 /* 加载.gif in Resources */ = {isa = PBXBuildFile; fileRef = 05309E461E810AF200E6ADD5 /* 加载.gif */; };
 		05309E751E810F2900E6ADD5 /* UIColor+FlatColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 05309E721E810F2900E6ADD5 /* UIColor+FlatColors.m */; };
 		05309E761E810F2900E6ADD5 /* UIView+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 05309E741E810F2900E6ADD5 /* UIView+Addition.m */; };
+		05309E881E82568500E6ADD5 /* HYFailureView.m in Sources */ = {isa = PBXBuildFile; fileRef = 05309E871E82568500E6ADD5 /* HYFailureView.m */; };
 		4ABD90C521B953A9CFC5AFAB /* libPods-Graduation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D990B262863CA3C3B4190270 /* libPods-Graduation.a */; };
 /* End PBXBuildFile section */
 
@@ -186,6 +187,8 @@
 		05309E721E810F2900E6ADD5 /* UIColor+FlatColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+FlatColors.m"; sourceTree = "<group>"; };
 		05309E731E810F2900E6ADD5 /* UIView+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Addition.h"; sourceTree = "<group>"; };
 		05309E741E810F2900E6ADD5 /* UIView+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Addition.m"; sourceTree = "<group>"; };
+		05309E861E82568500E6ADD5 /* HYFailureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYFailureView.h; sourceTree = "<group>"; };
+		05309E871E82568500E6ADD5 /* HYFailureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYFailureView.m; sourceTree = "<group>"; };
 		61B79ED197D504C019FF7E1F /* Pods-Graduation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Graduation.release.xcconfig"; path = "Pods/Target Support Files/Pods-Graduation/Pods-Graduation.release.xcconfig"; sourceTree = "<group>"; };
 		8638621BE2182BA7D9D0554C /* Pods-Graduation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Graduation.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Graduation/Pods-Graduation.debug.xcconfig"; sourceTree = "<group>"; };
 		D990B262863CA3C3B4190270 /* libPods-Graduation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Graduation.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -510,6 +513,8 @@
 			children = (
 				05309DEB1E8108D300E6ADD5 /* HYLoadingView.h */,
 				05309DEC1E8108D300E6ADD5 /* HYLoadingView.m */,
+				05309E861E82568500E6ADD5 /* HYFailureView.h */,
+				05309E871E82568500E6ADD5 /* HYFailureView.m */,
 				05309DED1E8108D300E6ADD5 /* HYTime.h */,
 				05309DEE1E8108D300E6ADD5 /* HYTime.m */,
 				05309DEF1E8108D300E6ADD5 /* UIBarButtonItem+HYExtenssion.h */,
@@ -718,6 +723,7 @@
 				05309E281E8108D400E6ADD5 /* HYTwoModel.m in Sources */,
 				05309E421E8108D400E6ADD5 /* UIButton+size.m in Sources */,
 				05309E3B1E8108D400E6ADD5 /* HYNavigationVC.m in Sources */,
+				05309E881E82568500E6ADD5 /* HYFailureView.m in Sources */,
 				05309E3A1E8108D400E6ADD5 /* UIViewController+CustomNavigationExtension.m in Sources */,
 				05309E101E8108D300E6ADD5 /* HYTwoTVC_Design.m in Sources */,
 				05309E251E8108D300E6ADD5 /* CardSelectedLayout.m in Sources */,

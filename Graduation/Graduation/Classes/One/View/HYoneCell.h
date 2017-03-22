@@ -13,7 +13,6 @@
 
 @property (nonatomic, strong) UIImageView *topicimageView;
 @property (nonatomic, strong) UILabel *titleLabel;
-@property (nonatomic, strong) UILabel *tagNmae;
 @property (nonatomic, strong) UILabel *viewCount;//浏览量
 
 @property (nonatomic, strong) HYOneModel *model;
