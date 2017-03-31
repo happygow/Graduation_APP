@@ -185,7 +185,7 @@ static NSString *const ID = @"register";
     detailVC.sub_title = model.sub_title;
     detailVC.web_url = model.web_url;
     detailVC.imageUrl = model.coverImageUrl;
-    detailVC.jz_wantsNavigationBarVisible = NO;
+//    detailVC.jz_wantsNavigationBarVisible = NO;
     [self.navigationController pushViewController:detailVC animated:YES];
 }
 

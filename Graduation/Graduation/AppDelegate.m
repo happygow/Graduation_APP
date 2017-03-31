@@ -23,7 +23,7 @@
     
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    self.window.rootViewController = [[HYtabBarVC alloc] init];;
+    self.window.rootViewController = [[HYtabBarVC alloc] init];
     [self.window makeKeyAndVisible];
     // Override point for customization after application launch.
     return YES;

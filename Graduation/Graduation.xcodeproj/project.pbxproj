@@ -12,9 +12,6 @@
 		05309D4E1E81081B00E6ADD5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05309D4C1E81081B00E6ADD5 /* Main.storyboard */; };
 		05309D501E81081B00E6ADD5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05309D4F1E81081B00E6ADD5 /* Assets.xcassets */; };
 		05309D531E81081B00E6ADD5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05309D511E81081B00E6ADD5 /* LaunchScreen.storyboard */; };
-		05309DFB1E8108D300E6ADD5 /* HYFourVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 05309D5E1E8108D300E6ADD5 /* HYFourVC.m */; };
-		05309DFC1E8108D300E6ADD5 /* HYPhotoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 05309D611E8108D300E6ADD5 /* HYPhotoModel.m */; };
-		05309DFD1E8108D300E6ADD5 /* HYPhotoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 05309D641E8108D300E6ADD5 /* HYPhotoCollectionViewCell.m */; };
 		05309DFE1E8108D300E6ADD5 /* home_email_black.png in Resources */ = {isa = PBXBuildFile; fileRef = 05309D671E8108D300E6ADD5 /* home_email_black.png */; };
 		05309DFF1E8108D300E6ADD5 /* home_email_red.png in Resources */ = {isa = PBXBuildFile; fileRef = 05309D681E8108D300E6ADD5 /* home_email_red.png */; };
 		05309E001E8108D300E6ADD5 /* home_emared.png in Resources */ = {isa = PBXBuildFile; fileRef = 05309D691E8108D300E6ADD5 /* home_emared.png */; };
@@ -29,11 +26,6 @@
 		05309E091E8108D300E6ADD5 /* tab_我的_pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 05309D721E8108D300E6ADD5 /* tab_我的_pressed.png */; };
 		05309E0A1E8108D300E6ADD5 /* tab_首页.png in Resources */ = {isa = PBXBuildFile; fileRef = 05309D731E8108D300E6ADD5 /* tab_首页.png */; };
 		05309E0B1E8108D300E6ADD5 /* tab_首页_pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 05309D741E8108D300E6ADD5 /* tab_首页_pressed.png */; };
-		05309E0C1E8108D300E6ADD5 /* HYFourTVC_Life.m in Sources */ = {isa = PBXBuildFile; fileRef = 05309D771E8108D300E6ADD5 /* HYFourTVC_Life.m */; };
-		05309E0D1E8108D300E6ADD5 /* HYOneTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 05309D791E8108D300E6ADD5 /* HYOneTVC.m */; };
-		05309E0E1E8108D300E6ADD5 /* HYOneVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 05309D7B1E8108D300E6ADD5 /* HYOneVC.m */; };
-		05309E0F1E8108D300E6ADD5 /* HYThreeTVC_Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = 05309D7D1E8108D300E6ADD5 /* HYThreeTVC_Photo.m */; };
-		05309E101E8108D300E6ADD5 /* HYTwoTVC_Design.m in Sources */ = {isa = PBXBuildFile; fileRef = 05309D7F1E8108D300E6ADD5 /* HYTwoTVC_Design.m */; };
 		05309E121E8108D300E6ADD5 /* cycle_01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 05309D821E8108D300E6ADD5 /* cycle_01.jpg */; };
 		05309E131E8108D300E6ADD5 /* cycle_02.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 05309D831E8108D300E6ADD5 /* cycle_02.jpg */; };
 		05309E141E8108D300E6ADD5 /* cycle_03.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 05309D841E8108D300E6ADD5 /* cycle_03.jpg */; };
@@ -74,6 +66,22 @@
 		05309E751E810F2900E6ADD5 /* UIColor+FlatColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 05309E721E810F2900E6ADD5 /* UIColor+FlatColors.m */; };
 		05309E761E810F2900E6ADD5 /* UIView+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 05309E741E810F2900E6ADD5 /* UIView+Addition.m */; };
 		05309E881E82568500E6ADD5 /* HYFailureView.m in Sources */ = {isa = PBXBuildFile; fileRef = 05309E871E82568500E6ADD5 /* HYFailureView.m */; };
+		0538E06C1E8E22EE006F2DFF /* HYOneVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0538E0631E8E22EE006F2DFF /* HYOneVC.m */; };
+		0538E06D1E8E22EE006F2DFF /* HYOneTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0538E0651E8E22EE006F2DFF /* HYOneTVC.m */; };
+		0538E06E1E8E22EE006F2DFF /* HYTwoTVC_Design.m in Sources */ = {isa = PBXBuildFile; fileRef = 0538E0671E8E22EE006F2DFF /* HYTwoTVC_Design.m */; };
+		0538E06F1E8E22EE006F2DFF /* HYThreeTVC_Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = 0538E0691E8E22EE006F2DFF /* HYThreeTVC_Photo.m */; };
+		0538E0701E8E22EE006F2DFF /* HYFourTVC_Life.m in Sources */ = {isa = PBXBuildFile; fileRef = 0538E06B1E8E22EE006F2DFF /* HYFourTVC_Life.m */; };
+		0538E07C1E8E2448006F2DFF /* CollectModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0538E0761E8E2448006F2DFF /* CollectModel.m */; };
+		0538E07D1E8E2448006F2DFF /* CategoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0538E0781E8E2448006F2DFF /* CategoryModel.m */; };
+		0538E07E1E8E2448006F2DFF /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0538E07A1E8E2448006F2DFF /* BaseModel.m */; };
+		0538E08E1E8E2494006F2DFF /* UIView+ViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 0538E08D1E8E2494006F2DFF /* UIView+ViewConstraint.m */; };
+		0538E0921E8E259F006F2DFF /* HYFourVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0538E0901E8E259F006F2DFF /* HYFourVC.m */; };
+		0538E0961E8E2D6F006F2DFF /* libSDCycleScrollView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0538E0951E8E2D6F006F2DFF /* libSDCycleScrollView.a */; };
+		0538E09C1E8E2E0D006F2DFF /* HorizonScrollTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0538E09B1E8E2E0D006F2DFF /* HorizonScrollTableView.m */; };
+		0538E09F1E8E2E39006F2DFF /* HorizontalScrollCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0538E09E1E8E2E39006F2DFF /* HorizontalScrollCell.m */; };
+		0538E0A21E8E2E5F006F2DFF /* HorzonItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0538E0A11E8E2E5F006F2DFF /* HorzonItemCell.m */; };
+		0538E0A61E8E2FBA006F2DFF /* DetailViewCtroller.m in Sources */ = {isa = PBXBuildFile; fileRef = 0538E0A51E8E2FBA006F2DFF /* DetailViewCtroller.m */; };
+		0538E0A91E8E305F006F2DFF /* BaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0538E0A81E8E305F006F2DFF /* BaseTableViewCell.m */; };
 		4ABD90C521B953A9CFC5AFAB /* libPods-Graduation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D990B262863CA3C3B4190270 /* libPods-Graduation.a */; };
 /* End PBXBuildFile section */
 
@@ -86,12 +94,6 @@
 		05309D4F1E81081B00E6ADD5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		05309D521E81081B00E6ADD5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		05309D541E81081B00E6ADD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		05309D5D1E8108D300E6ADD5 /* HYFourVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYFourVC.h; sourceTree = "<group>"; };
-		05309D5E1E8108D300E6ADD5 /* HYFourVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYFourVC.m; sourceTree = "<group>"; };
-		05309D601E8108D300E6ADD5 /* HYPhotoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYPhotoModel.h; sourceTree = "<group>"; };
-		05309D611E8108D300E6ADD5 /* HYPhotoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYPhotoModel.m; sourceTree = "<group>"; };
-		05309D631E8108D300E6ADD5 /* HYPhotoCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYPhotoCollectionViewCell.h; sourceTree = "<group>"; };
-		05309D641E8108D300E6ADD5 /* HYPhotoCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYPhotoCollectionViewCell.m; sourceTree = "<group>"; };
 		05309D671E8108D300E6ADD5 /* home_email_black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home_email_black.png; sourceTree = "<group>"; };
 		05309D681E8108D300E6ADD5 /* home_email_red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home_email_red.png; sourceTree = "<group>"; };
 		05309D691E8108D300E6ADD5 /* home_emared.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home_emared.png; sourceTree = "<group>"; };
@@ -106,16 +108,6 @@
 		05309D721E8108D300E6ADD5 /* tab_我的_pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_我的_pressed.png"; sourceTree = "<group>"; };
 		05309D731E8108D300E6ADD5 /* tab_首页.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_首页.png"; sourceTree = "<group>"; };
 		05309D741E8108D300E6ADD5 /* tab_首页_pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_首页_pressed.png"; sourceTree = "<group>"; };
-		05309D761E8108D300E6ADD5 /* HYFourTVC_Life.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYFourTVC_Life.h; sourceTree = "<group>"; };
-		05309D771E8108D300E6ADD5 /* HYFourTVC_Life.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYFourTVC_Life.m; sourceTree = "<group>"; };
-		05309D781E8108D300E6ADD5 /* HYOneTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYOneTVC.h; sourceTree = "<group>"; };
-		05309D791E8108D300E6ADD5 /* HYOneTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYOneTVC.m; sourceTree = "<group>"; };
-		05309D7A1E8108D300E6ADD5 /* HYOneVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYOneVC.h; sourceTree = "<group>"; };
-		05309D7B1E8108D300E6ADD5 /* HYOneVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYOneVC.m; sourceTree = "<group>"; };
-		05309D7C1E8108D300E6ADD5 /* HYThreeTVC_Photo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYThreeTVC_Photo.h; sourceTree = "<group>"; };
-		05309D7D1E8108D300E6ADD5 /* HYThreeTVC_Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYThreeTVC_Photo.m; sourceTree = "<group>"; };
-		05309D7E1E8108D300E6ADD5 /* HYTwoTVC_Design.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYTwoTVC_Design.h; sourceTree = "<group>"; };
-		05309D7F1E8108D300E6ADD5 /* HYTwoTVC_Design.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYTwoTVC_Design.m; sourceTree = "<group>"; };
 		05309D821E8108D300E6ADD5 /* cycle_01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cycle_01.jpg; sourceTree = "<group>"; };
 		05309D831E8108D300E6ADD5 /* cycle_02.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cycle_02.jpg; sourceTree = "<group>"; };
 		05309D841E8108D300E6ADD5 /* cycle_03.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cycle_03.jpg; sourceTree = "<group>"; };
@@ -134,8 +126,8 @@
 		05309D941E8108D300E6ADD5 /* HYoneCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYoneCell.m; sourceTree = "<group>"; };
 		05309D991E8108D300E6ADD5 /* HYThreeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYThreeVC.h; sourceTree = "<group>"; };
 		05309D9A1E8108D300E6ADD5 /* HYThreeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYThreeVC.m; sourceTree = "<group>"; };
-		05309D9B1E8108D300E6ADD5 /* HYTwoViewDidClickVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYTwoViewDidClickVC.h; sourceTree = "<group>"; };
-		05309D9C1E8108D300E6ADD5 /* HYTwoViewDidClickVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYTwoViewDidClickVC.m; sourceTree = "<group>"; };
+		05309D9B1E8108D300E6ADD5 /* HYTwoViewDidClickVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HYTwoViewDidClickVC.h; path = ../../Three/Controller/HYTwoViewDidClickVC.h; sourceTree = "<group>"; };
+		05309D9C1E8108D300E6ADD5 /* HYTwoViewDidClickVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HYTwoViewDidClickVC.m; path = ../../Three/Controller/HYTwoViewDidClickVC.m; sourceTree = "<group>"; };
 		05309D9D1E8108D300E6ADD5 /* HYVideoPlayVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYVideoPlayVC.h; sourceTree = "<group>"; };
 		05309D9E1E8108D300E6ADD5 /* HYVideoPlayVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYVideoPlayVC.m; sourceTree = "<group>"; };
 		05309DA01E8108D300E6ADD5 /* VideoListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoListModel.h; sourceTree = "<group>"; };
@@ -189,6 +181,38 @@
 		05309E741E810F2900E6ADD5 /* UIView+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Addition.m"; sourceTree = "<group>"; };
 		05309E861E82568500E6ADD5 /* HYFailureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYFailureView.h; sourceTree = "<group>"; };
 		05309E871E82568500E6ADD5 /* HYFailureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYFailureView.m; sourceTree = "<group>"; };
+		0538E0621E8E22EE006F2DFF /* HYOneVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYOneVC.h; sourceTree = "<group>"; };
+		0538E0631E8E22EE006F2DFF /* HYOneVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYOneVC.m; sourceTree = "<group>"; };
+		0538E0641E8E22EE006F2DFF /* HYOneTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYOneTVC.h; sourceTree = "<group>"; };
+		0538E0651E8E22EE006F2DFF /* HYOneTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYOneTVC.m; sourceTree = "<group>"; };
+		0538E0661E8E22EE006F2DFF /* HYTwoTVC_Design.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYTwoTVC_Design.h; sourceTree = "<group>"; };
+		0538E0671E8E22EE006F2DFF /* HYTwoTVC_Design.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYTwoTVC_Design.m; sourceTree = "<group>"; };
+		0538E0681E8E22EE006F2DFF /* HYThreeTVC_Photo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYThreeTVC_Photo.h; sourceTree = "<group>"; };
+		0538E0691E8E22EE006F2DFF /* HYThreeTVC_Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYThreeTVC_Photo.m; sourceTree = "<group>"; };
+		0538E06A1E8E22EE006F2DFF /* HYFourTVC_Life.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYFourTVC_Life.h; sourceTree = "<group>"; };
+		0538E06B1E8E22EE006F2DFF /* HYFourTVC_Life.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYFourTVC_Life.m; sourceTree = "<group>"; };
+		0538E0751E8E2448006F2DFF /* CollectModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectModel.h; sourceTree = "<group>"; };
+		0538E0761E8E2448006F2DFF /* CollectModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectModel.m; sourceTree = "<group>"; };
+		0538E0771E8E2448006F2DFF /* CategoryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryModel.h; sourceTree = "<group>"; };
+		0538E0781E8E2448006F2DFF /* CategoryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryModel.m; sourceTree = "<group>"; };
+		0538E0791E8E2448006F2DFF /* BaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseModel.h; sourceTree = "<group>"; };
+		0538E07A1E8E2448006F2DFF /* BaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseModel.m; sourceTree = "<group>"; };
+		0538E08C1E8E2494006F2DFF /* UIView+ViewConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ViewConstraint.h"; sourceTree = "<group>"; };
+		0538E08D1E8E2494006F2DFF /* UIView+ViewConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ViewConstraint.m"; sourceTree = "<group>"; };
+		0538E08F1E8E259F006F2DFF /* HYFourVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYFourVC.h; sourceTree = "<group>"; };
+		0538E0901E8E259F006F2DFF /* HYFourVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYFourVC.m; sourceTree = "<group>"; };
+		0538E0951E8E2D6F006F2DFF /* libSDCycleScrollView.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSDCycleScrollView.a; path = "../../../../Library/Developer/Xcode/DerivedData/Graduation-aulcjyufkqdbiqbhpjmsxgblopuj/Build/Products/Debug-iphonesimulator/SDCycleScrollView/libSDCycleScrollView.a"; sourceTree = "<group>"; };
+		0538E09A1E8E2E0D006F2DFF /* HorizonScrollTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HorizonScrollTableView.h; sourceTree = "<group>"; };
+		0538E09B1E8E2E0D006F2DFF /* HorizonScrollTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HorizonScrollTableView.m; sourceTree = "<group>"; };
+		0538E09D1E8E2E39006F2DFF /* HorizontalScrollCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HorizontalScrollCell.h; sourceTree = "<group>"; };
+		0538E09E1E8E2E39006F2DFF /* HorizontalScrollCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HorizontalScrollCell.m; sourceTree = "<group>"; };
+		0538E0A01E8E2E5F006F2DFF /* HorzonItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HorzonItemCell.h; sourceTree = "<group>"; };
+		0538E0A11E8E2E5F006F2DFF /* HorzonItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HorzonItemCell.m; sourceTree = "<group>"; };
+		0538E0A31E8E2F23006F2DFF /* HorizontalScrollCellDeleagte.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HorizontalScrollCellDeleagte.h; sourceTree = "<group>"; };
+		0538E0A41E8E2FBA006F2DFF /* DetailViewCtroller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewCtroller.h; sourceTree = "<group>"; };
+		0538E0A51E8E2FBA006F2DFF /* DetailViewCtroller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewCtroller.m; sourceTree = "<group>"; };
+		0538E0A71E8E305F006F2DFF /* BaseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableViewCell.h; sourceTree = "<group>"; };
+		0538E0A81E8E305F006F2DFF /* BaseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewCell.m; sourceTree = "<group>"; };
 		61B79ED197D504C019FF7E1F /* Pods-Graduation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Graduation.release.xcconfig"; path = "Pods/Target Support Files/Pods-Graduation/Pods-Graduation.release.xcconfig"; sourceTree = "<group>"; };
 		8638621BE2182BA7D9D0554C /* Pods-Graduation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Graduation.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Graduation/Pods-Graduation.debug.xcconfig"; sourceTree = "<group>"; };
 		D990B262863CA3C3B4190270 /* libPods-Graduation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Graduation.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -199,6 +223,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0538E0961E8E2D6F006F2DFF /* libSDCycleScrollView.a in Frameworks */,
 				4ABD90C521B953A9CFC5AFAB /* libPods-Graduation.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -273,8 +298,10 @@
 		05309D5C1E8108D300E6ADD5 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				05309D5D1E8108D300E6ADD5 /* HYFourVC.h */,
-				05309D5E1E8108D300E6ADD5 /* HYFourVC.m */,
+				0538E08F1E8E259F006F2DFF /* HYFourVC.h */,
+				0538E0901E8E259F006F2DFF /* HYFourVC.m */,
+				0538E0A41E8E2FBA006F2DFF /* DetailViewCtroller.h */,
+				0538E0A51E8E2FBA006F2DFF /* DetailViewCtroller.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -282,8 +309,12 @@
 		05309D5F1E8108D300E6ADD5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				05309D601E8108D300E6ADD5 /* HYPhotoModel.h */,
-				05309D611E8108D300E6ADD5 /* HYPhotoModel.m */,
+				0538E0751E8E2448006F2DFF /* CollectModel.h */,
+				0538E0761E8E2448006F2DFF /* CollectModel.m */,
+				0538E0771E8E2448006F2DFF /* CategoryModel.h */,
+				0538E0781E8E2448006F2DFF /* CategoryModel.m */,
+				0538E0791E8E2448006F2DFF /* BaseModel.h */,
+				0538E07A1E8E2448006F2DFF /* BaseModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -291,8 +322,15 @@
 		05309D621E8108D300E6ADD5 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				05309D631E8108D300E6ADD5 /* HYPhotoCollectionViewCell.h */,
-				05309D641E8108D300E6ADD5 /* HYPhotoCollectionViewCell.m */,
+				0538E09A1E8E2E0D006F2DFF /* HorizonScrollTableView.h */,
+				0538E09B1E8E2E0D006F2DFF /* HorizonScrollTableView.m */,
+				0538E09D1E8E2E39006F2DFF /* HorizontalScrollCell.h */,
+				0538E09E1E8E2E39006F2DFF /* HorizontalScrollCell.m */,
+				0538E0A01E8E2E5F006F2DFF /* HorzonItemCell.h */,
+				0538E0A11E8E2E5F006F2DFF /* HorzonItemCell.m */,
+				0538E0A71E8E305F006F2DFF /* BaseTableViewCell.h */,
+				0538E0A81E8E305F006F2DFF /* BaseTableViewCell.m */,
+				0538E0A31E8E2F23006F2DFF /* HorizontalScrollCellDeleagte.h */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -333,16 +371,16 @@
 		05309D751E8108D300E6ADD5 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				05309D7A1E8108D300E6ADD5 /* HYOneVC.h */,
-				05309D7B1E8108D300E6ADD5 /* HYOneVC.m */,
-				05309D781E8108D300E6ADD5 /* HYOneTVC.h */,
-				05309D791E8108D300E6ADD5 /* HYOneTVC.m */,
-				05309D7E1E8108D300E6ADD5 /* HYTwoTVC_Design.h */,
-				05309D7F1E8108D300E6ADD5 /* HYTwoTVC_Design.m */,
-				05309D7C1E8108D300E6ADD5 /* HYThreeTVC_Photo.h */,
-				05309D7D1E8108D300E6ADD5 /* HYThreeTVC_Photo.m */,
-				05309D761E8108D300E6ADD5 /* HYFourTVC_Life.h */,
-				05309D771E8108D300E6ADD5 /* HYFourTVC_Life.m */,
+				0538E0621E8E22EE006F2DFF /* HYOneVC.h */,
+				0538E0631E8E22EE006F2DFF /* HYOneVC.m */,
+				0538E0641E8E22EE006F2DFF /* HYOneTVC.h */,
+				0538E0651E8E22EE006F2DFF /* HYOneTVC.m */,
+				0538E0661E8E22EE006F2DFF /* HYTwoTVC_Design.h */,
+				0538E0671E8E22EE006F2DFF /* HYTwoTVC_Design.m */,
+				0538E0681E8E22EE006F2DFF /* HYThreeTVC_Photo.h */,
+				0538E0691E8E22EE006F2DFF /* HYThreeTVC_Photo.m */,
+				0538E06A1E8E22EE006F2DFF /* HYFourTVC_Life.h */,
+				0538E06B1E8E22EE006F2DFF /* HYFourTVC_Life.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -399,8 +437,6 @@
 			children = (
 				05309D991E8108D300E6ADD5 /* HYThreeVC.h */,
 				05309D9A1E8108D300E6ADD5 /* HYThreeVC.m */,
-				05309D9B1E8108D300E6ADD5 /* HYTwoViewDidClickVC.h */,
-				05309D9C1E8108D300E6ADD5 /* HYTwoViewDidClickVC.m */,
 				05309D9D1E8108D300E6ADD5 /* HYVideoPlayVC.h */,
 				05309D9E1E8108D300E6ADD5 /* HYVideoPlayVC.m */,
 			);
@@ -446,6 +482,8 @@
 			children = (
 				05309DAD1E8108D300E6ADD5 /* HYTwoVCTableViewController.h */,
 				05309DAE1E8108D300E6ADD5 /* HYTwoVCTableViewController.m */,
+				05309D9B1E8108D300E6ADD5 /* HYTwoViewDidClickVC.h */,
+				05309D9C1E8108D300E6ADD5 /* HYTwoViewDidClickVC.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -519,6 +557,8 @@
 				05309DEE1E8108D300E6ADD5 /* HYTime.m */,
 				05309DEF1E8108D300E6ADD5 /* UIBarButtonItem+HYExtenssion.h */,
 				05309DF01E8108D300E6ADD5 /* UIBarButtonItem+HYExtenssion.m */,
+				0538E08C1E8E2494006F2DFF /* UIView+ViewConstraint.h */,
+				0538E08D1E8E2494006F2DFF /* UIView+ViewConstraint.m */,
 				05309DF11E8108D300E6ADD5 /* UIButton+size.h */,
 				05309DF21E8108D300E6ADD5 /* UIButton+size.m */,
 				05309DF31E8108D300E6ADD5 /* UIImage+HYImage.h */,
@@ -536,6 +576,7 @@
 		6A962BB337F958D2462AFA2E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0538E0951E8E2D6F006F2DFF /* libSDCycleScrollView.a */,
 				D990B262863CA3C3B4190270 /* libPods-Graduation.a */,
 			);
 			name = Frameworks;
@@ -697,35 +738,39 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				05309E0E1E8108D300E6ADD5 /* HYOneVC.m in Sources */,
 				05309D481E81081B00E6ADD5 /* AppDelegate.m in Sources */,
+				0538E07D1E8E2448006F2DFF /* CategoryModel.m in Sources */,
 				05309E3F1E8108D400E6ADD5 /* HYLoadingView.m in Sources */,
-				05309DFC1E8108D300E6ADD5 /* HYPhotoModel.m in Sources */,
+				0538E06D1E8E22EE006F2DFF /* HYOneTVC.m in Sources */,
 				05309E211E8108D300E6ADD5 /* HYVideoPlayVC.m in Sources */,
 				05309E1B1E8108D300E6ADD5 /* HYTwoModel_Design.m in Sources */,
 				05309E1C1E8108D300E6ADD5 /* HYHeaderView.m in Sources */,
 				05309E221E8108D300E6ADD5 /* VideoListModel.m in Sources */,
+				0538E0A21E8E2E5F006F2DFF /* HorzonItemCell.m in Sources */,
+				0538E06C1E8E22EE006F2DFF /* HYOneVC.m in Sources */,
+				0538E0A61E8E2FBA006F2DFF /* DetailViewCtroller.m in Sources */,
 				05309E751E810F2900E6ADD5 /* UIColor+FlatColors.m in Sources */,
+				0538E0A91E8E305F006F2DFF /* BaseTableViewCell.m in Sources */,
 				05309E291E8108D400E6ADD5 /* HYTwoCell.m in Sources */,
-				05309E0C1E8108D300E6ADD5 /* HYFourTVC_Life.m in Sources */,
-				05309DFB1E8108D300E6ADD5 /* HYFourVC.m in Sources */,
+				0538E06F1E8E22EE006F2DFF /* HYThreeTVC_Photo.m in Sources */,
 				05309E261E8108D300E6ADD5 /* videoDeatilVC.m in Sources */,
 				05309E201E8108D300E6ADD5 /* HYTwoViewDidClickVC.m in Sources */,
-				05309E0F1E8108D300E6ADD5 /* HYThreeTVC_Photo.m in Sources */,
 				05309E761E810F2900E6ADD5 /* UIView+Addition.m in Sources */,
 				05309E391E8108D400E6ADD5 /* CustomNavigationController.m in Sources */,
+				0538E07E1E8E2448006F2DFF /* BaseModel.m in Sources */,
+				0538E08E1E8E2494006F2DFF /* UIView+ViewConstraint.m in Sources */,
 				05309E3D1E8108D400E6ADD5 /* HYtabBarVC.m in Sources */,
 				05309E3E1E8108D400E6ADD5 /* HYViewController.m in Sources */,
 				05309E1F1E8108D300E6ADD5 /* HYThreeVC.m in Sources */,
 				05309E231E8108D300E6ADD5 /* CardCellCollectionViewCell.m in Sources */,
 				05309E3C1E8108D400E6ADD5 /* HYtabBar.m in Sources */,
-				05309E0D1E8108D300E6ADD5 /* HYOneTVC.m in Sources */,
+				0538E0701E8E22EE006F2DFF /* HYFourTVC_Life.m in Sources */,
 				05309E281E8108D400E6ADD5 /* HYTwoModel.m in Sources */,
 				05309E421E8108D400E6ADD5 /* UIButton+size.m in Sources */,
+				0538E09C1E8E2E0D006F2DFF /* HorizonScrollTableView.m in Sources */,
 				05309E3B1E8108D400E6ADD5 /* HYNavigationVC.m in Sources */,
 				05309E881E82568500E6ADD5 /* HYFailureView.m in Sources */,
 				05309E3A1E8108D400E6ADD5 /* UIViewController+CustomNavigationExtension.m in Sources */,
-				05309E101E8108D300E6ADD5 /* HYTwoTVC_Design.m in Sources */,
 				05309E251E8108D300E6ADD5 /* CardSelectedLayout.m in Sources */,
 				05309E401E8108D400E6ADD5 /* HYTime.m in Sources */,
 				05309E271E8108D300E6ADD5 /* HYTwoVCTableViewController.m in Sources */,
@@ -733,11 +778,14 @@
 				05309E241E8108D300E6ADD5 /* CardLayout.m in Sources */,
 				05309E431E8108D400E6ADD5 /* UIImage+HYImage.m in Sources */,
 				05309D451E81081B00E6ADD5 /* main.m in Sources */,
+				0538E06E1E8E22EE006F2DFF /* HYTwoTVC_Design.m in Sources */,
+				0538E09F1E8E2E39006F2DFF /* HorizontalScrollCell.m in Sources */,
 				05309E1D1E8108D300E6ADD5 /* HYoneCell.m in Sources */,
-				05309DFD1E8108D300E6ADD5 /* HYPhotoCollectionViewCell.m in Sources */,
+				0538E0921E8E259F006F2DFF /* HYFourVC.m in Sources */,
 				05309E411E8108D400E6ADD5 /* UIBarButtonItem+HYExtenssion.m in Sources */,
 				05309E1A1E8108D300E6ADD5 /* HYOneModel.m in Sources */,
 				05309E441E8108D400E6ADD5 /* UIView+HYExtension.m in Sources */,
+				0538E07C1E8E2448006F2DFF /* CollectModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -859,6 +907,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = DYUUR96E57;
+				ENABLE_BITCODE = YES;
 				GCC_PREFIX_HEADER = Graduation/other/PrefixHeader.pch;
 				INFOPLIST_FILE = Graduation/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -873,6 +922,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = DYUUR96E57;
+				ENABLE_BITCODE = YES;
 				GCC_PREFIX_HEADER = Graduation/other/PrefixHeader.pch;
 				INFOPLIST_FILE = Graduation/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

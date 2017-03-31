@@ -1,8 +1,8 @@
 //
 //  HYFourVC.h
-//  AppOfArt
+//  Graduation
 //
-//  Created by LeeBruce on 17/2/6.
+//  Created by LeeBruce on 17/3/31.
 //  Copyright © 2017年 zhang. All rights reserved.
 //
 

@@ -176,7 +176,7 @@
     HYNavigationVC *nav = [[HYNavigationVC alloc] initWithRootViewController:vc];
     [self addChildViewController:nav];
 //    //获取导航条最高权限
-    //[[UITabBarItem appearance]setTitleTextAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:15]} forState:UIControlStateNormal];
+    [[UITabBarItem appearance]setTitleTextAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:15]} forState:UIControlStateNormal];
 }
 
 // 封装

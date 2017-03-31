@@ -7,87 +7,119 @@
 //
 
 #import "HYFourVC.h"
-#import "HYPhotoCollectionViewCell.h"
-#import "HYPhotoModel.h"
-@interface HYFourVC ()<UICollectionViewDelegate, UICollectionViewDataSource , UICollectionViewDelegateFlowLayout>
+#import "HorizonScrollTableView.h"
+#import "CategoryModel.h"
+#import "CollectModel.h"
+#import "DetailViewCtroller.h"
+
+#define BACK(block) dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), block)
+#define MAIN(block) dispatch_async(dispatch_get_main_queue(),block)
+#define AFTER(time, block)  dispatch_after(dispatch_time(DISPATCH_TIME_NOW, time * NSEC_PER_SEC), dispatch_get_main_queue(), block);
+
+@interface HYFourVC ()<HorizontalTableViewDelegate>
 {
-    NSInteger pageCount;
+    NSMutableArray *_dataSouce;
+    HorizonScrollTableView *_horizonTableView;
 }
-// collectionView
-@property (nonatomic , strong) UICollectionView *collectionView;
-// 数组
-@property (nonatomic , strong) NSMutableArray *dataArray;
+
+
 @end
-static NSString *ID = @"cell";
 @implementation HYFourVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.jz_wantsNavigationBarVisible = YES;
     self.navigationItem.title = @"影像";
-    
+    self.view.backgroundColor = [UIColor whiteColor];
+    [self setUpHorizontalScrollView];
 }
 
 
-- (void)loadData
-{
-    //@{@"ClassifyMode":@1}   1  是 有图片  0  为 无图片
-    [ HYNetworking getWithUrl:photoList refreshCache:YES params:@{@"ClassifyMode":@1} success:^(id response) {
-        NSDictionary *dictionary = response[@"Result"][@"WorksInfo"];
-       
-       NSDictionary *photoDict = [dictionary objectForKey:@"ArticleInfoCollection"] ;
-       HYLog(@"photodict----------%@",photoDict);
-       for (NSDictionary *dict in photoDict) {
-           HYPhotoModel *model = [[HYPhotoModel alloc] init];
-           [_dataArray addObject:model];
-           
-           
-           
-           model.coverPic = [NSString stringWithFormat:@"%@",dict[@"PicAddress"]];
-           model.picTitle = [NSString stringWithFormat:@"%@",dict[@"TextInfo"]];
-           
-       
 
-           HYLog(@" title == %@",model.picTitle);
-        HYLog(@" data count == %ld",_dataArray.count);
-           
-       }
-    [_collectionView reloadData];
-       
-       
-       
-    } fail:^(NSError *error) {
-        HYLog(@"出现错误");
-    }];
-    
-    
+- (UIColor *)randomColor {
+    CGFloat hue = ( arc4random() % 256 / 256.0 );  //  0.0 to 1.0
+    CGFloat saturation = ( arc4random() % 128 / 256.0 ) + 0.5;  //  0.5 to 1.0, away from white
+    CGFloat brightness = ( arc4random() % 128 / 256.0 ) + 0.5;  //  0.5 to 1.0, away from black
+    return [UIColor colorWithHue:hue saturation:saturation brightness:brightness alpha:1];
 }
 
 
-- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+- (NSMutableArray *)loadDataByType:(CenterTableViewType )type;
 {
-    return _dataArray.count;
-}
-
-- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
-{
-    HYPhotoCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:ID forIndexPath:indexPath];
-    if (!cell) {
-        cell = [[HYPhotoCollectionViewCell alloc] init];
+    
+    NSArray *nameArray = @[@"办公",@"厨具",@"创意",@"护肤",@"家居",@"美食",@"数码",@"卫浴",@"运动",@"杂货",@"植物",@"主题"];
+    
+    NSMutableArray *colorArray = [NSMutableArray arrayWithCapacity:10];
+    for (int i =0; i< 5; i++) {
+        [colorArray addObject:[self randomColor]];
     }
-    cell.model = _dataArray[indexPath.item];
-//    cell.photoTitle.text = model.picTitle;
-//    cell.contentText.text = model.contentText;
-//    cell.tags.text = model.contentText;
     
+    NSMutableArray *array = [NSMutableArray arrayWithCapacity:10];
+    [nameArray enumerateObjectsUsingBlock:^(NSString *objname, NSUInteger idx, BOOL *stop) {
+        CategoryModel *categoty = [[CategoryModel alloc] init];
+        categoty.name = objname;
+        
+        NSMutableArray *itemArray = [NSMutableArray arrayWithCapacity:10];
+        for (int i = 0 ; i< 5; i++) {
+            CollectModel *item = [[CollectModel alloc] init];
+            item.title = [NSString stringWithFormat:@"%@--(%ld)",objname,i*idx];
+//            if (type != CenterTableViewTopic) {
+                item.price = [NSString stringWithFormat:@"￥%ld",(i+1)*(idx+1)*2];
+//            }
+            item.backgroundColor = colorArray[i];
+            [itemArray addObject:item];
+        }
+        categoty.datalist = itemArray;
+        [array addObject:categoty];
+    }];
+    return  array;
     
-    return cell;
+}
+- (void)setUpHorizontalScrollView
+{
+
+    _horizonTableView = [[HorizonScrollTableView alloc] initWithFrame: CGRectMake(0, 0, HYScreenWidth, HYScreenHeight - 64)];
+    _horizonTableView.delegate = self;
+    [self.view addSubview:_horizonTableView];
+     _horizonTableView.dataSource = [self loadDataByType:CenterTableViewGoods];
+        _horizonTableView.type = CenterTableViewGoods;
+    
 }
 
+
+
+
+#pragma mark -
+#pragma mark - HorizontalTableViewDelegate
+- (void)horizontalTableView:(CenterTableViewType)type didSelectItemAtContentIndexPath:(NSIndexPath *)contentIndexPath inTableViewIndexPath:(NSIndexPath *)tableViewIndexPath
+{
+    if (contentIndexPath.row == 0 || contentIndexPath.row ==6 ) {
+        
+        if (type == CenterTableViewTopic)
+        {
+            // 跳转的主题列表
+            
+        }else
+        {
+            //跳转的主题单品列表
+        }
+    }else
+    {
+        DetailViewCtroller *detailVC = [[DetailViewCtroller alloc] init];
+        CategoryModel *model = _dataSouce[tableViewIndexPath.row];
+        CollectModel *likeModel =  model.datalist[contentIndexPath.row];
+        detailVC.title = likeModel.title;
+        detailVC.view.backgroundColor = likeModel.backgroundColor;
+        [self.navigationController pushViewController:detailVC animated:YES];
+    }
+    
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 
 
 

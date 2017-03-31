@@ -35,7 +35,10 @@
 #define fontMax HYValue (15.0)
 #define fontMin HYValue (14.0)
 #define spacing HYValue (15.0)
-
+/** 滚动标题的高度  */
+static const CGFloat HYTitleVewHeight = 40;
+/** 滚动标题每个item的宽度  */
+static const CGFloat HYTitleViewItemWidth = 64;
 
 
 // url

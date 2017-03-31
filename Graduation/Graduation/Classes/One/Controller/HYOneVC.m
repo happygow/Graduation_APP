@@ -351,4 +351,12 @@ static NSString *ID = @"cell";
 }
 
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+     HYLog(@"navigationController == %@",self.navigationController);
+}
+
+
+
+
 @end

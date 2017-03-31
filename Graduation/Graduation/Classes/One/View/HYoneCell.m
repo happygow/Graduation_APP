@@ -19,7 +19,7 @@
         [self.contentView addSubview:self.topicimageView];
         [self.contentView addSubview:self.titleLabel];
         [self.contentView addSubview:self.viewCount];
-
+        
         
         self.selectionStyle = UITableViewCellSelectionStyleNone;
         
@@ -48,8 +48,8 @@
         make.centerX.mas_equalTo(self);
         make.top.mas_equalTo(_topicimageView.mas_bottom).offset(40);
     }];
-//
-
+    //
+    
     
     
 }
@@ -60,7 +60,7 @@
     [self.topicimageView sd_setImageWithURL:[NSURL URLWithString:model.picUrl]];
     self.titleLabel.text = model.topic;
     self.viewCount.text = [NSString stringWithFormat:@"浏览量:%@",self.model.viewCount];
-
+    
 }
 
 
@@ -95,7 +95,7 @@
         _viewCount = [[UILabel alloc] init];
         _viewCount.textColor = [UIColor grayColor];
         _viewCount.font = [UIFont systemFontOfSize:11];
-//        _viewCount.text = @"12121212";
+        //        _viewCount.text = @"12121212";
     }
     return _viewCount;
 }
@@ -112,7 +112,7 @@
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
-
+    
     // Configure the view for the selected state
 }
 

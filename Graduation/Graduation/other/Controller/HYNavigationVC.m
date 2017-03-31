@@ -41,7 +41,7 @@
 {
     if (self.childViewControllers.count > 0) { // 如果push进来的不是第一个控制器
         UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-        [button setTitle:@"返回lalal " forState:UIControlStateNormal];
+        [button setTitle:@"返回 " forState:UIControlStateNormal];
         [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [button setTitleColor:[UIColor whiteColor] forState:UIControlStateFocused];
         [button setImage:[UIImage imageNamed:@"navigationButtonReturn"] forState:UIControlStateNormal];

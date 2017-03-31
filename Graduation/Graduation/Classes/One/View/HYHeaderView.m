@@ -98,7 +98,7 @@
         
         [_searchBar setSearchFieldBackgroundImage:[UIImage imageWithColor:[UIColor clearColor] size:_searchBar.size] forState:UIControlStateNormal];
         
-        [_searchBar setBackgroundImage:[UIImage imageWithColor:[[UIColor darkGrayColor] colorWithAlphaComponent:0.7] size:_searchBar.size] ];
+        [_searchBar setBackgroundImage:[UIImage imageWithColor:[[UIColor darkGrayColor] colorWithAlphaComponent:0.3] size:_searchBar.size] ];
         
         UITextField *searchField = [_searchBar valueForKey:@"_searchField"];
         searchField.textColor = [UIColor whiteColor];
