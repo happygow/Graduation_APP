@@ -162,17 +162,17 @@ NSString *const cellIdentifier = @"HorzonItemCell";
 // collectionviewcell的 尺寸
 - (CGSize)horizontalCellContentsView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    CGSize itemSize = CGSizeMake(70, 140);
-    if (_type == CenterTableViewTopic) {
-        itemSize.width = 312/2;
-        itemSize.height = itemSize.height-20;
-    }else
-    {
-        itemSize.width = 70;
-    }
-    if (indexPath.row == 0 ||indexPath.row == 6) {
-        return CGSizeMake(70, itemSize.height);
-    }
+    CGSize itemSize = CGSizeMake(80, 80);
+//    if (_type == CenterTableViewTopic) {
+//        itemSize.width = 312/2;
+//        itemSize.height = itemSize.height-20;
+//    }else
+//    {
+//        itemSize.width = 70;
+//    }
+//    if (indexPath.row == 0 ||indexPath.row == 6) {
+//        return CGSizeMake(70, itemSize.height);
+//    }
     return itemSize;
 }
 // collectionview cell  的 点击事件

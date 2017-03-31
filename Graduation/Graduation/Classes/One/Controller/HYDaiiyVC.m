@@ -1,22 +1,19 @@
 //
-//  HYFourTVC_Life.m
-//  AppOfArt
+//  HYDaiiyVC.m
+//  Graduation
 //
-//  Created by LeeBruce on 17/3/17.
+//  Created by LeeBruce on 17/3/31.
 //  Copyright © 2017年 zhang. All rights reserved.
 //
 
-#import "HYFourTVC_Life.h"
-#import "HYOneModel.h"
-#import "HYoneCell.h"
-@interface HYFourTVC_Life ()<UITableViewDelegate,UITableViewDataSource>
-@property (nonatomic, strong) NSMutableArray *dataArray;
-//@property (nonatomic, strong) UIViewController *controller;
+#import "HYDaiiyVC.h"
+#import "HYDailyCell.h"
 
+@interface HYDaiiyVC ()<UITableViewDelegate,UITableViewDataSource>
+@property (nonatomic, strong) NSMutableArray *dataArray;
 @end
 static NSString *ID = @"cell";
-@implementation HYFourTVC_Life
-
+@implementation HYDaiiyVC
 - (NSMutableArray *)dataArray
 {
     if (!_dataArray) {
@@ -41,17 +38,16 @@ static NSString *ID = @"cell";
     [self createView];
     
 }
-
 - (void)createView
 {
     
     _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, HYScreenWidth, HYScreenHeight)];
     _tableView.delegate = self;
     _tableView.dataSource = self;
-    [_tableView registerClass:[HYoneCell class] forCellReuseIdentifier:ID];
+    [_tableView registerClass:[HYDailyCell class] forCellReuseIdentifier:ID];
     UIView *tableHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, HYScreenWidth, HYValue(242))];
-    _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     tableHeaderView.backgroundColor = [UIColor whiteColor];
+    _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     _tableView.scrollIndicatorInsets = UIEdgeInsetsMake(HYValue(182), 0, 0, 0);
     _tableView.tableHeaderView = tableHeaderView;
     
@@ -60,11 +56,11 @@ static NSString *ID = @"cell";
 
 - (void)loadData
 {
-    [HYNetworking getWithUrl:lifeURL refreshCache:YES params:nil success:^(id response) {
+    [HYNetworking getWithUrl:dailyURL refreshCache:YES params:nil success:^(id response) {
         HYLog(@"data ===   %@",response);
-        NSDictionary *dictData = [response objectForKey:@"data"];
+        NSDictionary *dictData = [response[@"data"] objectForKey:@"products"];
         for (NSDictionary *dic in dictData) {
-            HYOneModel *model = [[HYOneModel alloc] initWithDictionary:dic];
+            HYDailyModel *model = [[HYDailyModel alloc] initWithDictionary:dic];
             [_dataArray addObject:model];
             
             HYLog(@"count =======     %ld",self.dataArray.count);
@@ -100,14 +96,13 @@ static NSString *ID = @"cell";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    HYoneCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
+    HYDailyCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
     if (!cell) {
-        cell = [[HYoneCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ID];
+        cell = [[HYDailyCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ID];
     }
     cell.model = [self.dataArray objectAtIndex:indexPath.row];
     return cell;
     
 }
-
 
 @end

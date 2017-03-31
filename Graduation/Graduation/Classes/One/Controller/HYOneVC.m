@@ -14,9 +14,15 @@
 #import "HYTwoTVC_Design.h"
 #import "HYThreeTVC_Photo.h"
 #import "HYFourTVC_Life.h"
+#import "HYDaiiyVC.h"
+#import "HYAllArtVC.h"
+#import "HYRingVC.h"
+#import "HYPackage.h"
+#import "HYShoesVC.h"
+#import "HYManVC.h"
 static NSString *ID = @"cell";
-#define categorys  @[@"推荐",@"原创",@"热门",@"美食"]
-//,@"生活",@"设计感",@"家居",@"礼物",@"阅读",@"运动健身",@"旅行户外"
+#define categorys  @[@"艺术",@"原创",@"摄影",@"生活",@"每天",@"精选",@"首饰",@"礼物",@"鞋履",@"男人"]
+//,@"运动健身",@"旅行户外"
 
 @interface HYOneVC ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -106,7 +112,7 @@ static NSString *ID = @"cell";
     CGFloat tableViewoffsetY = tableView.contentOffset.y;
     self.preTableViewOffsetY = tableViewoffsetY;
     
-    if (tableViewoffsetY >=0 && tableViewoffsetY <=126) {
+    if (tableViewoffsetY >=0 && tableViewoffsetY <=136) {
         self.segmentScrollView.frame = CGRectMake(0, HYValue(200) - tableViewoffsetY, HYScreenWidth, HYValue(40));
         self.cycleScrollView.frame = CGRectMake(0, 0 - tableViewoffsetY, HYScreenWidth, HYValue(200));
     }
@@ -217,16 +223,20 @@ static NSString *ID = @"cell";
         _bottomScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, HYScreenWidth, HYScreenHeight)];
         _bottomScrollView.delegate = self;
         _bottomScrollView.pagingEnabled = YES;
-        
-//        NSArray *colors = @[[UIColor redColor],[UIColor blueColor],[UIColor grayColor],[UIColor greenColor],[UIColor purpleColor],[UIColor orangeColor],[UIColor whiteColor],[UIColor redColor],[UIColor blueColor],[UIColor grayColor],[UIColor greenColor]];
-        
-            HYOneTVC *oneVC = [[HYOneTVC alloc] init];
-             HYTwoTVC_Design *twoVC = [[HYTwoTVC_Design alloc] init];
-             HYThreeTVC_Photo *threeVC = [[HYThreeTVC_Photo alloc] init];
-             HYFourTVC_Life *fourVC = [[HYFourTVC_Life alloc] init];
-            
 
-        for (int i = 0; i < categorys.count; i ++) {
+        HYOneTVC *oneVC = [[HYOneTVC alloc] init];
+        HYTwoTVC_Design *twoVC = [[HYTwoTVC_Design alloc] init];
+        HYThreeTVC_Photo *threeVC = [[HYThreeTVC_Photo alloc] init];
+        HYFourTVC_Life *fourVC = [[HYFourTVC_Life alloc] init];
+        HYDaiiyVC *daily = [[HYDaiiyVC alloc] init];
+        HYAllArtVC *allVC = [[HYAllArtVC alloc] init];
+        HYRingVC *RingVC = [[HYRingVC alloc] init];
+        HYPackage *PackageVC = [[HYPackage alloc] init];
+        HYShoesVC *ShoesVC = [[HYShoesVC alloc] init];
+        HYManVC *ManVC = [[HYManVC alloc] init];
+        NSArray *array = @[oneVC,twoVC,threeVC,fourVC,daily,allVC,RingVC,PackageVC,ShoesVC,ManVC];
+
+        for (int i = 0; i < array.count; i ++) {
             
             
             
@@ -234,22 +244,48 @@ static NSString *ID = @"cell";
             twoVC.view.frame = CGRectMake(HYScreenWidth * 1, 0, HYScreenWidth, HYScreenHeight);
             threeVC.view.frame = CGRectMake(HYScreenWidth * 2, 0, HYScreenWidth, HYScreenHeight);
             fourVC.view.frame = CGRectMake(HYScreenWidth * 3, 0, HYScreenWidth, HYScreenHeight);
+            daily.view.frame = CGRectMake(HYScreenWidth * 4, 0, HYScreenWidth, HYScreenHeight);
+            allVC.view.frame = CGRectMake(HYScreenWidth * 5, 0, HYScreenWidth, HYScreenHeight);
+            RingVC.view.frame = CGRectMake(HYScreenWidth * 6, 0, HYScreenWidth, HYScreenHeight);
+            PackageVC.view.frame = CGRectMake(HYScreenWidth * 7, 0, HYScreenWidth, HYScreenHeight);
+            ShoesVC.view.frame = CGRectMake(HYScreenWidth * 8, 0, HYScreenWidth, HYScreenHeight);
+            ManVC.view.frame = CGRectMake(HYScreenWidth * 9, 0, HYScreenWidth, HYScreenHeight);
+           
 //            oneVC.view.backgroundColor = colors[i];
             [self.bottomScrollView addSubview:oneVC.view];
             [self.bottomScrollView addSubview:twoVC.view];
             [self.bottomScrollView addSubview:threeVC.view];
             [self.bottomScrollView addSubview:fourVC.view];
+            [self.bottomScrollView addSubview:daily.view];
+            [self.bottomScrollView addSubview:allVC.view];
+            [self.bottomScrollView addSubview:RingVC.view];
+            [self.bottomScrollView addSubview:PackageVC.view];
+            [self.bottomScrollView addSubview:ShoesVC.view];
+            [self.bottomScrollView addSubview:ManVC.view];
             
             [self.controllers addObject:oneVC];
             [self.controllers addObject:twoVC];
             [self.controllers addObject:threeVC];
             [self.controllers addObject:fourVC];
+            [self.controllers addObject:daily];
+            [self.controllers addObject:allVC];
+            [self.controllers addObject:RingVC];
+            [self.controllers addObject:PackageVC];
+            [self.controllers addObject:ShoesVC];
+            [self.controllers addObject:ManVC];
+
             
             
             [self.tableViews addObject:oneVC.tableView];
             [self.tableViews addObject:twoVC.tableView];
             [self.tableViews addObject:threeVC.tableView];
             [self.tableViews addObject:fourVC.tableView];
+            [self.tableViews addObject:daily.tableView];
+            [self.tableViews addObject:allVC.tableView];
+            [self.tableViews addObject:RingVC.tableView];
+            [self.tableViews addObject:PackageVC.tableView];
+            [self.tableViews addObject:ShoesVC.tableView];
+            [self.tableViews addObject:ManVC.tableView];
             
             
             NSKeyValueObservingOptions options = NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld;
@@ -260,10 +296,16 @@ static NSString *ID = @"cell";
             [twoVC.tableView addObserver:self forKeyPath:@"contentOffset" options:options context:nil];
             [threeVC.tableView addObserver:self forKeyPath:@"contentOffset" options:options context:nil];
             [fourVC.tableView addObserver:self forKeyPath:@"contentOffset" options:options context:nil];
+            [daily.tableView addObserver:self forKeyPath:@"contentOffset" options:options context:nil];
+            [allVC.tableView addObserver:self forKeyPath:@"contentOffset" options:options context:nil];
+            [RingVC.tableView addObserver:self forKeyPath:@"contentOffset" options:options context:nil];
+            [PackageVC.tableView addObserver:self forKeyPath:@"contentOffset" options:options context:nil];
+            [ShoesVC.tableView addObserver:self forKeyPath:@"contentOffset" options:options context:nil];
+            [ManVC.tableView addObserver:self forKeyPath:@"contentOffset" options:options context:nil];
         }
         
         self.currentTableView = self.tableViews[0];
-        self.bottomScrollView.contentSize = CGSizeMake(self.controllers.count * HYScreenWidth, 0);
+        self.bottomScrollView.contentSize = CGSizeMake(self.controllers.count - 1 * HYScreenWidth, 0);
         
         
     }

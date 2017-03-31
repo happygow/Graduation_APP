@@ -11,8 +11,8 @@
 #import "HorizontalScrollCellDeleagte.h"
 
 typedef NS_ENUM(NSUInteger, CenterTableViewType) {
-    CenterTableViewTopic,
-    CenterTableViewGoods,
+    CenterTableViewTopic
+    
 };
 
 @protocol HorizontalTableViewDelegate <NSObject>

@@ -59,4 +59,12 @@ static const CGFloat HYTitleViewItemWidth = 64;
 #define photoURL @"http://api.artgoer.cn:8084/artgoer/api/v1/user/0/v3/topic/topicList?pageIndex=1&token=df68e038-143e-41cb-b554-456f78f184fc&topicLabelId=3"
 #define lifeURL @"http://api.artgoer.cn:8084/artgoer/api/v1/user/0/v3/topic/topicList?pageIndex=1&token=df68e038-143e-41cb-b554-456f78f184fc&topicLabelId=4"
 
+#define dailyURL @"http://design.zuimeia.com/api/v1/products/daily"
+
+#define allArtURL @"http://design.zuimeia.com/api/v1/products/category/70"
+#define RingURL @"http://design.zuimeia.com/api/v1/products/category/3"
+#define PackageURL @"http://design.zuimeia.com/api/v1/products/category/1"
+#define ShoesURL @"http://design.zuimeia.com/api/v1/products/category/2"
+#define ManURL @"http://design.zuimeia.com/api/v1/products/category/65"
+
 #endif /* Header_h */

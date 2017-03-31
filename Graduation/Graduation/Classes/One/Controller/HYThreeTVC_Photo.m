@@ -48,6 +48,7 @@ static NSString *ID = @"cell";
     _tableView.dataSource = self;
     [_tableView registerClass:[HYoneCell class] forCellReuseIdentifier:ID];
     UIView *tableHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, HYScreenWidth, HYValue(242))];
+    _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     tableHeaderView.backgroundColor = [UIColor whiteColor];
     _tableView.scrollIndicatorInsets = UIEdgeInsetsMake(HYValue(182), 0, 0, 0);
     _tableView.tableHeaderView = tableHeaderView;

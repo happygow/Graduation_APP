@@ -82,6 +82,14 @@
 		0538E0A21E8E2E5F006F2DFF /* HorzonItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0538E0A11E8E2E5F006F2DFF /* HorzonItemCell.m */; };
 		0538E0A61E8E2FBA006F2DFF /* DetailViewCtroller.m in Sources */ = {isa = PBXBuildFile; fileRef = 0538E0A51E8E2FBA006F2DFF /* DetailViewCtroller.m */; };
 		0538E0A91E8E305F006F2DFF /* BaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0538E0A81E8E305F006F2DFF /* BaseTableViewCell.m */; };
+		0538E0AC1E8E4C9D006F2DFF /* HYDaiiyVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0538E0AB1E8E4C9D006F2DFF /* HYDaiiyVC.m */; };
+		0538E0AF1E8E4CBF006F2DFF /* HYDailyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0538E0AE1E8E4CBF006F2DFF /* HYDailyModel.m */; };
+		0538E0B21E8E5069006F2DFF /* HYDailyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0538E0B11E8E5069006F2DFF /* HYDailyCell.m */; };
+		0538E0B51E8E5556006F2DFF /* HYAllArtVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0538E0B41E8E5556006F2DFF /* HYAllArtVC.m */; };
+		0538E0B81E8E557F006F2DFF /* HYRingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0538E0B71E8E557F006F2DFF /* HYRingVC.m */; };
+		0538E0BB1E8E55B3006F2DFF /* HYPackage.m in Sources */ = {isa = PBXBuildFile; fileRef = 0538E0BA1E8E55B3006F2DFF /* HYPackage.m */; };
+		0538E0BE1E8E55DE006F2DFF /* HYShoesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0538E0BD1E8E55DE006F2DFF /* HYShoesVC.m */; };
+		0538E0C11E8E5605006F2DFF /* HYManVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0538E0C01E8E5605006F2DFF /* HYManVC.m */; };
 		4ABD90C521B953A9CFC5AFAB /* libPods-Graduation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D990B262863CA3C3B4190270 /* libPods-Graduation.a */; };
 /* End PBXBuildFile section */
 
@@ -213,6 +221,22 @@
 		0538E0A51E8E2FBA006F2DFF /* DetailViewCtroller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewCtroller.m; sourceTree = "<group>"; };
 		0538E0A71E8E305F006F2DFF /* BaseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableViewCell.h; sourceTree = "<group>"; };
 		0538E0A81E8E305F006F2DFF /* BaseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewCell.m; sourceTree = "<group>"; };
+		0538E0AA1E8E4C9D006F2DFF /* HYDaiiyVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYDaiiyVC.h; sourceTree = "<group>"; };
+		0538E0AB1E8E4C9D006F2DFF /* HYDaiiyVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYDaiiyVC.m; sourceTree = "<group>"; };
+		0538E0AD1E8E4CBF006F2DFF /* HYDailyModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYDailyModel.h; sourceTree = "<group>"; };
+		0538E0AE1E8E4CBF006F2DFF /* HYDailyModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYDailyModel.m; sourceTree = "<group>"; };
+		0538E0B01E8E5069006F2DFF /* HYDailyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYDailyCell.h; sourceTree = "<group>"; };
+		0538E0B11E8E5069006F2DFF /* HYDailyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYDailyCell.m; sourceTree = "<group>"; };
+		0538E0B31E8E5556006F2DFF /* HYAllArtVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYAllArtVC.h; sourceTree = "<group>"; };
+		0538E0B41E8E5556006F2DFF /* HYAllArtVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYAllArtVC.m; sourceTree = "<group>"; };
+		0538E0B61E8E557F006F2DFF /* HYRingVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYRingVC.h; sourceTree = "<group>"; };
+		0538E0B71E8E557F006F2DFF /* HYRingVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYRingVC.m; sourceTree = "<group>"; };
+		0538E0B91E8E55B3006F2DFF /* HYPackage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYPackage.h; sourceTree = "<group>"; };
+		0538E0BA1E8E55B3006F2DFF /* HYPackage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYPackage.m; sourceTree = "<group>"; };
+		0538E0BC1E8E55DE006F2DFF /* HYShoesVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYShoesVC.h; sourceTree = "<group>"; };
+		0538E0BD1E8E55DE006F2DFF /* HYShoesVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYShoesVC.m; sourceTree = "<group>"; };
+		0538E0BF1E8E5605006F2DFF /* HYManVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYManVC.h; sourceTree = "<group>"; };
+		0538E0C01E8E5605006F2DFF /* HYManVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYManVC.m; sourceTree = "<group>"; };
 		61B79ED197D504C019FF7E1F /* Pods-Graduation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Graduation.release.xcconfig"; path = "Pods/Target Support Files/Pods-Graduation/Pods-Graduation.release.xcconfig"; sourceTree = "<group>"; };
 		8638621BE2182BA7D9D0554C /* Pods-Graduation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Graduation.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Graduation/Pods-Graduation.debug.xcconfig"; sourceTree = "<group>"; };
 		D990B262863CA3C3B4190270 /* libPods-Graduation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Graduation.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -381,6 +405,18 @@
 				0538E0691E8E22EE006F2DFF /* HYThreeTVC_Photo.m */,
 				0538E06A1E8E22EE006F2DFF /* HYFourTVC_Life.h */,
 				0538E06B1E8E22EE006F2DFF /* HYFourTVC_Life.m */,
+				0538E0AA1E8E4C9D006F2DFF /* HYDaiiyVC.h */,
+				0538E0AB1E8E4C9D006F2DFF /* HYDaiiyVC.m */,
+				0538E0B31E8E5556006F2DFF /* HYAllArtVC.h */,
+				0538E0B41E8E5556006F2DFF /* HYAllArtVC.m */,
+				0538E0B61E8E557F006F2DFF /* HYRingVC.h */,
+				0538E0B71E8E557F006F2DFF /* HYRingVC.m */,
+				0538E0B91E8E55B3006F2DFF /* HYPackage.h */,
+				0538E0BA1E8E55B3006F2DFF /* HYPackage.m */,
+				0538E0BC1E8E55DE006F2DFF /* HYShoesVC.h */,
+				0538E0BD1E8E55DE006F2DFF /* HYShoesVC.m */,
+				0538E0BF1E8E5605006F2DFF /* HYManVC.h */,
+				0538E0C01E8E5605006F2DFF /* HYManVC.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -405,6 +441,8 @@
 			children = (
 				05309D8B1E8108D300E6ADD5 /* HYOneModel.h */,
 				05309D8C1E8108D300E6ADD5 /* HYOneModel.m */,
+				0538E0AD1E8E4CBF006F2DFF /* HYDailyModel.h */,
+				0538E0AE1E8E4CBF006F2DFF /* HYDailyModel.m */,
 				05309D8D1E8108D300E6ADD5 /* HYTwoModel_Design.h */,
 				05309D8E1E8108D300E6ADD5 /* HYTwoModel_Design.m */,
 			);
@@ -418,6 +456,8 @@
 				05309D921E8108D300E6ADD5 /* HYHeaderView.m */,
 				05309D931E8108D300E6ADD5 /* HYoneCell.h */,
 				05309D941E8108D300E6ADD5 /* HYoneCell.m */,
+				0538E0B01E8E5069006F2DFF /* HYDailyCell.h */,
+				0538E0B11E8E5069006F2DFF /* HYDailyCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -743,6 +783,7 @@
 				05309E3F1E8108D400E6ADD5 /* HYLoadingView.m in Sources */,
 				0538E06D1E8E22EE006F2DFF /* HYOneTVC.m in Sources */,
 				05309E211E8108D300E6ADD5 /* HYVideoPlayVC.m in Sources */,
+				0538E0BB1E8E55B3006F2DFF /* HYPackage.m in Sources */,
 				05309E1B1E8108D300E6ADD5 /* HYTwoModel_Design.m in Sources */,
 				05309E1C1E8108D300E6ADD5 /* HYHeaderView.m in Sources */,
 				05309E221E8108D300E6ADD5 /* VideoListModel.m in Sources */,
@@ -751,21 +792,27 @@
 				0538E0A61E8E2FBA006F2DFF /* DetailViewCtroller.m in Sources */,
 				05309E751E810F2900E6ADD5 /* UIColor+FlatColors.m in Sources */,
 				0538E0A91E8E305F006F2DFF /* BaseTableViewCell.m in Sources */,
+				0538E0B51E8E5556006F2DFF /* HYAllArtVC.m in Sources */,
 				05309E291E8108D400E6ADD5 /* HYTwoCell.m in Sources */,
 				0538E06F1E8E22EE006F2DFF /* HYThreeTVC_Photo.m in Sources */,
 				05309E261E8108D300E6ADD5 /* videoDeatilVC.m in Sources */,
 				05309E201E8108D300E6ADD5 /* HYTwoViewDidClickVC.m in Sources */,
+				0538E0B81E8E557F006F2DFF /* HYRingVC.m in Sources */,
 				05309E761E810F2900E6ADD5 /* UIView+Addition.m in Sources */,
 				05309E391E8108D400E6ADD5 /* CustomNavigationController.m in Sources */,
 				0538E07E1E8E2448006F2DFF /* BaseModel.m in Sources */,
+				0538E0B21E8E5069006F2DFF /* HYDailyCell.m in Sources */,
 				0538E08E1E8E2494006F2DFF /* UIView+ViewConstraint.m in Sources */,
 				05309E3D1E8108D400E6ADD5 /* HYtabBarVC.m in Sources */,
+				0538E0C11E8E5605006F2DFF /* HYManVC.m in Sources */,
 				05309E3E1E8108D400E6ADD5 /* HYViewController.m in Sources */,
 				05309E1F1E8108D300E6ADD5 /* HYThreeVC.m in Sources */,
+				0538E0BE1E8E55DE006F2DFF /* HYShoesVC.m in Sources */,
 				05309E231E8108D300E6ADD5 /* CardCellCollectionViewCell.m in Sources */,
 				05309E3C1E8108D400E6ADD5 /* HYtabBar.m in Sources */,
 				0538E0701E8E22EE006F2DFF /* HYFourTVC_Life.m in Sources */,
 				05309E281E8108D400E6ADD5 /* HYTwoModel.m in Sources */,
+				0538E0AF1E8E4CBF006F2DFF /* HYDailyModel.m in Sources */,
 				05309E421E8108D400E6ADD5 /* UIButton+size.m in Sources */,
 				0538E09C1E8E2E0D006F2DFF /* HorizonScrollTableView.m in Sources */,
 				05309E3B1E8108D400E6ADD5 /* HYNavigationVC.m in Sources */,
@@ -784,6 +831,7 @@
 				0538E0921E8E259F006F2DFF /* HYFourVC.m in Sources */,
 				05309E411E8108D400E6ADD5 /* UIBarButtonItem+HYExtenssion.m in Sources */,
 				05309E1A1E8108D300E6ADD5 /* HYOneModel.m in Sources */,
+				0538E0AC1E8E4C9D006F2DFF /* HYDaiiyVC.m in Sources */,
 				05309E441E8108D400E6ADD5 /* UIView+HYExtension.m in Sources */,
 				0538E07C1E8E2448006F2DFF /* CollectModel.m in Sources */,
 			);

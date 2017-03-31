@@ -81,8 +81,8 @@
     _horizonTableView = [[HorizonScrollTableView alloc] initWithFrame: CGRectMake(0, 0, HYScreenWidth, HYScreenHeight - 64)];
     _horizonTableView.delegate = self;
     [self.view addSubview:_horizonTableView];
-     _horizonTableView.dataSource = [self loadDataByType:CenterTableViewGoods];
-        _horizonTableView.type = CenterTableViewGoods;
+     _horizonTableView.dataSource = [self loadDataByType:CenterTableViewTopic];
+        _horizonTableView.type = CenterTableViewTopic;
     
 }
 
@@ -93,25 +93,25 @@
 #pragma mark - HorizontalTableViewDelegate
 - (void)horizontalTableView:(CenterTableViewType)type didSelectItemAtContentIndexPath:(NSIndexPath *)contentIndexPath inTableViewIndexPath:(NSIndexPath *)tableViewIndexPath
 {
-    if (contentIndexPath.row == 0 || contentIndexPath.row ==6 ) {
-        
-        if (type == CenterTableViewTopic)
-        {
-            // 跳转的主题列表
-            
-        }else
-        {
-            //跳转的主题单品列表
-        }
-    }else
-    {
+//    if (contentIndexPath.row == 0 || contentIndexPath.row ==6 ) {
+//        
+//        if (type == CenterTableViewTopic)
+//        {
+//            // 跳转的主题列表
+//            
+//        }else
+//        {
+//            //跳转的主题单品列表
+//        }
+//    }else
+//    {
         DetailViewCtroller *detailVC = [[DetailViewCtroller alloc] init];
         CategoryModel *model = _dataSouce[tableViewIndexPath.row];
         CollectModel *likeModel =  model.datalist[contentIndexPath.row];
         detailVC.title = likeModel.title;
         detailVC.view.backgroundColor = likeModel.backgroundColor;
         [self.navigationController pushViewController:detailVC animated:YES];
-    }
+//    }
     
 }
 

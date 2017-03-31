@@ -1,16 +1,16 @@
+
 //
-//  HYoneCell.m
-//  AppOfArt
+//  HYDailyCell.m
+//  Graduation
 //
-//  Created by LeeBruce on 17/3/13.
+//  Created by LeeBruce on 17/3/31.
 //  Copyright © 2017年 zhang. All rights reserved.
 //
 
-#import "HYoneCell.h"
-@interface HYoneCell()
+#import "HYDailyCell.h"
 
-@end
-@implementation HYoneCell
+@implementation HYDailyCell
+
 
 -(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
@@ -18,13 +18,10 @@
         
         [self.contentView addSubview:self.topicimageView];
         [self.contentView addSubview:self.titleLabel];
-        [self.contentView addSubview:self.viewCount];
-        self.contentView.layer.masksToBounds = YES;
-        self.contentView.layer.cornerRadius = HYValue(50);
-        self.contentView.layer.borderColor = (__bridge CGColorRef _Nullable)([UIColor redColor]);
-        self.contentView.layer.borderWidth = HYValue(100);
+        [self.contentView addSubview:self.likeCount];
         
-//        self.selectionStyle = UITableViewCellSelectionStyleNone;
+        
+        self.selectionStyle = UITableViewCellSelectionStyleNone;
         
     }
     return self;
@@ -47,7 +44,7 @@
         make.top.mas_equalTo(_topicimageView.mas_bottom).offset(20);
     }];
     
-    [_viewCount mas_makeConstraints:^(MASConstraintMaker *make) {
+    [_likeCount mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.mas_equalTo(self);
         make.top.mas_equalTo(_topicimageView.mas_bottom).offset(40);
     }];
@@ -56,13 +53,13 @@
     
     
 }
-- (void)setModel:(HYOneModel *)model
+- (void)setModel:(HYDailyModel *)model
 {
     _model = model;
-    HYLog(@"pic url ==== %@%@%@",model.picUrl,model.topic,model.viewCount);
-    [self.topicimageView sd_setImageWithURL:[NSURL URLWithString:model.picUrl]];
+//    HYLog(@"pic url ==== %@%@%@",model.picUrl,model.topic,model.viewCount);
+    [self.topicimageView sd_setImageWithURL:[NSURL URLWithString:model.images[0]]];
     self.titleLabel.text = model.topic;
-    self.viewCount.text = [NSString stringWithFormat:@"浏览量:%@",self.model.viewCount];
+    self.likeCount.text = [NSString stringWithFormat:@"浏览量:%@",model.likenum];
     
 }
 
@@ -94,29 +91,16 @@
 
 //
 - (UILabel *)viewCount {
-    if (!_viewCount) {
-        _viewCount = [[UILabel alloc] init];
-        _viewCount.textColor = [UIColor grayColor];
-        _viewCount.font = [UIFont systemFontOfSize:11];
+    if (!_likeCount) {
+        _likeCount = [[UILabel alloc] init];
+        _likeCount.textColor = [UIColor grayColor];
+        _likeCount.font = [UIFont systemFontOfSize:11];
         //        _viewCount.text = @"12121212";
     }
-    return _viewCount;
+    return _likeCount;
 }
 
 
 
-
-
-
-- (void)awakeFromNib {
-    [super awakeFromNib];
-    // Initialization code
-}
-
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-    
-    // Configure the view for the selected state
-}
 
 @end
