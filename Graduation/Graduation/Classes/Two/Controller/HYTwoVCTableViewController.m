@@ -59,9 +59,26 @@ static NSString *const ID = @"register";
     }
     return _selectDict;
 }
+- (void)setBackgroundImage:(UIImage *)backgroundImage forBarMetrics:(UIBarMetrics)barMetrics
+{
+    
+}
+- (BOOL)prefersStatusBarHidden
+{
+    return NO;
+}
+
+- (UIStatusBarStyle)preferredStatusBarStyle{
+    
+    return UIStatusBarStyleLightContent;
+    
+    
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+//    self.preferredStatusBarStyle = 1;
+
     self.jz_wantsNavigationBarVisible = NO;
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
@@ -88,6 +105,8 @@ static NSString *const ID = @"register";
         [self loadData];
     }];
     self.tableView.mj_header = header;
+    [self.tableView.mj_header endRefreshing];
+    [self.tableView.mj_footer endRefreshing];
     MJRefreshAutoNormalFooter *footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
         [self loadMoreData];
     }];
@@ -108,8 +127,8 @@ static NSString *const ID = @"register";
 
                 [_dataArray addObject:model];
     
-                  HYLog(@" mode; == %@",_dataArray);
-                HYLog(@" dataarray == %ld",_dataArray.count);
+//                HYLog(@" mode; == %@",_dataArray);
+//                HYLog(@" dataarray == %ld",_dataArray.count);
 
                 
             }
@@ -118,6 +137,9 @@ static NSString *const ID = @"register";
         
         [SVProgressHUD dismiss];
          [self.tableView reloadData];
+        [self.tableView.mj_header endRefreshing];
+        [self.tableView.mj_footer endRefreshing];
+
     } fail:^(NSError *error) {
         
     }];
@@ -152,7 +174,7 @@ static NSString *const ID = @"register";
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return HYValue(HYScreenHeight/ 1.9);
+    return HYValue(HYScreenHeight/ 1.7);
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {

@@ -70,7 +70,7 @@ static NSString *ID = @"cell";
             HYOneModel *model = [[HYOneModel alloc] initWithDictionary:dic];
             [_dataArray addObject:model];
             
-            HYLog(@"count =======     %ld",self.dataArray.count);
+//            HYLog(@"count =======     %ld",self.dataArray.count);
             
             
         }

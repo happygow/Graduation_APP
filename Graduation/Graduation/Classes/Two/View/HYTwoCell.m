@@ -26,7 +26,7 @@ static int cellCount;
         
         
         // coverImage
-        self.picture = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, width, HYValue(HYScreenHeight/ 1.9))];
+        self.picture = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, width, HYValue(HYScreenHeight/ 1.7))];
         
         self.picture.image = [UIImage imageNamed:@"pic"];
         [self.contentView addSubview:self.picture];

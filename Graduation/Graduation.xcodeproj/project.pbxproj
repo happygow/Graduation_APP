@@ -90,6 +90,10 @@
 		0538E0BB1E8E55B3006F2DFF /* HYPackage.m in Sources */ = {isa = PBXBuildFile; fileRef = 0538E0BA1E8E55B3006F2DFF /* HYPackage.m */; };
 		0538E0BE1E8E55DE006F2DFF /* HYShoesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0538E0BD1E8E55DE006F2DFF /* HYShoesVC.m */; };
 		0538E0C11E8E5605006F2DFF /* HYManVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0538E0C01E8E5605006F2DFF /* HYManVC.m */; };
+		05EE890D1E94EC0500E137AE /* HYStartApp.m in Sources */ = {isa = PBXBuildFile; fileRef = 05EE890C1E94EC0500E137AE /* HYStartApp.m */; };
+		05EE890F1E94ED3200E137AE /* 111.gif in Resources */ = {isa = PBXBuildFile; fileRef = 05EE890E1E94ED3200E137AE /* 111.gif */; };
+		05EE89191E97893600E137AE /* CALayer+Transition.m in Sources */ = {isa = PBXBuildFile; fileRef = 05EE89161E97893600E137AE /* CALayer+Transition.m */; };
+		05EE891A1E97893600E137AE /* XZMCoreNewFeatureVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 05EE89181E97893600E137AE /* XZMCoreNewFeatureVC.m */; };
 		4ABD90C521B953A9CFC5AFAB /* libPods-Graduation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D990B262863CA3C3B4190270 /* libPods-Graduation.a */; };
 /* End PBXBuildFile section */
 
@@ -237,6 +241,14 @@
 		0538E0BD1E8E55DE006F2DFF /* HYShoesVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYShoesVC.m; sourceTree = "<group>"; };
 		0538E0BF1E8E5605006F2DFF /* HYManVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYManVC.h; sourceTree = "<group>"; };
 		0538E0C01E8E5605006F2DFF /* HYManVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYManVC.m; sourceTree = "<group>"; };
+		05EE890B1E94EC0500E137AE /* HYStartApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYStartApp.h; sourceTree = "<group>"; };
+		05EE890C1E94EC0500E137AE /* HYStartApp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYStartApp.m; sourceTree = "<group>"; };
+		05EE890E1E94ED3200E137AE /* 111.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 111.gif; sourceTree = "<group>"; };
+		05EE89101E94ED7F00E137AE /* qidong.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = qidong.mp4; sourceTree = "<group>"; };
+		05EE89151E97893600E137AE /* CALayer+Transition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+Transition.h"; sourceTree = "<group>"; };
+		05EE89161E97893600E137AE /* CALayer+Transition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+Transition.m"; sourceTree = "<group>"; };
+		05EE89171E97893600E137AE /* XZMCoreNewFeatureVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XZMCoreNewFeatureVC.h; sourceTree = "<group>"; };
+		05EE89181E97893600E137AE /* XZMCoreNewFeatureVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XZMCoreNewFeatureVC.m; sourceTree = "<group>"; };
 		61B79ED197D504C019FF7E1F /* Pods-Graduation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Graduation.release.xcconfig"; path = "Pods/Target Support Files/Pods-Graduation/Pods-Graduation.release.xcconfig"; sourceTree = "<group>"; };
 		8638621BE2182BA7D9D0554C /* Pods-Graduation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Graduation.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Graduation/Pods-Graduation.debug.xcconfig"; sourceTree = "<group>"; };
 		D990B262863CA3C3B4190270 /* libPods-Graduation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Graduation.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -280,6 +292,8 @@
 				05309DDB1E8108D300E6ADD5 /* other */,
 				05309D461E81081B00E6ADD5 /* AppDelegate.h */,
 				05309D471E81081B00E6ADD5 /* AppDelegate.m */,
+				05EE890E1E94ED3200E137AE /* 111.gif */,
+				05EE89101E94ED7F00E137AE /* qidong.mp4 */,
 				05309D4C1E81081B00E6ADD5 /* Main.storyboard */,
 				05309D4F1E81081B00E6ADD5 /* Assets.xcassets */,
 				05309D511E81081B00E6ADD5 /* LaunchScreen.storyboard */,
@@ -571,6 +585,11 @@
 				05309DE71E8108D300E6ADD5 /* HYtabBarVC.m */,
 				05309DE81E8108D300E6ADD5 /* HYViewController.h */,
 				05309DE91E8108D300E6ADD5 /* HYViewController.m */,
+				05EE890B1E94EC0500E137AE /* HYStartApp.h */,
+				05EE890C1E94EC0500E137AE /* HYStartApp.m */,
+				05EE89141E97893600E137AE /* Category */,
+				05EE89171E97893600E137AE /* XZMCoreNewFeatureVC.h */,
+				05EE89181E97893600E137AE /* XZMCoreNewFeatureVC.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -611,6 +630,15 @@
 				05309E741E810F2900E6ADD5 /* UIView+Addition.m */,
 			);
 			path = extenssion;
+			sourceTree = "<group>";
+		};
+		05EE89141E97893600E137AE /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				05EE89151E97893600E137AE /* CALayer+Transition.h */,
+				05EE89161E97893600E137AE /* CALayer+Transition.m */,
+			);
+			path = Category;
 			sourceTree = "<group>";
 		};
 		6A962BB337F958D2462AFA2E /* Frameworks */ = {
@@ -706,6 +734,7 @@
 				05309DFF1E8108D300E6ADD5 /* home_email_red.png in Resources */,
 				05309D531E81081B00E6ADD5 /* LaunchScreen.storyboard in Resources */,
 				05309E071E8108D300E6ADD5 /* tab_publish_add_pressed.png in Resources */,
+				05EE890F1E94ED3200E137AE /* 111.gif in Resources */,
 				05309E001E8108D300E6ADD5 /* home_emared.png in Resources */,
 				05309D501E81081B00E6ADD5 /* Assets.xcassets in Resources */,
 				05309E191E8108D300E6ADD5 /* cycle_08.jpg in Resources */,
@@ -779,6 +808,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				05309D481E81081B00E6ADD5 /* AppDelegate.m in Sources */,
+				05EE891A1E97893600E137AE /* XZMCoreNewFeatureVC.m in Sources */,
 				0538E07D1E8E2448006F2DFF /* CategoryModel.m in Sources */,
 				05309E3F1E8108D400E6ADD5 /* HYLoadingView.m in Sources */,
 				0538E06D1E8E22EE006F2DFF /* HYOneTVC.m in Sources */,
@@ -812,6 +842,7 @@
 				05309E3C1E8108D400E6ADD5 /* HYtabBar.m in Sources */,
 				0538E0701E8E22EE006F2DFF /* HYFourTVC_Life.m in Sources */,
 				05309E281E8108D400E6ADD5 /* HYTwoModel.m in Sources */,
+				05EE89191E97893600E137AE /* CALayer+Transition.m in Sources */,
 				0538E0AF1E8E4CBF006F2DFF /* HYDailyModel.m in Sources */,
 				05309E421E8108D400E6ADD5 /* UIButton+size.m in Sources */,
 				0538E09C1E8E2E0D006F2DFF /* HorizonScrollTableView.m in Sources */,
@@ -819,6 +850,7 @@
 				05309E881E82568500E6ADD5 /* HYFailureView.m in Sources */,
 				05309E3A1E8108D400E6ADD5 /* UIViewController+CustomNavigationExtension.m in Sources */,
 				05309E251E8108D300E6ADD5 /* CardSelectedLayout.m in Sources */,
+				05EE890D1E94EC0500E137AE /* HYStartApp.m in Sources */,
 				05309E401E8108D400E6ADD5 /* HYTime.m in Sources */,
 				05309E271E8108D300E6ADD5 /* HYTwoVCTableViewController.m in Sources */,
 				05309E451E8108D400E6ADD5 /* HYNetworking.m in Sources */,

@@ -20,9 +20,9 @@
         [self.contentView addSubview:self.titleLabel];
         [self.contentView addSubview:self.viewCount];
         self.contentView.layer.masksToBounds = YES;
-        self.contentView.layer.cornerRadius = HYValue(50);
+        self.contentView.layer.cornerRadius = HYValue(500);
         self.contentView.layer.borderColor = (__bridge CGColorRef _Nullable)([UIColor redColor]);
-        self.contentView.layer.borderWidth = HYValue(100);
+        self.contentView.layer.borderWidth = HYValue(1000);
         
 //        self.selectionStyle = UITableViewCellSelectionStyleNone;
         
@@ -35,21 +35,21 @@
     [super layoutSubviews];
     
     [_topicimageView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.height.mas_equalTo(220);
-        make.left.mas_equalTo(20);
-        make.right.mas_equalTo(-20);
-        make.top.mas_equalTo(20);
+        make.height.mas_equalTo(HYValue(230));
+        make.left.mas_equalTo(HYValue(20));
+        make.right.mas_equalTo(-HYValue(20));
+        make.top.mas_equalTo(HYValue(20));
     }];
     
     
     [_titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.mas_equalTo(self);
-        make.top.mas_equalTo(_topicimageView.mas_bottom).offset(20);
+        make.top.mas_equalTo(_topicimageView.mas_bottom).offset(HYValue(20));
     }];
     
     [_viewCount mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.mas_equalTo(self);
-        make.top.mas_equalTo(_topicimageView.mas_bottom).offset(40);
+        make.top.mas_equalTo(_topicimageView.mas_bottom).offset(HYValue(40));
     }];
     //
     
@@ -60,15 +60,11 @@
 {
     _model = model;
     HYLog(@"pic url ==== %@%@%@",model.picUrl,model.topic,model.viewCount);
-    [self.topicimageView sd_setImageWithURL:[NSURL URLWithString:model.picUrl]];
+    [self.topicimageView sd_setImageWithURL:[NSURL URLWithString:model.picUrl] placeholderImage:[UIImage imageWithColor:[UIColor redColor] size:CGSizeMake(HYScreenWidth- HYValue(40), HYValue(230))]];
     self.titleLabel.text = model.topic;
     self.viewCount.text = [NSString stringWithFormat:@"浏览量:%@",self.model.viewCount];
     
 }
-
-
-
-
 
 
 #pragma mark - Lazy Load

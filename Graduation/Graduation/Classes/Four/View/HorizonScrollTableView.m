@@ -139,7 +139,6 @@ NSString *const cellIdentifier = @"HorzonItemCell";
     return cell;
     
 }
-
 // tableView 的顶部视图
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
@@ -187,6 +186,7 @@ NSString *const cellIdentifier = @"HorzonItemCell";
         
         [_delegate horizontalTableView:_type didSelectItemAtContentIndexPath:contentIndexPath inTableViewIndexPath:tableViewIndexPath];
     }
+
 }
 
 @end

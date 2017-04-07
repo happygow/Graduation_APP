@@ -60,23 +60,24 @@
     CGFloat tableViewOffsetY = tableview.contentOffset.y;
     
     UIColor *color = [UIColor whiteColor];
-    CGFloat alpha = MIN(1, tableViewOffsetY / 136);
+    HYLog(@"offsety === %f",tableViewOffsetY);
+    CGFloat alpha = MIN(1, tableViewOffsetY / HYValue(107));
     self.backgroundColor = [color colorWithAlphaComponent:alpha];
     
-    if (tableViewOffsetY < 125) {
+    if (tableViewOffsetY < HYValue(120)) {
         [UIView animateWithDuration:0.25 animations:^{
             self.searchBtn.hidden = NO;
             [self.messageBtn setBackgroundImage:[UIImage imageNamed:@"home_email_block"] forState:UIControlStateNormal];
-            self.searchBar.frame = CGRectMake(-(self.width - HYValue(60)), HYValue(30), self.width - HYValue(80), HYValue(30));
+            self.searchBar.frame = CGRectMake(-(self.width - HYValue(60)), HYValue(25), self.width - HYValue(80), HYValue(30));
             self.messageBtn.alpha = 1 - alpha;
-            self.searchBar.alpha = 1 - alpha;
+//            self.searchBar.alpha = 1 - alpha;
             
         }];
     }
-    else if (tableViewOffsetY >= 125)
+    else if (tableViewOffsetY >= HYValue(120))
     {
         [UIView animateWithDuration:0.25 animations:^{
-            self.searchBar.frame = CGRectMake(HYValue(20), HYValue(30), self.width - HYValue(80), HYValue(30));
+            self.searchBar.frame = CGRectMake(HYValue(20), HYValue(25), self.width - HYValue(80), HYValue(30));
             self.messageBtn.alpha = 1;
             self.searchBtn.hidden = YES;
             
@@ -91,15 +92,13 @@
 {
     if (!_searchBar) {
         
-        _searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(-(self.width-60), HYValue(28), self.width-HYValue(80), HYValue(30))];
+        _searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(-(self.width-HYValue(60)), HYValue(25), self.width-HYValue(80), HYValue(30))];
         _searchBar.placeholder = @"点击搜索";
+        
         _searchBar.layer.cornerRadius = HYValue(6);
         _searchBar.layer.masksToBounds = YES;
-        
-        [_searchBar setSearchFieldBackgroundImage:[UIImage imageWithColor:[UIColor clearColor] size:_searchBar.size] forState:UIControlStateNormal];
-        
-        [_searchBar setBackgroundImage:[UIImage imageWithColor:[[UIColor darkGrayColor] colorWithAlphaComponent:0.3] size:_searchBar.size] ];
-        
+        [_searchBar setSearchFieldBackgroundImage:[UIImage imageWithColor:[UIColor lightGrayColor] size:_searchBar.size] forState:UIControlStateNormal];
+        [_searchBar setBackgroundImage:[UIImage imageWithColor:[[UIColor lightGrayColor] colorWithAlphaComponent:1] size:_searchBar.size] ];
         UITextField *searchField = [_searchBar valueForKey:@"_searchField"];
         searchField.textColor = [UIColor whiteColor];
         [searchField setValue:[UIColor whiteColor] forKeyPath:@"_placeholderLabel.textColor"];
@@ -111,7 +110,7 @@
 - (UIButton *)searchBtn
 {
     if (!_searchBtn) {
-        _searchBtn = [[UIButton alloc] initWithFrame:CGRectMake(HYValue(20), HYValue(20), HYValue(30), HYValue(30))];
+        _searchBtn = [[UIButton alloc] initWithFrame:CGRectMake(HYValue(20), HYValue(25), HYValue(30), HYValue(30))];
         [_searchBtn setBackgroundImage:[UIImage imageNamed:@"home_search_icon"] forState:UIControlStateNormal];
         
     }
@@ -122,7 +121,7 @@
 - (UIButton *)messageBtn
 {
     if (!_messageBtn) {
-        _messageBtn = [[UIButton alloc] initWithFrame:CGRectMake(self.width - HYValue(45), HYValue(30), HYValue(30), HYValue(30))];
+        _messageBtn = [[UIButton alloc] initWithFrame:CGRectMake(self.width - HYValue(45), HYValue(25), HYValue(30), HYValue(30))];
         [_messageBtn setBackgroundImage:[UIImage imageNamed:@"home_email_block"] forState:UIControlStateNormal];
     }
     return _messageBtn;
