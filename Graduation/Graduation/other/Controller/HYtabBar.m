@@ -15,7 +15,7 @@
     [super layoutSubviews];
     
     CGFloat buttonY = 0;
-    CGFloat buttonW = self.frame.size.width / 4;
+    CGFloat buttonW = self.frame.size.width / 5;
     CGFloat buttonH = self.frame.size.height;
     NSInteger index = 0;
     for (UIView *button in self.subviews) {

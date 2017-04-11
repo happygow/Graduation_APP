@@ -64,7 +64,7 @@ static NSString *ID = @"cell";
     _dataArray = [[NSMutableArray alloc]init];
     collectionHeight = self.view.bounds.size.height;
 
-    self.cardLayoutStyle1 =  [[CardLayout alloc]initWithOffsetY:400];
+    self.cardLayoutStyle1 =  [[CardLayout alloc]initWithOffsetY:HYValue(400)];
     self.cardLayout = self.cardLayoutStyle1;
     ((CardLayout*)self.cardLayoutStyle1).delegate = self;
     
@@ -72,8 +72,8 @@ static NSString *ID = @"cell";
     [_cardCollectionView registerClass:[CardCellCollectionViewCell class] forCellWithReuseIdentifier:ID];
     _cardCollectionView.delegate = self;
     _cardCollectionView.dataSource = self;
-    [_cardCollectionView setContentOffset:CGPointMake(0, 400)];
-    _cardCollectionView.backgroundColor = RGBColorC(0x2D3142);
+    [_cardCollectionView setContentOffset:CGPointMake(0, 10)];
+    _cardCollectionView.backgroundColor = [UIColor redColor];
   
     [self loadDate];
 
@@ -105,12 +105,8 @@ static NSString *ID = @"cell";
 
 - (void)loadDate
 {
-//    NSString *str = [self changeTime:[self getdate]];
-//    NSString *urlStr = [NSString stringWithFormat:dailyList,10,str];
-   
-    
     [SVProgressHUD setDefaultStyle:SVProgressHUDStyleDark];
-    [SVProgressHUD showWithStatus:@"数据正在加载中哦..."];
+    [SVProgressHUD showWithStatus:@"数据正在加载中了哦......"];
     
     
     
@@ -124,7 +120,6 @@ static NSString *ID = @"cell";
         for (NSDictionary *dic  in videoListDict) {
             VideoListModel *model = [[VideoListModel alloc] init];
             [_dataArray addObject:model];
-            HYLog(@"count1 ==  %ld",_dataArray.count );
             
             model.videoTitle = [NSString stringWithFormat:@"%@",dic[@"title"]];
             model.ImageView = [NSString stringWithFormat:@"%@",dic[@"coverForDetail"]];
@@ -166,8 +161,6 @@ static NSString *ID = @"cell";
                 model.duration = [NSString stringWithFormat:@"%@",dict[@"duration"]];
                 model.videoDescription = [NSString stringWithFormat:@"%@",dict[@"description"]];
                 model.playUrl = [NSString stringWithFormat:@"%@",dict[@"playUrl"]];
-//                model.alphaCoverImg = [NSString stringWithFormat:@"%@",dict[@""]];
-//                model.alphaCoverImg = [NSString stringWithFormat:@"%@",dict[@""]];
                 
             }
             [self.cardCollectionView reloadData];

@@ -11,6 +11,7 @@
 #import "HYTwoVCTableViewController.h"
 #import "HYthreeVC.h"
 #import "HYfourVC.h"
+#import "HYFiveVC.h"
 #import "HYtabBar.h"
 #import "CustomNavigationController.h"
 
@@ -60,7 +61,7 @@
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
     
-        if ([self isKindOfClass:[HYOneVC class]]||[self isKindOfClass:[HYTwoVCTableViewController class]]||[self isKindOfClass:[HYThreeVC class]]||[self isKindOfClass:[HYFourVC class]]) {
+        if ([self isKindOfClass:[HYOneVC class]]||[self isKindOfClass:[HYTwoVCTableViewController class]]||[self isKindOfClass:[HYThreeVC class]]||[self isKindOfClass:[HYFourVC class]] ||[self isKindOfClass:[HYFiveVC class]]) {
             self.navigationController.interactivePopGestureRecognizer.enabled = NO;
             
         }
@@ -101,6 +102,7 @@
     [self setupChildVc:[[HYThreeVC alloc] init] title:@"three" image:@"tabBar_me_icon" selectedImage:@"tabBar_me_click_icon"];
     
     [self setupChildVc:[[HYFourVC alloc] init] title:@"four" image:@"tabBar_friendTrends_icon" selectedImage:@"tabBar_friendTrends_click_icon"];
+     [self setupChildVc:[[HYFiveVC alloc] init] title:@"five" image:@"tabBar_friendTrends_icon" selectedImage:@"tabBar_friendTrends_click_icon"];
     
     // 更换tabBar
     [self setValue:[[HYtabBar alloc] init] forKeyPath:@"tabBar"];

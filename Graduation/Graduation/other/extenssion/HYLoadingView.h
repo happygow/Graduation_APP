@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HYLoadingView : UIImageView
+@interface HYLoadingView : UIView
 
 
 - (instancetype)initWithFrame:(CGRect)frame backgroundColor:(UIColor *)color;

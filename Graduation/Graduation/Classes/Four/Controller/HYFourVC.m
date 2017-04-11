@@ -7,119 +7,107 @@
 //
 
 #import "HYFourVC.h"
-#import "HorizonScrollTableView.h"
-#import "CategoryModel.h"
-#import "CollectModel.h"
-#import "DetailViewCtroller.h"
+#import "HYSegmentView.h"
+#import "HYSchoolMore.h"
+#import "HYSchoolWebVC.h"
+#import "HYFiveVC.h"
 
-#define BACK(block) dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), block)
-#define MAIN(block) dispatch_async(dispatch_get_main_queue(),block)
-#define AFTER(time, block)  dispatch_after(dispatch_time(DISPATCH_TIME_NOW, time * NSEC_PER_SEC), dispatch_get_main_queue(), block);
-
-@interface HYFourVC ()<HorizontalTableViewDelegate>
-{
-    NSMutableArray *_dataSouce;
-    HorizonScrollTableView *_horizonTableView;
-}
-
-
+@interface HYFourVC()<UITableViewDelegate, UITableViewDataSource>
+// tableview
+@property (nonatomic , strong) UITableView *tableview;
 @end
-@implementation HYFourVC
 
+@implementation HYFourVC
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.jz_wantsNavigationBarVisible = YES;
     self.navigationItem.title = @"影像";
-    self.view.backgroundColor = [UIColor whiteColor];
-    [self setUpHorizontalScrollView];
+    self.jz_navigationBarBackgroundAlpha = 1;
+//    self.isHiddenBack = YES;
+    self.automaticallyAdjustsScrollViewInsets = NO;
+
+    
+    self.tableview = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, HYScreenWidth, HYScreenHeight - 64) style:UITableViewStylePlain];
+    self.tableview.backgroundColor = [UIColor lightGrayColor];
+    [self.view addSubview:self.tableview];
+    
+    self.tableview.delegate = self;
+    self.tableview.dataSource = self;
+    self.tableview.separatorStyle = UITableViewCellSeparatorStyleNone;
+    
 }
 
 
 
-- (UIColor *)randomColor {
-    CGFloat hue = ( arc4random() % 256 / 256.0 );  //  0.0 to 1.0
-    CGFloat saturation = ( arc4random() % 128 / 256.0 ) + 0.5;  //  0.5 to 1.0, away from white
-    CGFloat brightness = ( arc4random() % 128 / 256.0 ) + 0.5;  //  0.5 to 1.0, away from black
-    return [UIColor colorWithHue:hue saturation:saturation brightness:brightness alpha:1];
-}
 
-
-- (NSMutableArray *)loadDataByType:(CenterTableViewType )type;
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    
-    NSArray *nameArray = @[@"办公",@"厨具",@"创意",@"护肤",@"家居",@"美食",@"数码",@"卫浴",@"运动",@"杂货",@"植物",@"主题"];
-    
-    NSMutableArray *colorArray = [NSMutableArray arrayWithCapacity:10];
-    for (int i =0; i< 5; i++) {
-        [colorArray addObject:[self randomColor]];
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 3;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return (HYScreenWidth - HYValue(20)) * 277 / 710 + HYValue(23);
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [[UITableViewCell alloc]initWithFrame:CGRectMake(0, 0, HYScreenWidth, (HYScreenWidth - HYValue(20)) * 277 / 710 + HYValue(23))];
+    CGFloat W = HYScreenWidth - HYValue(20);
+    CGFloat H = W * 277 / 710;
+    UIImageView *imag = [[UIImageView alloc]initWithFrame:CGRectMake(HYValue(10), HYValue(15), W, H)];
+    if (indexPath.row == 0)
+    {
+        imag.image = [UIImage imageNamed:@"homework"];
+    }
+    else if (indexPath.row == 1)
+    {
+        imag.image = [UIImage imageNamed:@"achievementShow"];
+        
+    }
+    else
+    {
+        imag.image = [UIImage imageNamed:@"studySurvey"];
     }
     
-    NSMutableArray *array = [NSMutableArray arrayWithCapacity:10];
-    [nameArray enumerateObjectsUsingBlock:^(NSString *objname, NSUInteger idx, BOOL *stop) {
-        CategoryModel *categoty = [[CategoryModel alloc] init];
-        categoty.name = objname;
+    // 这里 的颜色 和背景  设置为一样的  就可以看出分割了
+        cell.contentView.backgroundColor = [UIColor lightGrayColor];
+    cell.selectionStyle = 0;
+    [cell.contentView addSubview:imag];
+    return cell;
+}
+
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.row == 0)
+    {
+        HYLog(@"0");
+        HYSchoolWebVC *manage = [[HYSchoolWebVC alloc] init];
+        manage.jz_navigationBarBackgroundAlpha = 1;
+        [self.navigationController pushViewController:manage animated:YES];
         
-        NSMutableArray *itemArray = [NSMutableArray arrayWithCapacity:10];
-        for (int i = 0 ; i< 5; i++) {
-            CollectModel *item = [[CollectModel alloc] init];
-            item.title = [NSString stringWithFormat:@"%@--(%ld)",objname,i*idx];
-//            if (type != CenterTableViewTopic) {
-                item.price = [NSString stringWithFormat:@"￥%ld",(i+1)*(idx+1)*2];
-//            }
-            item.backgroundColor = colorArray[i];
-            [itemArray addObject:item];
-        }
-        categoty.datalist = itemArray;
-        [array addObject:categoty];
-    }];
-    return  array;
-    
+    }
+    else if (indexPath.row == 1)
+    {
+        HYLog(@"1");
+        
+        HYFiveVC *manage = [[HYFiveVC alloc] init];
+        manage.jz_navigationBarBackgroundAlpha = 1;
+        [self.navigationController pushViewController:manage animated:YES];
+        
+    }
+    else if (indexPath.row == 2)
+    {
+        HYLog(@"2");
+
+    }
+
 }
-- (void)setUpHorizontalScrollView
-{
-
-    _horizonTableView = [[HorizonScrollTableView alloc] initWithFrame: CGRectMake(0, 0, HYScreenWidth, HYScreenHeight - 64)];
-    _horizonTableView.delegate = self;
-    [self.view addSubview:_horizonTableView];
-     _horizonTableView.dataSource = [self loadDataByType:CenterTableViewTopic];
-        _horizonTableView.type = CenterTableViewTopic;
-    
-}
-
-
-
-
-#pragma mark -
-#pragma mark - HorizontalTableViewDelegate
-- (void)horizontalTableView:(CenterTableViewType)type didSelectItemAtContentIndexPath:(NSIndexPath *)contentIndexPath inTableViewIndexPath:(NSIndexPath *)tableViewIndexPath
-{
-//    if (contentIndexPath.row == 0 || contentIndexPath.row ==6 ) {
-//        
-//        if (type == CenterTableViewTopic)
-//        {
-//            // 跳转的主题列表
-//            
-//        }else
-//        {
-//            //跳转的主题单品列表
-//        }
-//    }else
-//    {
-        DetailViewCtroller *detailVC = [[DetailViewCtroller alloc] init];
-        CategoryModel *model = _dataSouce[tableViewIndexPath.row];
-        CollectModel *likeModel =  model.datalist[contentIndexPath.row];
-        detailVC.title = likeModel.title;
-        detailVC.view.backgroundColor = likeModel.backgroundColor;
-        [self.navigationController pushViewController:detailVC animated:YES];
-//    }
-    
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 
 
 

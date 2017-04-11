@@ -43,41 +43,6 @@
     
     // 多页 图
     
-//    
-//    UIWindow *window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-//    
-//    self.window = window;
-//    
-//    //判断是否需要显示：（内部已经考虑版本及本地版本缓存）
-//    BOOL canShow = [XZMCoreNewFeatureVC canShowNewFeature];
-//    
-//    //测试代码，正式版本应该删除
-//    canShow = YES;
-//    
-//    if(canShow){ // 初始化新特性界面
-//        window.rootViewController = [XZMCoreNewFeatureVC newFeatureVCWithImageNames:@[@"办公",@"厨具",@"创意",@"主题"] enterBlock:^{
-//            
-//            NSLog(@"进入主页面");
-//            [self enter];
-//            
-//        } configuration:^(UIButton *enterButton) { // 配置进入按钮
-//            [enterButton setBackgroundImage:[UIImage imageNamed:@"btn_nor"] forState:UIControlStateNormal];
-//            [enterButton setBackgroundImage:[UIImage imageNamed:@"btn_pressed"] forState:UIControlStateHighlighted];
-//            enterButton.bounds = CGRectMake(0, 0, 120, 40);
-//            enterButton.center = CGPointMake(KScreenW * 0.5, KScreenH* 0.85);
-//        }];
-//        
-//    }else{
-//        
-//        [self enter];
-//    }
-//    
-//    [window makeKeyAndVisible];
-//    
-    
-    
-    
-    
     
     UIWindow *window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     
@@ -90,12 +55,16 @@
     canShow = YES;
     
     if(canShow){ // 初始化新特性界面
-        window.rootViewController = [XZMCoreNewFeatureVC newFeatureVCWithPlayerURL:[[NSBundle mainBundle] URLForResource:@"qidong.mp4" withExtension:nil] enterBlock:^{
+        window.rootViewController = [XZMCoreNewFeatureVC newFeatureVCWithImageNames:@[@"主题"] enterBlock:^{
             
-            NSLog(@"进入主页面");
+//            NSLog(@"进入主页面");
             [self enter];
-        } configuration:^(AVPlayerLayer *playerLayer) {
             
+        } configuration:^(UIButton *enterButton) { // 配置进入按钮
+            [enterButton setBackgroundImage:[UIImage imageNamed:@"play"] forState:UIControlStateNormal];
+            [enterButton setBackgroundImage:[UIImage imageNamed:@"play"] forState:UIControlStateHighlighted];
+            enterButton.bounds = CGRectMake(0, 0, 120, 40);
+            enterButton.center = CGPointMake(KScreenW * 0.5, KScreenH* 0.85);
         }];
         
     }else{
@@ -107,6 +76,37 @@
     
     
     
+    
+    
+//    
+//    UIWindow *window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+//    
+//    self.window = window;
+//    
+//    //判断是否需要显示：（内部已经考虑版本及本地版本缓存）
+//    BOOL canShow = [XZMCoreNewFeatureVC canShowNewFeature];
+//    
+//    //测试代码，正式版本应该删除
+//    canShow = YES;
+//    
+//    if(canShow){ // 初始化新特性界面
+//        window.rootViewController = [XZMCoreNewFeatureVC newFeatureVCWithPlayerURL:[[NSBundle mainBundle] URLForResource:@"qidong.mp4" withExtension:nil] enterBlock:^{
+//            
+//            NSLog(@"进入主页面");
+//            [self enter];
+//        } configuration:^(AVPlayerLayer *playerLayer) {
+//            
+//        }];
+//        
+//    }else{
+//        
+//        [self enter];
+//    }
+//    
+//    [window makeKeyAndVisible];
+    
+    
+    
         // Override point for customization after application launch.
     return YES;
 }
@@ -114,7 +114,7 @@
 // 进入主页面
 -(void)enter{
     
-    UIViewController *vc = [[UIViewController alloc] init];
+    HYtabBarVC *vc = [[HYtabBarVC alloc] init];
     vc.view.backgroundColor = [UIColor brownColor];
     self.window.rootViewController = vc;
     [self.window.layer transitionWithAnimType:TransitionAnimTypeRamdom subType:TransitionSubtypesFromRamdom curve:TransitionCurveRamdom duration:2.0f];

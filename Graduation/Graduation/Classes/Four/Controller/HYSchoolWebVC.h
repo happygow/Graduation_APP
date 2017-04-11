@@ -1,13 +1,13 @@
 //
-//  BaseTableViewCell.h
+//  HYSchoolWebVC.h
 //  Graduation
 //
-//  Created by LeeBruce on 17/3/31.
+//  Created by LeeBruce on 17/4/11.
 //  Copyright © 2017年 zhang. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface BaseTableViewCell : UITableViewCell
+@interface HYSchoolWebVC : UIViewController
 
 @end

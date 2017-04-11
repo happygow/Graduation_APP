@@ -24,17 +24,21 @@
 #define HYValue(value) ((value)/375.0f*[UIScreen mainScreen].bounds.size.width)
 
 #define HYUIColor(color) [UIColor colorWithHexString:color]
+// 全局输入的字体颜色
+#define kUIColor(color) [UIColor colorWithHexString:color]
 
 /**
  *  白色字体颜色
  */
-#define HYWhiteColor [UIColor colorWithHexString:@"ffffff"]
+#define HYWhiteColor [UIColor whiteColor]
 // RGB
 #define HYrgb(r,g,b)   [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:1.0f]
 
 #define fontMax HYValue (15.0)
 #define fontMin HYValue (14.0)
 #define spacing HYValue (15.0)
+// 字体
+#define kFont(x)    [UIFont systemFontOfSize:(x)]
 /** 滚动标题的高度  */
 static const CGFloat HYTitleVewHeight = 40;
 /** 滚动标题每个item的宽度  */
