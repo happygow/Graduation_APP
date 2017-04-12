@@ -26,16 +26,27 @@
     wsLoginV.titleLabel.textColor = [UIColor grayColor];
     wsLoginV.hideEyesType = NOEyesHide;//遮挡眼睛类型
     [self.view addSubview:wsLoginV];
-    UITapGestureRecognizer *login = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(back)];
-    [wsLoginV addGestureRecognizer:login];
+//    [wsLoginV addGestureRecognizer:login];
     [wsLoginV setClickBlock:^(NSString *textField1Text, NSString *textField2Text) {
         
         
+        if ([textField1Text isEqualToString:@"admin" ]&&[ textField2Text isEqualToString:@"123456"]) {
+            [self dismissViewControllerAnimated:YES completion:nil];
+        }
+//        else if([textField1Text isEqualToString:NULL])
+//        {
+//            UIAlertView *alertV = [[UIAlertView alloc]initWithTitle:@"错误提示" message:[NSString stringWithFormat:@"请输入账号"] delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+//            [alertV show];
+//        }
+        else
+        {
+             NSLog(@"点击了登录按钮textField1 = %@   textField2 = %@",textField1Text,textField2Text);
+        UIAlertView *alertV = [[UIAlertView alloc]initWithTitle:@"错误提示" message:[NSString stringWithFormat:@"账号或密码错误"] delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+        [alertV show];
+        }
         
-//        NSLog(@"点击了登录按钮textField1 = %@   textField2 = %@",textField1Text,textField2Text);
-//        UIAlertView *alertV = [[UIAlertView alloc]initWithTitle:@"登录按钮事件" message:[NSString stringWithFormat:@"账号：%@\n密码：%@",textField1Text,textField2Text] delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
-//        [alertV show];
-         [self dismissViewControllerAnimated:YES completion:nil];
+       
+         
     }];
 }
 

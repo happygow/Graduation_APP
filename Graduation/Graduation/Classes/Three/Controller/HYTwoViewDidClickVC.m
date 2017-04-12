@@ -11,7 +11,7 @@
 #import "HYLoadingView.h"
 
 @interface HYTwoViewDidClickVC ()<WKNavigationDelegate>
-
+@property (nonatomic, strong) HYLoadingView *loadingView;
 // web
 @property (nonatomic , strong) WKWebView *webView;
 
@@ -96,5 +96,30 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler
+{
+    decisionHandler(WKNavigationActionPolicyAllow);
+}
+
+- (void)webView:(WKWebView *)webView didStartProvisionalNavigation:(WKNavigation *)navigation
+{
+    [self.view addSubview:self.loadingView];
+}
+
+- (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation
+{
+    [_loadingView removeFromSuperview];
+}
+
+-(HYLoadingView *)loadingView
+{
+    if (!_loadingView)
+    {
+        _loadingView = [[HYLoadingView alloc]initWithFrame:CGRectMake(0, 0, HYScreenWidth, HYScreenHeight - 64) backgroundColor:nil];
+    }
+    return _loadingView;
+}
+
 
 @end
