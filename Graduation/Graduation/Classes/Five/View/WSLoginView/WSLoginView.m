@@ -153,6 +153,7 @@ typedef NS_ENUM(NSInteger, WSLoginShowType) {
 - (void)LoginAction:(UIButton *)sender{
     [self.textField1 resignFirstResponder];
     [self.textField2 resignFirstResponder];
+ 
     
     if (_clickBlock) {
         _clickBlock(self.textField1.text, self.textField2.text);

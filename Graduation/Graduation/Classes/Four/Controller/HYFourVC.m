@@ -20,7 +20,7 @@
 @implementation HYFourVC
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationItem.title = @"影像";
+    self.navigationItem.title = @"校园";
     self.jz_navigationBarBackgroundAlpha = 1;
 //    self.isHiddenBack = YES;
     self.automaticallyAdjustsScrollViewInsets = NO;

@@ -45,7 +45,6 @@
 		05309E231E8108D300E6ADD5 /* CardCellCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 05309DA41E8108D300E6ADD5 /* CardCellCollectionViewCell.m */; };
 		05309E241E8108D300E6ADD5 /* CardLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 05309DA61E8108D300E6ADD5 /* CardLayout.m */; };
 		05309E251E8108D300E6ADD5 /* CardSelectedLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 05309DA81E8108D300E6ADD5 /* CardSelectedLayout.m */; };
-		05309E261E8108D300E6ADD5 /* videoDeatilVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 05309DAA1E8108D300E6ADD5 /* videoDeatilVC.m */; };
 		05309E271E8108D300E6ADD5 /* HYTwoVCTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05309DAE1E8108D300E6ADD5 /* HYTwoVCTableViewController.m */; };
 		05309E281E8108D400E6ADD5 /* HYTwoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 05309DB11E8108D300E6ADD5 /* HYTwoModel.m */; };
 		05309E291E8108D400E6ADD5 /* HYTwoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 05309DB41E8108D300E6ADD5 /* HYTwoCell.m */; };
@@ -97,6 +96,7 @@
 		05DACB981E9CD7F400D95BE6 /* owl-login@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 05DACB8F1E9CD7F400D95BE6 /* owl-login@2x.png */; };
 		05DACB991E9CD7F400D95BE6 /* WSLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 05DACB911E9CD7F400D95BE6 /* WSLoginView.m */; };
 		05DACB9C1E9CDCC800D95BE6 /* HYEnterloading.m in Sources */ = {isa = PBXBuildFile; fileRef = 05DACB9B1E9CDCC800D95BE6 /* HYEnterloading.m */; };
+		05DACB9F1E9DFFB800D95BE6 /* videoDeatilVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 05DACB9E1E9DFFB800D95BE6 /* videoDeatilVC.m */; };
 		05EE890D1E94EC0500E137AE /* HYStartApp.m in Sources */ = {isa = PBXBuildFile; fileRef = 05EE890C1E94EC0500E137AE /* HYStartApp.m */; };
 		05EE890F1E94ED3200E137AE /* 111.gif in Resources */ = {isa = PBXBuildFile; fileRef = 05EE890E1E94ED3200E137AE /* 111.gif */; };
 		05EE89191E97893600E137AE /* CALayer+Transition.m in Sources */ = {isa = PBXBuildFile; fileRef = 05EE89161E97893600E137AE /* CALayer+Transition.m */; };
@@ -157,8 +157,6 @@
 		05309DA61E8108D300E6ADD5 /* CardLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardLayout.m; sourceTree = "<group>"; };
 		05309DA71E8108D300E6ADD5 /* CardSelectedLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardSelectedLayout.h; sourceTree = "<group>"; };
 		05309DA81E8108D300E6ADD5 /* CardSelectedLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardSelectedLayout.m; sourceTree = "<group>"; };
-		05309DA91E8108D300E6ADD5 /* videoDeatilVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = videoDeatilVC.h; sourceTree = "<group>"; };
-		05309DAA1E8108D300E6ADD5 /* videoDeatilVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = videoDeatilVC.m; sourceTree = "<group>"; };
 		05309DAD1E8108D300E6ADD5 /* HYTwoVCTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYTwoVCTableViewController.h; sourceTree = "<group>"; };
 		05309DAE1E8108D300E6ADD5 /* HYTwoVCTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYTwoVCTableViewController.m; sourceTree = "<group>"; };
 		05309DB01E8108D300E6ADD5 /* HYTwoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYTwoModel.h; sourceTree = "<group>"; };
@@ -253,6 +251,8 @@
 		05DACB911E9CD7F400D95BE6 /* WSLoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSLoginView.m; sourceTree = "<group>"; };
 		05DACB9A1E9CDCC800D95BE6 /* HYEnterloading.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYEnterloading.h; sourceTree = "<group>"; };
 		05DACB9B1E9CDCC800D95BE6 /* HYEnterloading.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYEnterloading.m; sourceTree = "<group>"; };
+		05DACB9D1E9DFFB800D95BE6 /* videoDeatilVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = videoDeatilVC.h; sourceTree = "<group>"; };
+		05DACB9E1E9DFFB800D95BE6 /* videoDeatilVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = videoDeatilVC.m; sourceTree = "<group>"; };
 		05EE890B1E94EC0500E137AE /* HYStartApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYStartApp.h; sourceTree = "<group>"; };
 		05EE890C1E94EC0500E137AE /* HYStartApp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYStartApp.m; sourceTree = "<group>"; };
 		05EE890E1E94ED3200E137AE /* 111.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 111.gif; sourceTree = "<group>"; };
@@ -496,6 +496,8 @@
 				05309D9A1E8108D300E6ADD5 /* HYThreeVC.m */,
 				05309D9D1E8108D300E6ADD5 /* HYVideoPlayVC.h */,
 				05309D9E1E8108D300E6ADD5 /* HYVideoPlayVC.m */,
+				05DACB9D1E9DFFB800D95BE6 /* videoDeatilVC.h */,
+				05DACB9E1E9DFFB800D95BE6 /* videoDeatilVC.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -518,8 +520,6 @@
 				05309DA61E8108D300E6ADD5 /* CardLayout.m */,
 				05309DA71E8108D300E6ADD5 /* CardSelectedLayout.h */,
 				05309DA81E8108D300E6ADD5 /* CardSelectedLayout.m */,
-				05309DA91E8108D300E6ADD5 /* videoDeatilVC.h */,
-				05309DAA1E8108D300E6ADD5 /* videoDeatilVC.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -888,7 +888,6 @@
 				0538E0B51E8E5556006F2DFF /* HYAllArtVC.m in Sources */,
 				05309E291E8108D400E6ADD5 /* HYTwoCell.m in Sources */,
 				0538E06F1E8E22EE006F2DFF /* HYThreeTVC_Photo.m in Sources */,
-				05309E261E8108D300E6ADD5 /* videoDeatilVC.m in Sources */,
 				05309E201E8108D300E6ADD5 /* HYTwoViewDidClickVC.m in Sources */,
 				0538E0B81E8E557F006F2DFF /* HYRingVC.m in Sources */,
 				05309E761E810F2900E6ADD5 /* UIView+Addition.m in Sources */,
@@ -902,6 +901,7 @@
 				05309E1F1E8108D300E6ADD5 /* HYThreeVC.m in Sources */,
 				05DACB7E1E9C8A0800D95BE6 /* HYSchoolWebVC.m in Sources */,
 				0538E0BE1E8E55DE006F2DFF /* HYShoesVC.m in Sources */,
+				05DACB9F1E9DFFB800D95BE6 /* videoDeatilVC.m in Sources */,
 				05309E231E8108D300E6ADD5 /* CardCellCollectionViewCell.m in Sources */,
 				05DACB7B1E9C789A00D95BE6 /* HYSchoolMore.m in Sources */,
 				05309E3C1E8108D400E6ADD5 /* HYtabBar.m in Sources */,

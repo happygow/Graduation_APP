@@ -17,6 +17,8 @@ typedef enum {
 
 
 
+
+
 @interface WSLoginView : UIView
 
 
@@ -30,6 +32,7 @@ typedef void (^ClicksAlertBlock)(NSString *textField1Text, NSString *textField2T
 @property(nonatomic,strong)UIButton *loginBtn;
 
 @property(nonatomic,strong)UILabel *titleLabel;
+
 
 /**
  *  遮眼睛效果 （默认遮住眼睛）

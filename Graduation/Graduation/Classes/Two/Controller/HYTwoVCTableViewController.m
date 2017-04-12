@@ -71,8 +71,7 @@ static NSString *const ID = @"register";
 - (UIStatusBarStyle)preferredStatusBarStyle{
     
     return UIStatusBarStyleLightContent;
-    
-    
+
 }
 
 - (void)viewDidLoad {

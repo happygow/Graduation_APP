@@ -35,5 +35,4 @@
 
 #define textcolor [UIColor redColor]
 
-#endif /* PrefixHeader_pch */
-// /Users/BruceLee/Documents/1/Graduation_APP/Graduation/Graduation/other/PrefixHeader.pch
+#endif
