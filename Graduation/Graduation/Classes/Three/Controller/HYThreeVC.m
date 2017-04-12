@@ -73,7 +73,7 @@ static NSString *ID = @"cell";
     _cardCollectionView.delegate = self;
     _cardCollectionView.dataSource = self;
     [_cardCollectionView setContentOffset:CGPointMake(0, 10)];
-    _cardCollectionView.backgroundColor = [UIColor lightGrayColor];
+    _cardCollectionView.backgroundColor = [UIColor darkGrayColor];
   
     [self loadDate];
 
