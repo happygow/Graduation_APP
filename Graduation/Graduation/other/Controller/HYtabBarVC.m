@@ -95,19 +95,21 @@
     //[self setTabBar];
     
     
-    [self setupChildVc:[[HYOneVC alloc] init] title:@"one" image:@"tabBar_essence_icon" selectedImage:@"tabBar_essence_click_icon"];
+    [self setupChildVc:[[HYOneVC alloc] init] title:@"首页" image:@"tabBar_essence_icon" selectedImage:@"tabBar_essence_click_icon"];
     
-    [self setupChildVc:[[HYTwoVCTableViewController alloc] init] title:@"two" image:@"tabBar_new_icon" selectedImage:@"tabBar_new_click_icon"];
+    [self setupChildVc:[[HYTwoVCTableViewController alloc] init] title:@"画报" image:@"tabBar_new_icon" selectedImage:@"tabBar_new_click_icon"];
     
-    [self setupChildVc:[[HYThreeVC alloc] init] title:@"three" image:@"tabBar_me_icon" selectedImage:@"tabBar_me_click_icon"];
+    [self setupChildVc:[[HYThreeVC alloc] init] title:@"创意" image:@"tabBar_me_icon" selectedImage:@"tabBar_me_click_icon"];
     
-    [self setupChildVc:[[HYFourVC alloc] init] title:@"four" image:@"tabBar_friendTrends_icon" selectedImage:@"tabBar_friendTrends_click_icon"];
-     [self setupChildVc:[[HYFiveVC alloc] init] title:@"five" image:@"tabBar_friendTrends_icon" selectedImage:@"tabBar_friendTrends_click_icon"];
+    [self setupChildVc:[[HYFourVC alloc] init] title:@"校园" image:@"tabBar_friendTrends_icon" selectedImage:@"tabBar_friendTrends_click_icon"];
+     [self setupChildVc:[[HYFiveVC alloc] init] title:@"我的" image:@"tabBar_friendTrends_icon" selectedImage:@"tabBar_friendTrends_click_icon"];
     
     // 更换tabBar
     [self setValue:[[HYtabBar alloc] init] forKeyPath:@"tabBar"];
     
-    
+    //获取导航条最高权限
+    [[UITabBarItem appearance]setTitleTextAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:15]} forState:UIControlStateNormal];
+
     
     
     
@@ -173,12 +175,11 @@
     vc.tabBarItem.title = title;
     vc.tabBarItem.image = [UIImage imageNamed:image];
     vc.tabBarItem.selectedImage = [UIImage imageNamed:selectedImage];
-    
+    [[UITabBarItem appearance]setTitleTextAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:HYValue(15)]} forState:UIControlStateNormal];
     // 包装一个导航控制器, 添加导航控制器为tabbarcontroller的子控制器
     HYNavigationVC *nav = [[HYNavigationVC alloc] initWithRootViewController:vc];
     [self addChildViewController:nav];
-//    //获取导航条最高权限
-    [[UITabBarItem appearance]setTitleTextAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:15]} forState:UIControlStateNormal];
+//
 }
 
 // 封装

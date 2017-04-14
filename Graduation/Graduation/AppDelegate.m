@@ -34,45 +34,45 @@
 //        [[NSUserDefaults standardUserDefaults] setObject:@"YES" forKey:@"isFirstLogin"];
 //    }else{
 //        //不是首次启动
-//    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-//    self.window.rootViewController = [[HYtabBarVC alloc] init];
-//    [self.window makeKeyAndVisible];
-//
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.rootViewController = [[HYtabBarVC alloc] init];
+    [self.window makeKeyAndVisible];
+
 //    }
 
     
     // 多页 图
     
+//    
+//    UIWindow *window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+//    
+//    self.window = window;
+//    
+//    //判断是否需要显示：（内部已经考虑版本及本地版本缓存）
+//    BOOL canShow = [XZMCoreNewFeatureVC canShowNewFeature];
+//    
+//    //测试代码，正式版本应该删除
+//    canShow = YES;
+//    
+//    if(canShow){ // 初始化新特性界面
+//        window.rootViewController = [XZMCoreNewFeatureVC newFeatureVCWithImageNames:@[@"主题"] enterBlock:^{
+//            
+////            NSLog(@"进入主页面");
+//            [self enter];
+//            
+//        } configuration:^(UIButton *enterButton) { // 配置进入按钮
+//            [enterButton setBackgroundImage:[UIImage imageNamed:@"play"] forState:UIControlStateNormal];
+//            [enterButton setBackgroundImage:[UIImage imageNamed:@"play"] forState:UIControlStateHighlighted];
+//            enterButton.bounds = CGRectMake(0, 0, 120, 40);
+//            enterButton.center = CGPointMake(KScreenW * 0.5, KScreenH* 0.85);
+//        }];
+//        
+//    }else{
+//        
+//        [self enter];
+//    }
     
-    UIWindow *window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    
-    self.window = window;
-    
-    //判断是否需要显示：（内部已经考虑版本及本地版本缓存）
-    BOOL canShow = [XZMCoreNewFeatureVC canShowNewFeature];
-    
-    //测试代码，正式版本应该删除
-    canShow = YES;
-    
-    if(canShow){ // 初始化新特性界面
-        window.rootViewController = [XZMCoreNewFeatureVC newFeatureVCWithImageNames:@[@"主题"] enterBlock:^{
-            
-//            NSLog(@"进入主页面");
-            [self enter];
-            
-        } configuration:^(UIButton *enterButton) { // 配置进入按钮
-            [enterButton setBackgroundImage:[UIImage imageNamed:@"play"] forState:UIControlStateNormal];
-            [enterButton setBackgroundImage:[UIImage imageNamed:@"play"] forState:UIControlStateHighlighted];
-            enterButton.bounds = CGRectMake(0, 0, 120, 40);
-            enterButton.center = CGPointMake(KScreenW * 0.5, KScreenH* 0.85);
-        }];
-        
-    }else{
-        
-        [self enter];
-    }
-    
-    [window makeKeyAndVisible];
+//    [window makeKeyAndVisible];
     
     
     

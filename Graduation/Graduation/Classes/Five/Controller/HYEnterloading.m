@@ -48,8 +48,23 @@
        
          
     }];
+    
+    
+    // 向下滑动 返回
+    UISwipeGestureRecognizer *recognizerBack = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipBack:)];
+    [recognizerBack setDirection:(UISwipeGestureRecognizerDirectionDown)];
+    [[self view ]addGestureRecognizer:recognizerBack];
+
+    
+    
+    
 }
 
-
+- (void)swipBack:(UISwipeGestureRecognizer *)recognizer
+{
+    if (recognizer.direction == UISwipeGestureRecognizerDirectionDown) {
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }
+}
 
 @end

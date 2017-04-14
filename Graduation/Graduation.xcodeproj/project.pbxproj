@@ -102,6 +102,7 @@
 		05EE89191E97893600E137AE /* CALayer+Transition.m in Sources */ = {isa = PBXBuildFile; fileRef = 05EE89161E97893600E137AE /* CALayer+Transition.m */; };
 		05EE891A1E97893600E137AE /* XZMCoreNewFeatureVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 05EE89181E97893600E137AE /* XZMCoreNewFeatureVC.m */; };
 		4ABD90C521B953A9CFC5AFAB /* libPods-Graduation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D990B262863CA3C3B4190270 /* libPods-Graduation.a */; };
+		65BCEFA21EA07D590060340B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65BCEFA11EA07D590060340B /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -262,6 +263,7 @@
 		05EE89171E97893600E137AE /* XZMCoreNewFeatureVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XZMCoreNewFeatureVC.h; sourceTree = "<group>"; };
 		05EE89181E97893600E137AE /* XZMCoreNewFeatureVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XZMCoreNewFeatureVC.m; sourceTree = "<group>"; };
 		61B79ED197D504C019FF7E1F /* Pods-Graduation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Graduation.release.xcconfig"; path = "Pods/Target Support Files/Pods-Graduation/Pods-Graduation.release.xcconfig"; sourceTree = "<group>"; };
+		65BCEFA11EA07D590060340B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		8638621BE2182BA7D9D0554C /* Pods-Graduation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Graduation.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Graduation/Pods-Graduation.debug.xcconfig"; sourceTree = "<group>"; };
 		D990B262863CA3C3B4190270 /* libPods-Graduation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Graduation.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -312,6 +314,7 @@
 				05DACB7F1E9CACE800D95BE6 /* image.plist */,
 				05309D541E81081B00E6ADD5 /* Info.plist */,
 				05309E461E810AF200E6ADD5 /* 加载.gif */,
+				65BCEFA11EA07D590060340B /* Images.xcassets */,
 				05309D431E81081B00E6ADD5 /* Supporting Files */,
 			);
 			path = Graduation;
@@ -723,12 +726,15 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 05309D571E81081B00E6ADD5 /* Build configuration list for PBXNativeTarget "Graduation" */;
 			buildPhases = (
+				5B84320EEFE77C4D27B61B2A /* 📦 Check Pods Manifest.lock */,
 				022B68AA9DA9840CE365846D /* [CP] Check Pods Manifest.lock */,
 				05309D3C1E81081B00E6ADD5 /* Sources */,
 				05309D3D1E81081B00E6ADD5 /* Frameworks */,
 				05309D3E1E81081B00E6ADD5 /* Resources */,
 				971307C0BC865694972D39B5 /* [CP] Embed Pods Frameworks */,
 				70275D278DAFDCD47D33001F /* [CP] Copy Pods Resources */,
+				EF9C8E65FC8FBC4C9A42A610 /* 📦 Embed Pods Frameworks */,
+				DBB98406DEED9C41114DBE6A /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -788,6 +794,7 @@
 				05309E151E8108D300E6ADD5 /* cycle_04.jpg in Resources */,
 				05309E041E8108D300E6ADD5 /* nar_bgbg.png in Resources */,
 				05309E141E8108D300E6ADD5 /* cycle_03.jpg in Resources */,
+				65BCEFA21EA07D590060340B /* Images.xcassets in Resources */,
 				05309E171E8108D300E6ADD5 /* cycle_06.jpg in Resources */,
 				05DACB931E9CD7F400D95BE6 /* icon_hand.png in Resources */,
 				05309DFF1E8108D300E6ADD5 /* home_email_red.png in Resources */,
@@ -835,6 +842,21 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		5B84320EEFE77C4D27B61B2A /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 		70275D278DAFDCD47D33001F /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -858,6 +880,36 @@
 			inputPaths = (
 			);
 			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Graduation/Pods-Graduation-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DBB98406DEED9C41114DBE6A /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Graduation/Pods-Graduation-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EF9C8E65FC8FBC4C9A42A610 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1055,7 +1107,7 @@
 				GCC_PREFIX_HEADER = Graduation/other/PrefixHeader.pch;
 				INFOPLIST_FILE = Graduation/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.Graduation.me.Graduation;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Graduation.me1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -1070,7 +1122,7 @@
 				GCC_PREFIX_HEADER = Graduation/other/PrefixHeader.pch;
 				INFOPLIST_FILE = Graduation/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.Graduation.me.Graduation;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Graduation.me1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

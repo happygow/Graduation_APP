@@ -34,7 +34,7 @@
 - (void)createView
 {
     _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, -20, HYScreenWidth, HYScreenHeight - 49 +20) style:UITableViewStylePlain];
-    _tableView.backgroundColor = [UIColor whiteColor];
+    _tableView.backgroundColor = HYrgb(200, 200, 200);
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     [self.view addSubview:_tableView];
@@ -62,8 +62,8 @@
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
     UIView *headerView = [[UIView alloc]init];
-    headerView.backgroundColor = [UIColor yellowColor];
-    _userImg = [[UIImageView alloc] initWithFrame:CGRectMake(HYValue(100), (HYValue(100) ) , 50, 50)];
+//    headerView.backgroundColor = [UIColor yellowColor];
+    _userImg = [[UIImageView alloc] initWithFrame:CGRectMake(HYValue(100), HYValue(50)  , 50, 50)];
     _userImg.backgroundColor = [UIColor redColor];
     headerView.userInteractionEnabled = YES;
     _userImg.userInteractionEnabled = YES;
@@ -99,7 +99,7 @@
     
     
     // 这里 的颜色 和背景  设置为一样的  就可以看出分割了
-    cell.contentView.backgroundColor = [UIColor lightGrayColor];
+    cell.contentView.backgroundColor = HYrgb(225, 225, 225);
     cell.selectionStyle = 0;
     [cell.contentView addSubview:image];
 

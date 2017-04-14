@@ -96,9 +96,14 @@
     {
         HYLog(@"1");
         
-        HYFiveVC *manage = [[HYFiveVC alloc] init];
+        HYSchoolWebVC *manage = [[HYSchoolWebVC alloc] init];
         manage.jz_navigationBarBackgroundAlpha = 1;
         [self.navigationController pushViewController:manage animated:YES];
+        
+        
+//        HYFiveVC *manage = [[HYFiveVC alloc] init];
+//        manage.jz_navigationBarBackgroundAlpha = 1;
+//        [self.navigationController pushViewController:manage animated:YES];
         
     }
     else if (indexPath.row == 2)
