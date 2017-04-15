@@ -45,11 +45,14 @@
     [_titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.mas_equalTo(self);
         make.top.mas_equalTo(_topicimageView.mas_bottom).offset(HYValue(20));
+        make.left.mas_equalTo(_topicimageView.left).offset(HYValue(10));
+        make.right.mas_equalTo(_topicimageView.right).offset(HYValue(10));
+        
     }];
     
     [_viewCount mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.mas_equalTo(self);
-        make.top.mas_equalTo(_topicimageView.mas_bottom).offset(HYValue(40));
+        make.top.mas_equalTo(_titleLabel.mas_bottom).offset(HYValue(5));
     }];
     //
     
@@ -81,6 +84,8 @@
     if (!_titleLabel) {
         _titleLabel = [[UILabel alloc] init];
         _titleLabel.textColor = [UIColor grayColor];
+        _titleLabel.numberOfLines = 0;
+        _titleLabel.textAlignment = 1;
         _titleLabel.font = [UIFont systemFontOfSize:13];
         _titleLabel.text = @"测试主题";
     }

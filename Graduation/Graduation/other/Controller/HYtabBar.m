@@ -13,7 +13,7 @@
 - (void)layoutSubviews
 {
     [super layoutSubviews];
-    
+//    self.barTintColor = HYMainColor;
     CGFloat buttonY = 0;
     CGFloat buttonW = self.frame.size.width / 5;
     CGFloat buttonH = self.frame.size.height;

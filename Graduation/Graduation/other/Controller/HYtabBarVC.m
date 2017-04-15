@@ -56,6 +56,7 @@
     UITabBarItem *item = [UITabBarItem appearance];
     [item setTitleTextAttributes:attrs forState:UIControlStateNormal];
     [item setTitleTextAttributes:selectedAttrs forState:UIControlStateSelected];
+    
 }
 //||[self isKindOfClass:[FiveViewController class]]
 -(void)viewDidAppear:(BOOL)animated{
@@ -95,76 +96,25 @@
     //[self setTabBar];
     
     
-    [self setupChildVc:[[HYOneVC alloc] init] title:@"首页" image:@"tabBar_essence_icon" selectedImage:@"tabBar_essence_click_icon"];
+    [self setupChildVc:[[HYOneVC alloc] init] title:@"首页" image:@"mainn" selectedImage:@"main"];
     
-    [self setupChildVc:[[HYTwoVCTableViewController alloc] init] title:@"画报" image:@"tabBar_new_icon" selectedImage:@"tabBar_new_click_icon"];
+    [self setupChildVc:[[HYTwoVCTableViewController alloc] init] title:@"画报" image:@"huabaon" selectedImage:@"huabao"];
     
-    [self setupChildVc:[[HYThreeVC alloc] init] title:@"创意" image:@"tabBar_me_icon" selectedImage:@"tabBar_me_click_icon"];
+    [self setupChildVc:[[HYThreeVC alloc] init] title:@"创意" image:@"videon" selectedImage:@"video"];
     
-    [self setupChildVc:[[HYFourVC alloc] init] title:@"校园" image:@"tabBar_friendTrends_icon" selectedImage:@"tabBar_friendTrends_click_icon"];
-     [self setupChildVc:[[HYFiveVC alloc] init] title:@"我的" image:@"tabBar_friendTrends_icon" selectedImage:@"tabBar_friendTrends_click_icon"];
+    [self setupChildVc:[[HYFourVC alloc] init] title:@"校园" image:@"peoplen" selectedImage:@"people"];
+     [self setupChildVc:[[HYFiveVC alloc] init] title:@"我的" image:@"men" selectedImage:@"me"];
     
     // 更换tabBar
     [self setValue:[[HYtabBar alloc] init] forKeyPath:@"tabBar"];
     
     //获取导航条最高权限
-    [[UITabBarItem appearance]setTitleTextAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:15]} forState:UIControlStateNormal];
+    [[UITabBarItem appearance]setTitleTextAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:HYValue(10)]} forState:UIControlStateNormal];
 
-    
-    
-    
+    [[UITabBarItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:HYMainColor} forState:UIControlStateSelected];
     
 }
-//
-//- (void)setChildViewControllers
-//{
-//    HYOneVC *one = [[HYOneVC alloc] init];
-//    CustomNavigationController *navione = [[CustomNavigationController alloc] initWithRootViewController:one];
-//    navione.fullScreenPopGestureEnabled = YES;
-//    
-//    
-//    HYTwoVC *two = [[HYTwoVC alloc] init];
-//    CustomNavigationController *navitwo = [[CustomNavigationController alloc] initWithRootViewController:two];
-//    navitwo.fullScreenPopGestureEnabled = YES;
-//    
-//    
-//    HYThreeVC *three = [[HYThreeVC alloc] init];
-//    CustomNavigationController *navithree = [[CustomNavigationController alloc] initWithRootViewController:three];
-//    navithree.fullScreenPopGestureEnabled = YES;
-//    
-//    
-//    HYFourVC *four = [[HYFourVC alloc] init];
-//    CustomNavigationController *navifour = [[CustomNavigationController alloc] initWithRootViewController:four];
-//    navifour.fullScreenPopGestureEnabled = YES;
-//
-//    
-//    self.viewControllers = @[navione,navitwo,navithree,navifour];
-//}
-//
-//- (void)setTabBar
-//{
-//    NSArray *titleArr = @[@"精选",@"流逝",@"视频",@"自我"];
-//    
-//    NSArray *imageArr = @[@"tabBar_essence_icon",@"tabBar_new_icon",@"tabBar_me_icon",@"tabBar_friendTrends_icon"];
-//    NSArray *selectedArray = @[@"tabBar_essence_click_icon",@"tabBar_new_click_icon",@"tabBar_me_click_icon",@"tabBar_friendTrends_click_icon"];
-//    
-//    
-//    //  循环设置
-//    for (int i = 0; i < 4; i ++) {
-//        UIViewController *vc = self.viewControllers[i];
-//        vc.tabBarItem = [[UITabBarItem alloc] initWithTitle:titleArr[i] image:[UIImage imageNamed:imageArr[i]] selectedImage:[UIImage imageNamed:selectedArray[i]]];
-//        vc.tabBarItem.tag = i;
-//        
-//        // 包装一个导航控制器, 添加导航控制器为tabbarcontroller的子控制器
-////        HYNavigationVC *nav = [[HYNavigationVC alloc] initWithRootViewController:vc];
-////        [self addChildViewController:nav];
-//
-//        
-//    }
-//    //获取导航条最高权限
-//    [[UITabBarItem appearance]setTitleTextAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:20]} forState:UIControlStateNormal];
-//    
-//}
+
 /**
  * 初始化子控制器
  */
@@ -175,7 +125,6 @@
     vc.tabBarItem.title = title;
     vc.tabBarItem.image = [UIImage imageNamed:image];
     vc.tabBarItem.selectedImage = [UIImage imageNamed:selectedImage];
-    [[UITabBarItem appearance]setTitleTextAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:HYValue(15)]} forState:UIControlStateNormal];
     // 包装一个导航控制器, 添加导航控制器为tabbarcontroller的子控制器
     HYNavigationVC *nav = [[HYNavigationVC alloc] initWithRootViewController:vc];
     [self addChildViewController:nav];

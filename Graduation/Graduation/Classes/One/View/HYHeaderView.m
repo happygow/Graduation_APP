@@ -97,8 +97,8 @@
         
         _searchBar.layer.cornerRadius = HYValue(6);
         _searchBar.layer.masksToBounds = YES;
-        [_searchBar setSearchFieldBackgroundImage:[UIImage imageWithColor:[UIColor lightGrayColor] size:_searchBar.size] forState:UIControlStateNormal];
-        [_searchBar setBackgroundImage:[UIImage imageWithColor:[[UIColor lightGrayColor] colorWithAlphaComponent:1] size:_searchBar.size] ];
+        [_searchBar setSearchFieldBackgroundImage:[UIImage imageWithColor:HYSearchColor size:_searchBar.size] forState:UIControlStateNormal];
+        [_searchBar setBackgroundImage:[UIImage imageWithColor:[HYSearchColor colorWithAlphaComponent:1] size:_searchBar.size] ];
         UITextField *searchField = [_searchBar valueForKey:@"_searchField"];
         searchField.textColor = [UIColor whiteColor];
         [searchField setValue:[UIColor whiteColor] forKeyPath:@"_placeholderLabel.textColor"];

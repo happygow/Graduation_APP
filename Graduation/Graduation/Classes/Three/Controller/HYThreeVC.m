@@ -73,7 +73,7 @@ static NSString *ID = @"cell";
     _cardCollectionView.delegate = self;
     _cardCollectionView.dataSource = self;
     [_cardCollectionView setContentOffset:CGPointMake(0, 10)];
-    _cardCollectionView.backgroundColor = [UIColor darkGrayColor];
+    _cardCollectionView.backgroundColor = HYBlueDeep;
   
     [self loadDate];
 
@@ -213,43 +213,6 @@ static NSString *ID = @"cell";
     
     [self.navigationController presentViewController:detail animated:YES completion:nil];
 
-//    CGFloat offsetY = self.cardCollectionView.contentOffset.y;
-//    if ([self.cardLayout isKindOfClass:[CardLayout class]]) {
-//        if (!self.cardLayoutStyle2) {
-//            self.cardLayoutStyle2 =  [[CardSelectedLayout alloc]initWithIndexPath:indexPath offsetY:offsetY ContentSizeHeight:((CardLayout*)self.cardLayout).contentSizeHeight];
-//            self.cardLayout = self.cardLayoutStyle2;
-//        }
-//        else
-//        {
-//            ((CardSelectedLayout*)self.cardLayoutStyle2).contentOffsetY = offsetY;
-//            ((CardSelectedLayout*)self.cardLayoutStyle2).contentSizeHeight = ((CardLayout*)self.cardLayout).contentSizeHeight;
-//            ((CardSelectedLayout*)self.cardLayoutStyle2).selectedIndexPath = indexPath;
-//            self.cardLayout = self.cardLayoutStyle2;
-//        }
-//        self.cardCollectionView.scrollEnabled = NO;
-//        [self showMaskView]; //显示背景浮层
-//        //选中的卡片不显示蒙层
-//        //[((CardCellCollectionViewCell*)[self.cardCollectionView cellForItemAtIndexPath:indexPath]) setBlur:0];
-//    }
-//    else
-//    {
-//        if (!self.cardLayoutStyle1) {
-//            self.cardLayoutStyle1 =  [[CardLayout alloc]initWithOffsetY:offsetY];
-//            self.cardLayout = self.cardLayoutStyle1;
-//            ((CardLayout*)self.cardLayoutStyle1).delegate = self;
-//        }
-//        else
-//        {
-//            ((CardLayout*)self.cardLayoutStyle1).offsetY = offsetY;
-//            self.cardLayout = self.cardLayoutStyle1;
-//            ((CardLayout*)self.cardLayoutStyle1).delegate = self;
-//        }
-//        self.cardCollectionView.scrollEnabled = YES;
-//        [self hideMaskView];
-//
-//    }
-//   
-//    [self.cardCollectionView setCollectionViewLayout:self.cardLayout animated:YES];
 }
 -(void)showMaskView
 {

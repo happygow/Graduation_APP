@@ -173,7 +173,7 @@ static NSString *const ID = @"register";
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return HYValue(HYScreenHeight/ 1.7);
+    return HYValue(370);
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {

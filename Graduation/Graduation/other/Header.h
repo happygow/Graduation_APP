@@ -27,6 +27,21 @@
 // 全局输入的字体颜色
 #define kUIColor(color) [UIColor colorWithHexString:color]
 
+// 主色调 ff5d73   255 93 115
+
+#define HYMainColor HYrgb(255,93,115)
+
+#define HYSearchColor HYrgb(255,178,188)
+// 255  243  158
+#define HYCoverColor HYrgb(34,94,155)
+// 106  184 186
+#define HYCoverAlpha HYrgb(34,94,155)
+
+// 蓝深色
+#define HYBlueDeep HYrgb(29,68,93)
+#define HYAlphaColor(r,g,b,c) [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:(c)1.0f]
+//#define HYCoverAlphaColor HYAlphaColor(106,184,186,0.4)
+
 /**
  *  白色字体颜色
  */

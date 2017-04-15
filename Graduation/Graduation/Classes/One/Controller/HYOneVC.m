@@ -328,7 +328,7 @@ static NSString *ID = @"cell";
             
             [btn setTitle:categorys[i] forState:UIControlStateNormal];
             [btn setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
-            [btn setTitleColor:[UIColor redColor] forState:UIControlStateSelected];
+            [btn setTitleColor:HYMainColor forState:UIControlStateSelected];
             btn.titleLabel.font = [UIFont systemFontOfSize:fontMin];
             CGSize size = [UIButton sizeOfLabelWithCustomMaxWidth:HYScreenWidth FontSize:fontMin FilledTextString:categorys[i]];
             
@@ -363,7 +363,8 @@ static NSString *ID = @"cell";
 {
     if (!_currentSelectedImageView) {
         _currentSelectedImageView = [[UIImageView alloc] init];
-        _currentSelectedImageView.image = [UIImage imageNamed:@"nar_bgbg"];
+
+        _currentSelectedImageView.image = [UIImage imageWithColor:HYMainColor size:CGSizeMake(HYValue(64), HYValue(64))];
     }
     return _currentSelectedImageView;
 }

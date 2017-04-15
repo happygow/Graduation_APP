@@ -10,10 +10,10 @@
 #import <WebKit/WebKit.h>
 #import "HYLoadingView.h"
 
-@interface HYTwoViewDidClickVC ()<WKNavigationDelegate>
+@interface HYTwoViewDidClickVC ()<UIScrollViewDelegate>
 @property (nonatomic, strong) HYLoadingView *loadingView;
 // web
-@property (nonatomic , strong) WKWebView *webView;
+@property (nonatomic , strong) UIWebView *webView;
 
 // big
 @property (nonatomic , strong) UIView *bigView;

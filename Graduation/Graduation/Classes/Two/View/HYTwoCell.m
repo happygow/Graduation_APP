@@ -24,16 +24,22 @@ static int cellCount;
         
         CGFloat width = HYScreenWidth;
         
-        
+        // cover
+        UIImageView *cover = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, HYScreenWidth, HYValue(360))];
+       
+        cover.backgroundColor = HYMainColor;
+        [self.contentView addSubview:cover];
         // coverImage
-        self.picture = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, width, HYValue(HYScreenHeight/ 1.7))];
+        self.picture = [[UIImageView alloc] initWithFrame:CGRectMake(HYValue(5), HYValue(5), width- HYValue(10), HYValue(350))];
         
         self.picture.image = [UIImage imageNamed:@"pic"];
         [self.contentView addSubview:self.picture];
         
         
-        self.coverview = [[UIView alloc] initWithFrame:CGRectMake(0, self.picture.height - HYValue(150), HYScreenWidth, HYValue(150))];
-        self.coverview.backgroundColor = [UIColor colorWithWhite:0 alpha:0.25];
+        self.coverview = [[UIView alloc] initWithFrame:CGRectMake(HYValue(5), self.picture.height - HYValue(145), self.picture.width, HYValue(150))];
+        self.coverview.backgroundColor = [UIColor colorWithRed:255/255.0 green:93/255.0 blue:115/255.0 alpha:0.4];
+//        self.coverview.alpha = 0.4;
+//        [HYAlphaColor(106, 184, 186, 0.4) ];
         [self.contentView addSubview:self.coverview];
         
         self.titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(HYValue(10), HYValue(10), HYScreenWidth - HYValue(20), HYValue(80))];
