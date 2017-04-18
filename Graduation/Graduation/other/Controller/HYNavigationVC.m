@@ -18,11 +18,12 @@
  */
 + (void)initialize
 {
-    // 当导航栏用在XMGNavigationController中, appearance设置才会生效
-    //    UINavigationBar *bar = [UINavigationBar appearanceWhenContainedIn:[self class], nil];
+//     当导航栏用在XMGNavigationController中, appearance设置才会生效
+//    UINavigationBar *bar = [UINavigationBar appearanceWhenContainedIn:[self class], nil];
 //    UINavigationBar *bar = [UINavigationBar appearance];
 //    [bar setBackgroundImage:[UIImage imageNamed:@"navigationbarBackgroundWhite"] forBarMetrics:UIBarMetricsDefault];
 
+//    [bar setBackgroundColor:HYMainColor];
 }
 
 
@@ -44,15 +45,15 @@
 //        [button setTitle:@"返回 " forState:UIControlStateNormal];
         [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [button setTitleColor:[UIColor whiteColor] forState:UIControlStateFocused];
-        [button setImage:[UIImage imageNamed:@"back"] forState:UIControlStateNormal];
-        [button setImage:[UIImage imageNamed:@"backn"] forState:UIControlStateHighlighted];
-        button.size = CGSizeMake(70, 30);
+        [button setImage:[UIImage imageNamed:@"back2"] forState:UIControlStateNormal];
+        [button setImage:[UIImage imageNamed:@"backr"] forState:UIControlStateHighlighted];
+        button.size = CGSizeMake(HYValue(60), HYValue(30));
         // 让按钮内部的所有内容左对齐
         button.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
         //        [button sizeToFit];
         // 让按钮的内容往左边偏移10
-        button.contentEdgeInsets = UIEdgeInsetsMake(0, -10, 0, 0);
-        [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        button.contentEdgeInsets = UIEdgeInsetsMake(0, 0, 0, 0);
+        [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [button setTitleColor:[UIColor redColor] forState:UIControlStateHighlighted];
         [button addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];
         

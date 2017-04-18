@@ -18,16 +18,30 @@
 @end
 
 @implementation HYFourVC
-- (void)viewDidLoad {
+- (void)viewWillAppear:(BOOL)animated
+{
+       self.navigationController.navigationBar.hidden =  NO;
+}
+- (UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleLightContent;
+}
+
+-(void)viewDidLoad {
+    
     [super viewDidLoad];
+    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
     self.navigationItem.title = @"校园";
-    self.jz_navigationBarBackgroundAlpha = 1;
+    [self.navigationController.navigationBar setBarTintColor:HYMainColor];
+    [self.navigationController.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor],NSForegroundColorAttributeName, nil]];
+    self.navigationController.navigationBar.hidden =  NO;
+//    self.jz_navigationBarTintColor = HYMainColor;
 //    self.isHiddenBack = YES;
     self.automaticallyAdjustsScrollViewInsets = NO;
 
     
     self.tableview = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, HYScreenWidth, HYScreenHeight - 64) style:UITableViewStylePlain];
-    self.tableview.backgroundColor = [UIColor lightGrayColor];
+    self.tableview.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.tableview];
     
     self.tableview.delegate = self;
@@ -51,7 +65,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return (HYScreenWidth - HYValue(20)) * 277 / 710 + HYValue(23);
+    return  HYValue(150);
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -62,20 +76,20 @@
     UIImageView *imag = [[UIImageView alloc]initWithFrame:CGRectMake(HYValue(10), HYValue(15), W, H)];
     if (indexPath.row == 0)
     {
-        imag.image = [UIImage imageNamed:@"homework"];
+        imag.image = [UIImage imageNamed:@"schoolnet"];
     }
     else if (indexPath.row == 1)
     {
-        imag.image = [UIImage imageNamed:@"achievementShow"];
+        imag.image = [UIImage imageNamed:@"schoolphoto"];
         
     }
     else
     {
-        imag.image = [UIImage imageNamed:@"studySurvey"];
+        imag.image = [UIImage imageNamed:@"edu"];
     }
     
     // 这里 的颜色 和背景  设置为一样的  就可以看出分割了
-        cell.contentView.backgroundColor = [UIColor lightGrayColor];
+        cell.contentView.backgroundColor = [UIColor whiteColor];
     cell.selectionStyle = 0;
     [cell.contentView addSubview:imag];
     return cell;

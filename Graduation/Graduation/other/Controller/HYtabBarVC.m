@@ -41,23 +41,23 @@
     return UIInterfaceOrientationPortrait;
 }
 
-+ (void)initialize
-{
-    // 通过appearance统一设置所有UITabBarItem的文字属性
-    // 后面带有UI_APPEARANCE_SELECTOR的方法, 都可以通过appearance对象来统一设置
-    NSMutableDictionary *attrs = [NSMutableDictionary dictionary];
-    attrs[NSFontAttributeName] = [UIFont systemFontOfSize:12];
-    attrs[NSForegroundColorAttributeName] = [UIColor grayColor];
-    
-    NSMutableDictionary *selectedAttrs = [NSMutableDictionary dictionary];
-    selectedAttrs[NSFontAttributeName] = attrs[NSFontAttributeName];
-    selectedAttrs[NSForegroundColorAttributeName] = [UIColor darkGrayColor];
-    
-    UITabBarItem *item = [UITabBarItem appearance];
-    [item setTitleTextAttributes:attrs forState:UIControlStateNormal];
-    [item setTitleTextAttributes:selectedAttrs forState:UIControlStateSelected];
-    
-}
+//+ (void)initialize
+//{
+//    // 通过appearance统一设置所有UITabBarItem的文字属性
+//    // 后面带有UI_APPEARANCE_SELECTOR的方法, 都可以通过appearance对象来统一设置
+//    NSMutableDictionary *attrs = [NSMutableDictionary dictionary];
+//    attrs[NSFontAttributeName] = [UIFont systemFontOfSize:13];
+//    attrs[NSForegroundColorAttributeName] = [UIColor grayColor];
+//    
+//    NSMutableDictionary *selectedAttrs = [NSMutableDictionary dictionary];
+//    selectedAttrs[NSFontAttributeName] = attrs[NSFontAttributeName];
+//    selectedAttrs[NSForegroundColorAttributeName] = [UIColor darkGrayColor];
+//    
+//    UITabBarItem *item = [UITabBarItem appearance];
+//    [item setTitleTextAttributes:attrs forState:UIControlStateNormal];
+//    [item setTitleTextAttributes:selectedAttrs forState:UIControlStateSelected];
+//    
+//}
 //||[self isKindOfClass:[FiveViewController class]]
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
@@ -76,40 +76,23 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    //self.view.backgroundColor = [UIColor whiteColor];
-    //[UINavigationBar appearance];
-    // 通过appearance统一设置所有UITabBarItem的文字属性
-    // 后面带有UI_APPEARANCE_SELECTOR的方法, 都可以通过appearance对象来统一设置
-//    
-//    NSMutableDictionary *attrs = [NSMutableDictionary dictionary];
-//    attrs[NSFontAttributeName] = [UIFont systemFontOfSize:12];
-//    attrs[NSForegroundColorAttributeName] = [UIColor grayColor];
-//    
-//    NSMutableDictionary *selectedAttrs = [NSMutableDictionary dictionary];
-//    selectedAttrs[NSFontAttributeName] = attrs[NSFontAttributeName];
-//    selectedAttrs[NSForegroundColorAttributeName] = [UIColor darkGrayColor];
-//    
-//    UITabBarItem *item = [UITabBarItem appearance];
-//    [item setTitleTextAttributes:attrs forState:UIControlStateNormal];
-//    [item setTitleTextAttributes:selectedAttrs forState:UIControlStateSelected];
-    //[self setChildViewControllers];
-    //[self setTabBar];
+
     
     
-    [self setupChildVc:[[HYOneVC alloc] init] title:@"首页" image:@"mainn" selectedImage:@"main"];
+    [self setupChildVc:[[HYOneVC alloc] init] title:@"首页" image:@"mainn" selectedImage:@"main2"];
     
-    [self setupChildVc:[[HYTwoVCTableViewController alloc] init] title:@"画报" image:@"huabaon" selectedImage:@"huabao"];
+    [self setupChildVc:[[HYTwoVCTableViewController alloc] init] title:@"画报" image:@"huabaon" selectedImage:@"huabao2"];
     
-    [self setupChildVc:[[HYThreeVC alloc] init] title:@"创意" image:@"videon" selectedImage:@"video"];
+    [self setupChildVc:[[HYThreeVC alloc] init] title:@"创意" image:@"videon" selectedImage:@"video2"];
     
-    [self setupChildVc:[[HYFourVC alloc] init] title:@"校园" image:@"peoplen" selectedImage:@"people"];
-     [self setupChildVc:[[HYFiveVC alloc] init] title:@"我的" image:@"men" selectedImage:@"me"];
+    [self setupChildVc:[[HYFourVC alloc] init] title:@"校园" image:@"campusn" selectedImage:@"campus"];
+     [self setupChildVc:[[HYFiveVC alloc] init] title:@"我的" image:@"men" selectedImage:@"me2"];
     
     // 更换tabBar
     [self setValue:[[HYtabBar alloc] init] forKeyPath:@"tabBar"];
     
     //获取导航条最高权限
-    [[UITabBarItem appearance]setTitleTextAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:HYValue(10)]} forState:UIControlStateNormal];
+    [[UITabBarItem appearance]setTitleTextAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:HYValue(12)]} forState:UIControlStateNormal];
 
     [[UITabBarItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:HYMainColor} forState:UIControlStateSelected];
     
@@ -130,7 +113,7 @@
     [self addChildViewController:nav];
 //
 }
-
+  
 // 封装
 
 @end

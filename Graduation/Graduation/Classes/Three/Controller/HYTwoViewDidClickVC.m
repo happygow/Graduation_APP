@@ -28,7 +28,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.automaticallyAdjustsScrollViewInsets = YES;
+    self.jz_navigationBarTintColor = HYMainColor;
   self.view.backgroundColor = [UIColor whiteColor];
+    self.jz_wantsNavigationBarVisible = YES;
     [self loadData];
 }
 
@@ -52,7 +54,7 @@
     _bigView = [[UIView alloc] initWithFrame:CGRectMake(0, -HYValue(500), HYScreenWidth, HYValue(500))];
 //    _bigView.backgroundColor = [UIColor yellowColor];
     
-     UILabel *mainTitle = [[UILabel alloc] initWithFrame:CGRectMake(HYValue(20), HYValue(50), HYScreenWidth - HYValue(40), HYValue(50))];
+     UILabel *mainTitle = [[UILabel alloc] initWithFrame:CGRectMake(HYValue(20), HYValue(30), HYScreenWidth - HYValue(40), HYValue(50))];
     mainTitle.numberOfLines = 0;
     mainTitle.textColor = [UIColor darkGrayColor];
     mainTitle.textAlignment = NSTextAlignmentCenter;
@@ -76,22 +78,22 @@
     [webView.scrollView addSubview:_bigView];
     
     
-    // back btn
-    _backBtn = [[UIButton alloc] initWithFrame:CGRectMake(HYValue(15), HYValue(15), HYValue(15), HYValue(15))];
-    [_backBtn setImage:[UIImage imageNamed:@"navigationButtonReturn"] forState:UIControlStateNormal];
-    [_backBtn addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];
-    [self.bigView addSubview:_backBtn];
+//    // back btn
+//    _backBtn = [[UIButton alloc] initWithFrame:CGRectMake(HYValue(15), HYValue(15), HYValue(15), HYValue(15))];
+//    [_backBtn setImage:[UIImage imageNamed:@"back"] forState:UIControlStateNormal];
+//    [_backBtn addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];
+//    [self.bigView addSubview:_backBtn];
     
     //去掉黑色框框
     webView.scrollView.contentOffset= CGPointMake(0, -552);
     // 是自己瞎写的,根据不同情况设定,黑框越大,这个数就越小!是负数的小!!
 }
 
-
-- (void)back
-{
-    [self.navigationController popViewControllerAnimated:YES];
-}
+//
+//- (void)back
+//{
+//    [self.navigationController popViewControllerAnimated:YES];
+//}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

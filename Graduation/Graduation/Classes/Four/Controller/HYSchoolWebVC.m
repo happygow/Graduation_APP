@@ -18,11 +18,13 @@
 @end
 
 @implementation HYSchoolWebVC
-
+- (BOOL)prefersStatusBarHidden {
+    return YES;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
+    self.jz_wantsNavigationBarVisible = YES;
     self.navigationItem.title = @"工院校园";
     
     self.automaticallyAdjustsScrollViewInsets = NO;
@@ -31,7 +33,7 @@
     config.preferences = [[WKPreferences alloc] init];
     config.preferences.minimumFontSize = HYValue(10);
     config.preferences.javaScriptEnabled = YES;
-    self.webView = [[WKWebView alloc] initWithFrame:CGRectMake(0, 64, HYScreenWidth, HYScreenHeight - 64 ) configuration:config];
+    self.webView = [[WKWebView alloc] initWithFrame:CGRectMake(0, 64, HYScreenWidth, HYScreenHeight  - 64) configuration:config];
     NSString *url = [NSString stringWithFormat:@"http://www.xzit.edu.cn/"];
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
     [self.webView loadRequest:request];
