@@ -29,7 +29,7 @@
 
 // 主色调 ff5d73   255 93 115
 
-#define HYMainColor HYrgb(255,93,115)
+#define HYMainColor HYrgb(255,84,108)
 
 #define HYSearchColor HYrgb(255,178,188)
 // 255  243  158

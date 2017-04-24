@@ -20,7 +20,7 @@
 @property (nonatomic, copy) NSString *category;
 
 @property (nonatomic, copy) NSString *duration;
-
+@property (nonatomic, assign) NSInteger dates;
 @property (nonatomic, copy) NSString *videoDescription;
 
 @property (nonatomic, copy) NSDictionary *consumption;

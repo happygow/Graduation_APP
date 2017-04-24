@@ -143,7 +143,7 @@
     backBtn.backgroundColor = [UIColor lightGrayColor];
     backBtn.layer.cornerRadius = 15;
     backBtn.layer.masksToBounds = YES;
-    [backBtn setImage:[UIImage imageNamed:@"navigationButtonReturn"] forState:UIControlStateNormal];
+    [backBtn setImage:[UIImage imageNamed:@"back2"] forState:UIControlStateNormal];
     [_coverImageView addSubview:backBtn];
     
     UIButton *btnClicked = [[UIButton alloc] initWithFrame:CGRectMake(5, HYValue(20), HYValue(30), HYValue(30))];

@@ -12,6 +12,8 @@
 @interface CardCellCollectionViewCell : UICollectionViewCell    
 
 @property (nonatomic, strong) UILabel *titleLabel;
+@property (nonatomic, strong) UILabel *titleLabeld;
+@property (nonatomic, strong) UILabel *titleLabelt;
 /** 图片 */
 @property (nonatomic, strong) UIImageView *coverImg;
 // model

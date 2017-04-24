@@ -23,14 +23,14 @@
 {
     WSLoginView *wsLoginV = [[WSLoginView alloc]initWithFrame:self.view.bounds];
     wsLoginV.titleLabel.text = @"我是一只调皮的猫头鹰";
-    wsLoginV.titleLabel.textColor = [UIColor grayColor];
+    wsLoginV.titleLabel.textColor = [UIColor whiteColor];
     wsLoginV.hideEyesType = NOEyesHide;//遮挡眼睛类型
     [self.view addSubview:wsLoginV];
 //    [wsLoginV addGestureRecognizer:login];
     [wsLoginV setClickBlock:^(NSString *textField1Text, NSString *textField2Text) {
         
         
-        if ([textField1Text isEqualToString:@"admin" ]&&[ textField2Text isEqualToString:@"123456"]) {
+        if ([textField1Text isEqualToString:@"12345" ]&&[ textField2Text isEqualToString:@"123456"]) {
             [self dismissViewControllerAnimated:YES completion:nil];
         }
 //        else if([textField1Text isEqualToString:NULL])

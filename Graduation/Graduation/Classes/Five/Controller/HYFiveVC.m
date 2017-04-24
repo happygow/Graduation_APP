@@ -9,7 +9,9 @@
 #import "HYFiveVC.h"
 #import "HYEnterloading.h"
 #import "WSLoginView.h"
-@interface HYFiveVC ()
+@interface HYFiveVC ()<UITableViewDelegate, UITableViewDataSource>
+
+@property (nonatomic, strong) UITableView *tableview;
 
 @property (nonatomic, strong) UIView *bigView;
 @property (nonatomic, strong) UIView *headerView;
@@ -25,151 +27,144 @@
 @implementation HYFiveVC
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor whiteColor];
+    // HYrgb(65, 44, 52)
+    self.view.backgroundColor = HYrgb(118, 67, 84);
+    
     self.jz_wantsNavigationBarVisible = NO;
     [self createView];
 }
 - (void)createView
 {
-    _bigView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, HYScreenWidth, HYScreenHeight)];
-//    _bigView.backgroundColor = [UIColor redColor];
-    [self.view addSubview:_bigView];
-    
+
+//    
     _headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, HYScreenWidth, HYValue(235))];
-//    _headerView.backgroundColor = [UIColor yellowColor];
-    [_bigView addSubview:_headerView];
-    
-    CGFloat footerH = HYScreenHeight - _headerView.height - 49 -HYValue(10);
-    _footerView = [[UIView alloc] initWithFrame:CGRectMake(0, _headerView.bottom + HYValue(2), HYScreenWidth, footerH)];
-    _footerView.backgroundColor = HYMainColor;
-    [_bigView addSubview:_footerView];
+
+    [self.view addSubview:_headerView];
+   
     
     
+    
+    
+    
+    self.tableview = [[UITableView alloc] initWithFrame:CGRectMake(0, _headerView.bottom - HYValue(2) , HYScreenWidth, HYScreenHeight - _headerView.height - 39) style:UITableViewStylePlain];
+    self.tableview.delegate = self;
+    self.tableview.dataSource = self;
+    self.tableview.separatorStyle = UITableViewCellSeparatorStyleNone;
+    [self.view addSubview:self.tableview];
+    
+   
     
     // header
     _headerImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, HYScreenWidth, _headerView.height)];
     _headerImageView.image = [UIImage imageNamed:@"headerView2"];
+    _headerImageView.userInteractionEnabled = YES;
     [_headerView addSubview:_headerImageView];
     
     //头像
-    _userImgBtn = [[UIImageView alloc] initWithFrame:CGRectMake(HYScreenWidth - HYValue(120) - HYValue(34), HYValue(23), HYValue(120), HYValue(120))];
-    _userImgBtn.image = [UIImage imageNamed:@"center_default_category"];
+    _userImgBtn = [[UIImageView alloc] initWithFrame:CGRectMake(HYScreenWidth - HYValue(120) - HYValue(34), HYValue(60), HYValue(120), HYValue(120))];
+    _userImgBtn.image = [UIImage imageNamed:@"timg"];
     _userImgBtn.userInteractionEnabled = YES;
     _userImgBtn.layer.borderWidth = HYValue(2);
     _userImgBtn.layer.borderColor = (__bridge CGColorRef _Nullable)([UIColor whiteColor]);
     _userImgBtn.layer.masksToBounds = YES;
     _userImgBtn.layer.cornerRadius = _userImgBtn.bounds.size.width / 2;
-    [_headerImageView addSubview:_userImgBtn];
+    
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(toLogin)];
     [_userImgBtn addGestureRecognizer:tap];
-    
+    [_headerImageView addSubview:_userImgBtn];
     // label
-    UILabel *nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(HYValue(10), _userImgBtn.bottom + HYValue(10), HYScreenWidth - HYValue(20), HYValue(30))];
-    nameLabel.text = @"1231212121";
+    UILabel *nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(HYValue(35),  HYValue(75), HYValue(100), HYValue(80))];
+    nameLabel.text = @"你好 \n小屁孩";
+    nameLabel.font = kFont(HYValue(30));
+    
+    nameLabel.numberOfLines = 0;
+    nameLabel.textColor = [UIColor whiteColor];
     nameLabel.textAlignment = NSTextAlignmentCenter;
     [_headerImageView addSubview:nameLabel];
+    
+    UIView *loginView = [[UILabel alloc] initWithFrame:CGRectMake(nameLabel.x, nameLabel.bottom + HYValue(20),HYValue(300), HYValue(20))];
+//    loginView.backgroundColor = [UIColor yellowColor];
+    [_headerView addSubview:loginView];
+    
+    
+    UILabel *registLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, HYValue(50), HYValue(30))];
+    registLabel.text = @"注册";
+    registLabel.textAlignment = 2;
+    registLabel.textColor = [UIColor whiteColor];
+    registLabel.textColor = HYWhiteColor;
+    [loginView addSubview:registLabel];
+    
+    // line
+    UIView *line = [[UIView alloc] initWithFrame:CGRectMake(registLabel.right + HYValue(5), HYValue(3), 1, registLabel.height - HYValue(8))];
+    line.backgroundColor = HYWhiteColor;
+    [loginView addSubview:line];
+    
+    
+    UILabel *login = [[UILabel alloc] initWithFrame:CGRectMake(line.right + HYValue(5), 0, HYValue(120), registLabel.height)];
+    login.text = @"已有账号？";
+    login.textAlignment = 0;
+    login.textColor = HYWhiteColor;
+    [loginView addSubview:login];
+    
+    
     // 九宫格
-    [self createPatchWithHeight:footerH];
+//    [self createPatchWithHeight:footerH];
 }
 
-- (void)createPatchWithHeight:(CGFloat)footerH
+
+#pragma mark - 数据源方法
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    
-    CGFloat width = HYScreenWidth / 3;
-    NSArray *imgArr = @[@"jiazaishibai",@"jiazaishibai",@"jiazaishibai",@"jiazaishibai",@"jiazaishibai",@"jiazaishibai",@"jiazaishibai",@"jiazaishibai",@"jiazaishibai"];
-    NSArray *titleArr = @[@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@""];
-    for (int i = 0; i <3; i ++) {
-        for (int j = 0; j <3; j ++) {
-            UIView *iconView = [[UIView alloc] initWithFrame:CGRectMake(j *width, i *footerH / 3, width, footerH / 3)];
-            [_footerView addSubview:iconView];
-            
-            CGFloat imgH = HYValue(35);
-            CGFloat labelH = HYValue(20);
-            UIView *tapView = [[UIView alloc] initWithFrame:CGRectMake(0, (footerH / 3 - (imgH + labelH + HYValue(10))) / 2, width, HYValue(60))];
-//            tapView.backgroundColor = [UIColor blueColor];
-            
-            UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(skip:)];
-            [tapView addGestureRecognizer:tap];
-            
-            UIImageView *img = [[UIImageView alloc] initWithFrame:CGRectMake((width - imgH) / 2, 0,imgH, imgH)];
-            img.image = [UIImage imageNamed:imgArr[i *3 + j]];
-            
-            UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 10 + img.bottom, width, labelH)];
-            titleLabel.text = titleArr[i * 3 + j];
-            titleLabel.textColor = HYrgb(90, 90, 90);
-            titleLabel.font = [UIFont systemFontOfSize:HYValue(14)];
-            titleLabel.textAlignment = 1;
-            [iconView addSubview:tapView];
-            [tapView addSubview:img];
-            [tapView addSubview:titleLabel];
-            
-            tapView.tag = i *3 + j + 2000;
-            
-            
-            
-        }
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 4;
+}
+
+
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return  HYValue(90);
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [[UITableViewCell alloc]initWithFrame:CGRectMake(0, 0, HYScreenWidth, (HYScreenWidth - HYValue(20)) * 277 / 1230 )];
+    CGFloat W = HYScreenWidth - HYValue(20);
+    CGFloat H = W * 277 / 1230;
+    UIImageView *imag = [[UIImageView alloc]initWithFrame:CGRectMake(HYValue(10), HYValue(10), W, H)];
+    if (indexPath.row == 0)
+    {
+        imag.image = [UIImage imageNamed:@"personCenter1"];
+    }
+    else if (indexPath.row == 1)
+    {
+        imag.image = [UIImage imageNamed:@"activityNotice"];
         
     }
-    
-    // 横线
-    for (int i = 0; i < 2; i++)
+    else  if (indexPath.row == 2)
     {
-        UIView *line = [[UIView alloc]initWithFrame:CGRectMake(0, footerH / 3 * (i + 1), HYScreenWidth, 1)];
-        line.backgroundColor = [UIColor whiteColor];
-        [_footerView addSubview:line];
-    }
-    
-    // 竖线
-    for (int i = 0; i < 2; i++)
-    {
-        UIView *line = [[UIView alloc]initWithFrame:CGRectMake(width * (i + 1), 0, 1, footerH)];
-        line.backgroundColor =  [UIColor whiteColor];
-        [_footerView addSubview:line];
-    }
-    
-}
-#pragma mark --- 九宫格跳转 ---
-- (void)skip:(UITapGestureRecognizer *)tap
-{
-    NSInteger tag = tap.view.tag - 2000;
-    if (tag == 0)//我的课程
-    {
-        [self toMyCourse];
-    }
-    else if (tag == 1) // 我的购物车
-    {
-        [self toMyCart];
-    }
-    else if (tag == 2)// 我的订单
-    {
-        [self toMyOrder];
-    }
-    else if (tag == 3)// 我的收藏
-    {
-        [self toMyCollection];
-    }
-    else if (tag == 4)// 我的关注
-    {
-        [self toMyCollection];
-    }
-    else if (tag == 5)// 教育商城
-    {
-        [self toMyCollection];
-    }
-    else if (tag == 6)// 我想学
-    {
-        [self toMyCollection];
-    }
-    else if (tag == 7)// 设置
-    {
-        [self toMyCollection];
+        imag.image = [UIImage imageNamed:@"myCollection"];
     }
     else
     {
-        
+        imag.image = [UIImage imageNamed:@"pSetting"];
     }
     
+    // 这里 的颜色 和背景  设置为一样的  就可以看出分割了
+//    cell.contentView.backgroundColor = HYrgb(118, 67, 84);
+    cell.selectionStyle = 0;
+    [cell.contentView addSubview:imag];
+    return cell;
 }
+
+
+#pragma mark - 代理方法
+
+
 
 - (void)toMyWorks
 {

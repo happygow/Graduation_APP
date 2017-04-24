@@ -102,7 +102,10 @@
 		05EE89191E97893600E137AE /* CALayer+Transition.m in Sources */ = {isa = PBXBuildFile; fileRef = 05EE89161E97893600E137AE /* CALayer+Transition.m */; };
 		05EE891A1E97893600E137AE /* XZMCoreNewFeatureVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 05EE89181E97893600E137AE /* XZMCoreNewFeatureVC.m */; };
 		4ABD90C521B953A9CFC5AFAB /* libPods-Graduation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D990B262863CA3C3B4190270 /* libPods-Graduation.a */; };
+		657D78B31EAE039600915E09 /* bg2.png in Resources */ = {isa = PBXBuildFile; fileRef = 657D78B21EAE039600915E09 /* bg2.png */; };
 		65BCEFA21EA07D590060340B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65BCEFA11EA07D590060340B /* Images.xcassets */; };
+		65DADB261EA89CC600A32053 /* 750.png in Resources */ = {isa = PBXBuildFile; fileRef = 65DADB251EA89CC600A32053 /* 750.png */; };
+		65DADB281EA89D1400A32053 /* 1242.png in Resources */ = {isa = PBXBuildFile; fileRef = 65DADB271EA89D1400A32053 /* 1242.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -263,7 +266,10 @@
 		05EE89171E97893600E137AE /* XZMCoreNewFeatureVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XZMCoreNewFeatureVC.h; sourceTree = "<group>"; };
 		05EE89181E97893600E137AE /* XZMCoreNewFeatureVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XZMCoreNewFeatureVC.m; sourceTree = "<group>"; };
 		61B79ED197D504C019FF7E1F /* Pods-Graduation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Graduation.release.xcconfig"; path = "Pods/Target Support Files/Pods-Graduation/Pods-Graduation.release.xcconfig"; sourceTree = "<group>"; };
+		657D78B21EAE039600915E09 /* bg2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg2.png; sourceTree = "<group>"; };
 		65BCEFA11EA07D590060340B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		65DADB251EA89CC600A32053 /* 750.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 750.png; sourceTree = "<group>"; };
+		65DADB271EA89D1400A32053 /* 1242.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1242.png; sourceTree = "<group>"; };
 		8638621BE2182BA7D9D0554C /* Pods-Graduation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Graduation.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Graduation/Pods-Graduation.debug.xcconfig"; sourceTree = "<group>"; };
 		D990B262863CA3C3B4190270 /* libPods-Graduation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Graduation.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -680,12 +686,15 @@
 			isa = PBXGroup;
 			children = (
 				05DACB891E9CD7F400D95BE6 /* bg.jpeg */,
+				657D78B21EAE039600915E09 /* bg2.png */,
 				05DACB8A1E9CD7F400D95BE6 /* icon_hand.png */,
 				05DACB8B1E9CD7F400D95BE6 /* iconfont-password.png */,
 				05DACB8C1E9CD7F400D95BE6 /* iconfont-user.png */,
 				05DACB8D1E9CD7F400D95BE6 /* owl-login-arm-left@2x.png */,
 				05DACB8E1E9CD7F400D95BE6 /* owl-login-arm-right@2x.png */,
+				65DADB271EA89D1400A32053 /* 1242.png */,
 				05DACB8F1E9CD7F400D95BE6 /* owl-login@2x.png */,
+				65DADB251EA89CC600A32053 /* 750.png */,
 				05DACB901E9CD7F400D95BE6 /* WSLoginView.h */,
 				05DACB911E9CD7F400D95BE6 /* WSLoginView.m */,
 			);
@@ -791,10 +800,12 @@
 				05309E471E810AF200E6ADD5 /* 加载.gif in Resources */,
 				05309E161E8108D300E6ADD5 /* cycle_05.jpg in Resources */,
 				05309E011E8108D300E6ADD5 /* home_like.png in Resources */,
+				657D78B31EAE039600915E09 /* bg2.png in Resources */,
 				05309E151E8108D300E6ADD5 /* cycle_04.jpg in Resources */,
 				05309E041E8108D300E6ADD5 /* nar_bgbg.png in Resources */,
 				05309E141E8108D300E6ADD5 /* cycle_03.jpg in Resources */,
 				65BCEFA21EA07D590060340B /* Images.xcassets in Resources */,
+				65DADB281EA89D1400A32053 /* 1242.png in Resources */,
 				05309E171E8108D300E6ADD5 /* cycle_06.jpg in Resources */,
 				05DACB931E9CD7F400D95BE6 /* icon_hand.png in Resources */,
 				05309DFF1E8108D300E6ADD5 /* home_email_red.png in Resources */,
@@ -814,6 +825,7 @@
 				05DACB941E9CD7F400D95BE6 /* iconfont-password.png in Resources */,
 				05309E181E8108D300E6ADD5 /* cycle_07.jpg in Resources */,
 				05309E0B1E8108D300E6ADD5 /* tab_首页_pressed.png in Resources */,
+				65DADB261EA89CC600A32053 /* 750.png in Resources */,
 				05309E061E8108D300E6ADD5 /* tab_publish_add.png in Resources */,
 				05309E021E8108D300E6ADD5 /* home_search_icon.png in Resources */,
 				05309E051E8108D300E6ADD5 /* tab_bar_bg.png in Resources */,
@@ -1101,7 +1113,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8638621BE2182BA7D9D0554C /* Pods-Graduation.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-3";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = DYUUR96E57;
 				ENABLE_BITCODE = YES;
 				GCC_PREFIX_HEADER = Graduation/other/PrefixHeader.pch;
@@ -1116,7 +1129,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 61B79ED197D504C019FF7E1F /* Pods-Graduation.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-3";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = DYUUR96E57;
 				ENABLE_BITCODE = YES;
 				GCC_PREFIX_HEADER = Graduation/other/PrefixHeader.pch;

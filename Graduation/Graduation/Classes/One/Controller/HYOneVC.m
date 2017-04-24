@@ -85,6 +85,7 @@ static NSString *ID = @"cell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.jz_wantsNavigationBarVisible = NO;
+     [[UIApplication sharedApplication]setStatusBarHidden:NO withAnimation:UIStatusBarAnimationNone];
     
     self.view.backgroundColor = [UIColor whiteColor];
     //    self.navigationController.navigationBar.hidden = YES;

@@ -35,7 +35,7 @@
     [super layoutSubviews];
     
     [_topicimageView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.height.mas_equalTo(HYValue(230));
+        make.height.mas_equalTo(HYValue(250));
         make.left.mas_equalTo(HYValue(20));
         make.right.mas_equalTo(-HYValue(20));
         make.top.mas_equalTo(HYValue(20));
@@ -63,7 +63,7 @@
 {
     _model = model;
     HYLog(@"pic url ==== %@%@%@",model.picUrl,model.topic,model.viewCount);
-    [self.topicimageView sd_setImageWithURL:[NSURL URLWithString:model.picUrl] placeholderImage:[UIImage imageWithColor:[UIColor redColor] size:CGSizeMake(HYScreenWidth- HYValue(40), HYValue(230))]];
+    [self.topicimageView sd_setImageWithURL:[NSURL URLWithString:model.picUrl] placeholderImage:[UIImage imageNamed:@"mainHolder"]];
     self.titleLabel.text = model.topic;
     self.viewCount.text = [NSString stringWithFormat:@"浏览量:%@",self.model.viewCount];
     

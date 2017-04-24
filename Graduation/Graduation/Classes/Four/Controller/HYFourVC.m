@@ -76,17 +76,17 @@
     UIImageView *imag = [[UIImageView alloc]initWithFrame:CGRectMake(HYValue(10), HYValue(15), W, H)];
     if (indexPath.row == 0)
     {
-        imag.image = [UIImage imageNamed:@"schoolnet"];
+        imag.image = [UIImage imageNamed:@"campusNetwork"];
     }
     else if (indexPath.row == 1)
     {
-        imag.image = [UIImage imageNamed:@"schoolphoto"];
+        imag.image = [UIImage imageNamed:@"campusView"];
         
     }
-    else
-    {
-        imag.image = [UIImage imageNamed:@"edu"];
-    }
+//    else
+//    {
+//        imag.image = [UIImage imageNamed:@""];
+//    }
     
     // 这里 的颜色 和背景  设置为一样的  就可以看出分割了
         cell.contentView.backgroundColor = [UIColor whiteColor];

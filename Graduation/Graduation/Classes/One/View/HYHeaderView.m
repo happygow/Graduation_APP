@@ -67,7 +67,7 @@
     if (tableViewOffsetY < HYValue(120)) {
         [UIView animateWithDuration:0.25 animations:^{
             self.searchBtn.hidden = NO;
-            [self.messageBtn setBackgroundImage:[UIImage imageNamed:@"home_email_block"] forState:UIControlStateNormal];
+            [self.messageBtn setBackgroundImage:[UIImage imageNamed:@"message"] forState:UIControlStateNormal];
             self.searchBar.frame = CGRectMake(-(self.width - HYValue(60)), HYValue(25), self.width - HYValue(80), HYValue(30));
             self.messageBtn.alpha = 1 - alpha;
 //            self.searchBar.alpha = 1 - alpha;
@@ -81,7 +81,7 @@
             self.messageBtn.alpha = 1;
             self.searchBtn.hidden = YES;
             
-            [self.messageBtn setBackgroundImage:[UIImage imageNamed:@"home_email_black"] forState:UIControlStateNormal];
+            [self.messageBtn setBackgroundImage:[UIImage imageNamed:@"messagered"] forState:UIControlStateNormal];
         }];
     }
     
@@ -121,8 +121,8 @@
 - (UIButton *)messageBtn
 {
     if (!_messageBtn) {
-        _messageBtn = [[UIButton alloc] initWithFrame:CGRectMake(self.width - HYValue(45), HYValue(25), HYValue(30), HYValue(30))];
-        [_messageBtn setBackgroundImage:[UIImage imageNamed:@"home_email_block"] forState:UIControlStateNormal];
+        _messageBtn = [[UIButton alloc] initWithFrame:CGRectMake(self.width - HYValue(45), HYValue(32), HYValue(20), HYValue(15))];
+        [_messageBtn setBackgroundImage:[UIImage imageNamed:@"message"] forState:UIControlStateNormal];
     }
     return _messageBtn;
     

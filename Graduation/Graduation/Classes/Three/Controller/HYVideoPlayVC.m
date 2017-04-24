@@ -186,13 +186,13 @@
     _backButton.frame = CGRectMake(20, 0, 350,50);
     [_backButton addTarget:self action:@selector(BackButtonDidClicked:) forControlEvents:UIControlEventTouchUpInside];
     [_ControlView addSubview:_backButton];
-    UIImageView *image = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"navigationButtonReturn"]];
+    UIImageView *image = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"back_white"]];
     image.frame = CGRectMake(0, 10, 20, 20);
     [_backButton addSubview:image];
     
     // VideoTitle
     _titleLabel = [[UILabel alloc] init];
-    _titleLabel.frame = CGRectMake(20, 10, 400, 20);
+    _titleLabel.frame = CGRectMake(HYValue(30), 10, 400, 20);
     _titleLabel.font = [UIFont systemFontOfSize:16];
     _titleLabel.textColor = [UIColor whiteColor];
     _titleLabel.text = _titleStr;
@@ -222,25 +222,25 @@
     [_volumeDownbutton setImage:[UIImage imageNamed:@"V-.png"] forState:UIControlStateNormal];
     [_ControlView addSubview:_volumeDownbutton];
     [_volumeDownbutton addTarget:self action:@selector(volumeDown:) forControlEvents:UIControlEventTouchUpInside];
-    
+//    
     // 收藏Button
     self.CollectButton = [[UIButton alloc] init];
-    [self.CollectButton setImage:[UIImage imageNamed:@"collect.png"] forState:UIControlStateNormal];
+    [self.CollectButton setImage:[UIImage imageNamed:@""] forState:UIControlStateNormal];
     [self.CollectButton addTarget:self action:@selector(collectButtonDidClicked:) forControlEvents:UIControlEventTouchUpInside];
     self.CollectButton.translatesAutoresizingMaskIntoConstraints = NO;
     [_ControlView addSubview:self.CollectButton];
     
     // 上传Button
     _uploadButton = [[UIButton alloc] init];
-    [_uploadButton setImage:[UIImage imageNamed:@"upload.png"] forState:UIControlStateNormal];
+    [_uploadButton setImage:[UIImage imageNamed:@""] forState:UIControlStateNormal];
     _uploadButton.translatesAutoresizingMaskIntoConstraints = NO;
     [_ControlView addSubview:_uploadButton];
     
     // HDButton
     _HDButton = [[UIButton alloc]init];
-    [_HDButton setImage:[UIImage imageNamed:@"btn_HD_normal@2x"] forState:UIControlStateNormal];
+    [_HDButton setImage:[UIImage imageNamed:@""] forState:UIControlStateNormal];
     _HDButton.translatesAutoresizingMaskIntoConstraints = NO;
-    _HDButton.backgroundColor = [UIColor colorWithWhite:5 alpha:0.3];
+    _HDButton.backgroundColor = [UIColor colorWithWhite:5 alpha:0];
     _HDButton.layer.cornerRadius = 5;
     _HDButton.userInteractionEnabled = NO;
     [_ControlView addSubview:_HDButton];
@@ -306,10 +306,10 @@
 -(void)collectButtonDidClicked:(UIButton *)sender{
     [sender setShowsTouchWhenHighlighted:1];
     if (!_isCollect) {
-        [_CollectButton setBackgroundImage:[UIImage imageNamed:@"collectSelete.png"] forState:UIControlStateNormal];
+        [_CollectButton setBackgroundImage:[UIImage imageNamed:@""] forState:UIControlStateNormal];
         _isCollect = 1;
     }else{
-        [_CollectButton setBackgroundImage:[UIImage imageNamed:@"collect.png"] forState:UIControlStateNormal];
+        [_CollectButton setBackgroundImage:[UIImage imageNamed:@""] forState:UIControlStateNormal];
         _isCollect = 0;
     }
 }
@@ -346,7 +346,7 @@
 -(void)pauseButtonDidClicked:(UIButton *)sender{
     [sender setShowsTouchWhenHighlighted:1];
     if (!_isPause) {
-        [_pauseButton setImage:[UIImage imageNamed:@"btn_play@2x"] forState:UIControlStateNormal];
+        [_pauseButton setImage:[UIImage imageNamed:@"play_btn"] forState:UIControlStateNormal];
         [_player pause];
         self.adView.hidden = 0;
         _isPause = 1;
@@ -375,7 +375,7 @@
     AVPlayerItem *playerItem = (AVPlayerItem *)object;
     if ([keyPath isEqualToString:@"status"]) {
         if ([playerItem status] == AVPlayerStatusReadyToPlay) {
-            NSLog(@"AVPlayerStatusReadyToPlay");
+//            NSLog(@"AVPlayerStatusReadyToPlay");
             if( [UIApplication sharedApplication].applicationState == UIApplicationStateActive ||  [UIApplication sharedApplication].applicationState == UIApplicationStateInactive) {
                 [SVProgressHUD dismiss];
                 [self.player play];
