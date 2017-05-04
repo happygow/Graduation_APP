@@ -21,17 +21,20 @@
 - (void)viewWillAppear:(BOOL)animated
 {
        self.navigationController.navigationBar.hidden =  NO;
+        [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
 }
 - (UIStatusBarStyle)preferredStatusBarStyle
 {
     return UIStatusBarStyleLightContent;
 }
 
+
 -(void)viewDidLoad {
     
     [super viewDidLoad];
     [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
     self.navigationItem.title = @"校园";
+//    self.navigationController.navigationBar.backgroundColor = HYMainColor;
     [self.navigationController.navigationBar setBarTintColor:HYMainColor];
     [self.navigationController.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor],NSForegroundColorAttributeName, nil]];
     self.navigationController.navigationBar.hidden =  NO;
@@ -70,9 +73,9 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [[UITableViewCell alloc]initWithFrame:CGRectMake(0, 0, HYScreenWidth, (HYScreenWidth - HYValue(20)) * 277 / 710 + HYValue(23))];
+    UITableViewCell *cell = [[UITableViewCell alloc]initWithFrame:CGRectMake(0, 0, HYScreenWidth, HYValue(140))];
     CGFloat W = HYScreenWidth - HYValue(20);
-    CGFloat H = W * 277 / 710;
+    CGFloat H = W * 277 / 810;
     UIImageView *imag = [[UIImageView alloc]initWithFrame:CGRectMake(HYValue(10), HYValue(15), W, H)];
     if (indexPath.row == 0)
     {

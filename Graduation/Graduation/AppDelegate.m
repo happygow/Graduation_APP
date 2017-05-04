@@ -27,6 +27,8 @@
     return UIInterfaceOrientationMaskAll;//支持所有方向
 }
 
+
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
 //    
@@ -41,6 +43,7 @@
 //        //不是首次启动
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.rootViewController = [[HYtabBarVC alloc] init];
+    [NSThread sleepForTimeInterval:2.0];
     [self.window makeKeyAndVisible];
 
 //    }

@@ -53,9 +53,10 @@ static NSString *ID = @"cell";
 {
     return UIInterfaceOrientationPortrait;
 }
+
 - (void)viewWillAppear:(BOOL)animated
 {
-    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleDefault;
+    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -159,7 +160,7 @@ static NSString *ID = @"cell";
                 model.ImageView = [NSString stringWithFormat:@"%@",dict[@"coverForDetail"]];
                 model.alphaCoverImg = [NSString stringWithFormat:@"%@",dict[@"coverBlurred"]];
                 model.duration = [NSString stringWithFormat:@"%@",dict[@"duration"]];
-                model.dates = [NSString stringWithFormat:@"%@",dict[@"date"]];
+//                model.dates = [NSString stringWithFormat:@"%@",dict[@"date"]];
 
                 model.videoDescription = [NSString stringWithFormat:@"%@",dict[@"description"]];
                 model.playUrl = [NSString stringWithFormat:@"%@",dict[@"playUrl"]];

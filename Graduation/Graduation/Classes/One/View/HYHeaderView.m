@@ -48,7 +48,10 @@
     }
     
 }
-
+- (void)willMoveToWindow:(UIWindow *)newWindow
+{
+    
+}
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context
 {
     if (![keyPath isEqualToString:@"contentOffset"]) {
@@ -59,7 +62,7 @@
     UITableView *tableview = (UITableView *)object;
     CGFloat tableViewOffsetY = tableview.contentOffset.y;
     
-    UIColor *color = [UIColor whiteColor];
+    UIColor *color = HYMainColor;
     HYLog(@"offsety === %f",tableViewOffsetY);
     CGFloat alpha = MIN(1, tableViewOffsetY / HYValue(107));
     self.backgroundColor = [color colorWithAlphaComponent:alpha];
@@ -67,8 +70,8 @@
     if (tableViewOffsetY < HYValue(120)) {
         [UIView animateWithDuration:0.25 animations:^{
             self.searchBtn.hidden = NO;
-            [self.messageBtn setBackgroundImage:[UIImage imageNamed:@"message"] forState:UIControlStateNormal];
-            self.searchBar.frame = CGRectMake(-(self.width - HYValue(60)), HYValue(25), self.width - HYValue(80), HYValue(30));
+            [self.messageBtn setBackgroundImage:[UIImage imageNamed:@""] forState:UIControlStateNormal];
+            self.searchBar.frame = CGRectMake(-(self.width - HYValue(40)), HYValue(25), self.width - HYValue(40), HYValue(30));
             self.messageBtn.alpha = 1 - alpha;
 //            self.searchBar.alpha = 1 - alpha;
             
@@ -77,11 +80,11 @@
     else if (tableViewOffsetY >= HYValue(120))
     {
         [UIView animateWithDuration:0.25 animations:^{
-            self.searchBar.frame = CGRectMake(HYValue(20), HYValue(25), self.width - HYValue(80), HYValue(30));
+            self.searchBar.frame = CGRectMake(HYValue(20), HYValue(25), self.width - HYValue(40), HYValue(30));
             self.messageBtn.alpha = 1;
             self.searchBtn.hidden = YES;
             
-            [self.messageBtn setBackgroundImage:[UIImage imageNamed:@"messagered"] forState:UIControlStateNormal];
+            [self.messageBtn setBackgroundImage:[UIImage imageNamed:@""] forState:UIControlStateNormal];
         }];
     }
     
@@ -92,7 +95,7 @@
 {
     if (!_searchBar) {
         
-        _searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(-(self.width-HYValue(60)), HYValue(25), self.width-HYValue(80), HYValue(30))];
+        _searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(-(self.width-HYValue(40)), HYValue(25), self.width-HYValue(40), HYValue(30))];
         _searchBar.placeholder = @"点击搜索";
         
         _searchBar.layer.cornerRadius = HYValue(6);
@@ -110,8 +113,8 @@
 - (UIButton *)searchBtn
 {
     if (!_searchBtn) {
-        _searchBtn = [[UIButton alloc] initWithFrame:CGRectMake(HYValue(20), HYValue(25), HYValue(30), HYValue(30))];
-        [_searchBtn setBackgroundImage:[UIImage imageNamed:@"home_search_icon"] forState:UIControlStateNormal];
+        _searchBtn = [[UIButton alloc] initWithFrame:CGRectMake(HYValue(20), HYValue(25), HYValue(15), HYValue(15))];
+        [_searchBtn setBackgroundImage:[UIImage imageNamed:@"searchicon"] forState:UIControlStateNormal];
         
     }
     return _searchBtn;

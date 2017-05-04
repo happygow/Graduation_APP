@@ -23,6 +23,7 @@
 @property (nonatomic , strong) UIImageView *alphaCoverImg;
 // description
 @property (nonatomic , strong) UILabel *videoDescription;
+@property(nonatomic, readonly) BOOL prefersStatusBarHidden;
 @end
 
 @implementation videoDeatilVC
@@ -40,13 +41,14 @@
     return UIInterfaceOrientationPortrait;
 }
 
-
+- (BOOL)prefersStatusBarHidden {
+    return YES;
+}
 
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     //解决 系统自带的侧滑失效问题
-    
     self.navigationController.interactivePopGestureRecognizer.delegate = (id<UIGestureRecognizerDelegate>)self;
     self.navigationController.navigationBar.hidden = NO;
     
@@ -140,8 +142,7 @@
     
     // back btn
     UIButton *backBtn = [[UIButton alloc] initWithFrame:CGRectMake(HYValue(10), HYValue(30), HYValue(25), HYValue(25))];
-    backBtn.backgroundColor = [UIColor lightGrayColor];
-    backBtn.layer.cornerRadius = 15;
+
     backBtn.layer.masksToBounds = YES;
     [backBtn setImage:[UIImage imageNamed:@"back2"] forState:UIControlStateNormal];
     [_coverImageView addSubview:backBtn];
@@ -149,8 +150,6 @@
     UIButton *btnClicked = [[UIButton alloc] initWithFrame:CGRectMake(5, HYValue(20), HYValue(30), HYValue(30))];
     [btnClicked addTarget:self action:@selector(goBack) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:btnClicked];
-    
-    
     
 }
 

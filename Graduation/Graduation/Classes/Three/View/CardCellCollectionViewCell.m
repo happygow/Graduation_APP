@@ -35,7 +35,7 @@ static int cellCount;
         self.coverImg.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"videoHolder"]];
         [self.contentView addSubview:self.coverImg];
         
-        self.titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, HYValue(60), width, 30)];
+        self.titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, HYValue(80), width, 30)];
  
         self.titleLabel.textColor = [UIColor whiteColor];
         self.titleLabel.font = [UIFont systemFontOfSize:HYValue(15)];

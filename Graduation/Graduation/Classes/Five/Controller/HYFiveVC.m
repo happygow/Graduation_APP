@@ -25,12 +25,20 @@
 @end
 
 @implementation HYFiveVC
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
+     
+     
+
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // HYrgb(65, 44, 52)
-    self.view.backgroundColor = HYrgb(118, 67, 84);
-    
-    self.jz_wantsNavigationBarVisible = NO;
+    self.view.backgroundColor = HYrgb(255, 94, 124);
+       self.jz_wantsNavigationBarVisible = NO;
     [self createView];
 }
 - (void)createView
@@ -61,8 +69,8 @@
     [_headerView addSubview:_headerImageView];
     
     //头像
-    _userImgBtn = [[UIImageView alloc] initWithFrame:CGRectMake(HYScreenWidth - HYValue(120) - HYValue(34), HYValue(60), HYValue(120), HYValue(120))];
-    _userImgBtn.image = [UIImage imageNamed:@"timg"];
+    _userImgBtn = [[UIImageView alloc] initWithFrame:CGRectMake((HYScreenWidth - HYValue(100) )/2, HYValue(60), HYValue(100), HYValue(100))];
+    _userImgBtn.image = [UIImage imageNamed:@"light60"];
     _userImgBtn.userInteractionEnabled = YES;
     _userImgBtn.layer.borderWidth = HYValue(2);
     _userImgBtn.layer.borderColor = (__bridge CGColorRef _Nullable)([UIColor whiteColor]);
@@ -73,16 +81,17 @@
     [_userImgBtn addGestureRecognizer:tap];
     [_headerImageView addSubview:_userImgBtn];
     // label
-    UILabel *nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(HYValue(35),  HYValue(75), HYValue(100), HYValue(80))];
-    nameLabel.text = @"你好 \n小屁孩";
-    nameLabel.font = kFont(HYValue(30));
+    UILabel *nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(_userImgBtn.x - HYValue(42),  _userImgBtn.bottom + HYValue(5), HYValue(180), HYValue(70))];
+    nameLabel.text = @"小屁孩";
+    nameLabel.font = kFont(HYValue(23));
     
     nameLabel.numberOfLines = 0;
     nameLabel.textColor = [UIColor whiteColor];
     nameLabel.textAlignment = NSTextAlignmentCenter;
     [_headerImageView addSubview:nameLabel];
     
-    UIView *loginView = [[UILabel alloc] initWithFrame:CGRectMake(nameLabel.x, nameLabel.bottom + HYValue(20),HYValue(300), HYValue(20))];
+    UIView *loginView = [[UILabel alloc] initWithFrame:CGRectMake(_userImgBtn.x - HYValue(20), HYValue(25),HYValue(300), HYValue(20))];
+    loginView.userInteractionEnabled  = YES;
 //    loginView.backgroundColor = [UIColor yellowColor];
     [_headerView addSubview:loginView];
     
@@ -90,12 +99,13 @@
     UILabel *registLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, HYValue(50), HYValue(30))];
     registLabel.text = @"注册";
     registLabel.textAlignment = 2;
+    registLabel.userInteractionEnabled = YES;
     registLabel.textColor = [UIColor whiteColor];
     registLabel.textColor = HYWhiteColor;
     [loginView addSubview:registLabel];
     
     // line
-    UIView *line = [[UIView alloc] initWithFrame:CGRectMake(registLabel.right + HYValue(5), HYValue(3), 1, registLabel.height - HYValue(8))];
+    UIView *line = [[UIView alloc] initWithFrame:CGRectMake(registLabel.right + HYValue(5), HYValue(8), 1,  HYValue(15))];
     line.backgroundColor = HYWhiteColor;
     [loginView addSubview:line];
     
@@ -103,6 +113,9 @@
     UILabel *login = [[UILabel alloc] initWithFrame:CGRectMake(line.right + HYValue(5), 0, HYValue(120), registLabel.height)];
     login.text = @"已有账号？";
     login.textAlignment = 0;
+    login.userInteractionEnabled = YES;
+    UITapGestureRecognizer *loginTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(toLogin)];
+    [login addGestureRecognizer:loginTap];
     login.textColor = HYWhiteColor;
     [loginView addSubview:login];
     
@@ -138,20 +151,20 @@
     UIImageView *imag = [[UIImageView alloc]initWithFrame:CGRectMake(HYValue(10), HYValue(10), W, H)];
     if (indexPath.row == 0)
     {
-        imag.image = [UIImage imageNamed:@"personCenter1"];
+        imag.image = [UIImage imageNamed:@"center3"];
     }
     else if (indexPath.row == 1)
     {
-        imag.image = [UIImage imageNamed:@"activityNotice"];
+        imag.image = [UIImage imageNamed:@"notice3"];
         
     }
     else  if (indexPath.row == 2)
     {
-        imag.image = [UIImage imageNamed:@"myCollection"];
+        imag.image = [UIImage imageNamed:@"collect3"];
     }
     else
     {
-        imag.image = [UIImage imageNamed:@"pSetting"];
+        imag.image = [UIImage imageNamed:@"setting3"];
     }
     
     // 这里 的颜色 和背景  设置为一样的  就可以看出分割了

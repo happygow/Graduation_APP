@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,16 +21,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch6" translatesAutoresizingMaskIntoConstraints="NO" id="fW1-Wr-NA2">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch5.png" translatesAutoresizingMaskIntoConstraints="NO" id="Fqe-bO-cIe">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="fW1-Wr-NA2" secondAttribute="trailing" id="2wq-Iu-f60"/>
-                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="fW1-Wr-NA2" secondAttribute="bottom" id="LIM-jT-CXE"/>
-                            <constraint firstItem="fW1-Wr-NA2" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="asR-LG-aAO"/>
-                            <constraint firstItem="fW1-Wr-NA2" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="yCK-sA-Zde"/>
+                            <constraint firstAttribute="trailing" secondItem="Fqe-bO-cIe" secondAttribute="trailing" id="2IK-Ln-SoQ"/>
+                            <constraint firstItem="Fqe-bO-cIe" firstAttribute="bottom" secondItem="xb3-aO-Qok" secondAttribute="top" id="7pF-to-5PD"/>
+                            <constraint firstAttribute="trailing" secondItem="Fqe-bO-cIe" secondAttribute="trailing" id="8rn-c3-ah0"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="Fqe-bO-cIe" secondAttribute="bottom" id="Ui8-aq-IIN"/>
+                            <constraint firstItem="Fqe-bO-cIe" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="ahh-cE-OEF"/>
+                            <constraint firstItem="Fqe-bO-cIe" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="eaG-T7-BE9"/>
+                            <constraint firstItem="Fqe-bO-cIe" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="k7H-eO-Qkc"/>
+                            <constraint firstItem="Fqe-bO-cIe" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="z6f-Uk-taR"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -40,6 +44,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="launch6" width="375" height="667"/>
+        <image name="launch5.png" width="640" height="1136"/>
     </resources>
 </document>

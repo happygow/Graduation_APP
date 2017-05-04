@@ -89,7 +89,9 @@
         [self.player pause];
     }
 }
-
+- (BOOL)prefersStatusBarHidden {
+    return YES;
+}
 -(void)viewWillAppear:(BOOL)animated{
     
     self.navigationController.navigationBar.alpha = 0;
@@ -97,7 +99,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     self.view.backgroundColor = [UIColor blackColor];
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(stopPlay) name:@"stop" object:nil];
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(play) name:@"stop" object:nil];
